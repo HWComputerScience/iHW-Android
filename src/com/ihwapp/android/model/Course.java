@@ -55,6 +55,7 @@ public class Course {
 	}
 	
 	public int getTotalMeetings() {
+		//Count this course's meetings
 		int sum = 0;
 		for (int meeting : meetings) {
 			if (meeting>0) sum++;

@@ -59,24 +59,6 @@ public class Time implements Parcelable {
 	}
 	
 	/**
-	 * Sets the hour (0-23) of this time.
-	 *
-	public void setHour(int hour) { 
-		if (hour<0 || hour>23) throw new IllegalArgumentException();
-		this.hour = hour;
-	}
-	
-	/**
-	 * Sets the hour (1-12) of this time.
-	 *
-	public void setHour(int hour, boolean pm) {
-		if (hour<0 || hour>12) throw new IllegalArgumentException();
-		if (pm && hour != 12) this.hour = hour+12;
-		else if (!pm && hour == 12) this.hour = hour-12;
-		else this.hour = hour;
-	}*/
-	
-	/**
 	 * Returns whether or not this time represents a PM time.
 	 */
 	public boolean isPM() { return hour >= 12; }
@@ -87,27 +69,12 @@ public class Time implements Parcelable {
 	public int getMinute() { return minute; }
 	
 	/**
-	 * Sets the minute (0-59) of this time.
-	 *
-	public void setMinute(int minute) {
-		if (minute<0 || minute>59) throw new IllegalArgumentException();
-		this.minute = minute;
-	}*/
-	
-	/**
 	 * Returns the second of this time.
 	 */
 	public int getSecond() {
 		return this.second;
 	}
 	
-	/**
-	 * Sets the second (0-59) of this time.
-	 *
-	public void setSecond(int second) {
-		if (second<0 || second>59) throw new IllegalArgumentException();
-		this.second = second;
-	}*/
 	
 	/**
 	 * Creates and returns a new Time by adding the
@@ -178,6 +145,9 @@ public class Time implements Parcelable {
 		return d.getTimeInMillis() + 1000*(this.getHour()*3600 + this.getMinute()*60 + this.getSecond());
 	}
 
+	
+	//Stuff to comply with Parcelable -- You don't need to care about this
+	
 	@Override
 	public int describeContents() {
 		return 0;
@@ -204,11 +174,4 @@ public class Time implements Parcelable {
 		this(in.readInt(), in.readInt());
 		this.second = in.readInt();
 	}
-	
-	/*
-	@Override
-	public String toJSONString() {
-		return "\"" + hour + ":" + minute + "\"";
-	}
-	*/
 }

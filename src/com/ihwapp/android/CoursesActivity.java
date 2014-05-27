@@ -38,6 +38,7 @@ public abstract class CoursesActivity extends ListActivity implements ListAdapte
 	}
 	
 	private void reloadData() {
+		//Get course names and copy them into a local array
 		Object[] courseObjs = Curriculum.getCurrentCurriculum().getAllCourseNames().toArray();
 		courseNames = Arrays.copyOf(courseObjs, courseObjs.length, String[].class);
 		this.setListAdapter(this);
@@ -45,13 +46,16 @@ public abstract class CoursesActivity extends ListActivity implements ListAdapte
 	
 	@Override
 	public abstract boolean onCreateOptionsMenu(Menu menu);
+	//Leave this one abstract to control the menu items individually in subclasses
 	
 	public boolean onOptionsItemSelected(MenuItem item) {
 		if (item.getItemId() == R.id.action_add) {
+			//Show a new "Edit Course" activity
 			Intent i = new Intent(this, EditCourseActivity.class);
 			startActivity(i);
 			return true;
 		} else if (item.getItemId() == R.id.action_done) {
+			//Go back to the main schedule view
 			Intent i = new Intent(this, ScheduleActivity.class);
 			i.addFlags(
                     Intent.FLAG_ACTIVITY_CLEAR_TOP |
@@ -60,6 +64,7 @@ public abstract class CoursesActivity extends ListActivity implements ListAdapte
 			this.finish();
 			return true;
 		} else if (item.getItemId() == android.R.id.home) {
+			//Up button (top-left arrow by icon) pressed -- close and go back
 			this.finish();
 			return true;
 		}
@@ -67,6 +72,9 @@ public abstract class CoursesActivity extends ListActivity implements ListAdapte
 	}
 	
 	public void onListItemClick(ListView l, View v, int position, long id) {
+		//Open this course in a new edit course activity
+		//NOTE: Course names must be unique for this to work, and I'm not
+		///sure they're enforced that way...could be a problem later on...
 		Intent i = new Intent(this, EditCourseActivity.class);
 		i.putExtra("courseName", courseNames[position]);
 		startActivity(i);
@@ -97,8 +105,8 @@ public abstract class CoursesActivity extends ListActivity implements ListAdapte
 	public View getView(final int position, View convertView, ViewGroup parent) {
 		if (convertView == null) {
 			convertView = this.getLayoutInflater().inflate(R.layout.list_item_course, null);
-            ((TextView)convertView.findViewById(R.id.text_course_name)).setText(courseNames[position]);
         }
+		((TextView)convertView.findViewById(R.id.text_course_name)).setText(courseNames[position]);
         convertView.setBackgroundResource(R.drawable.list_item_selector);
 		return convertView;
 	}
@@ -134,6 +142,7 @@ public abstract class CoursesActivity extends ListActivity implements ListAdapte
 		return true;
 	}
 	
+	//Implements the contextual action bar (long-press to select) functionality
 	private class ListSelectionListener implements AbsListView.MultiChoiceModeListener {
 		
 		@Override
@@ -165,6 +174,7 @@ public abstract class CoursesActivity extends ListActivity implements ListAdapte
 				i.putExtra("courseName", courseNames[(int)getListView().getCheckedItemIds()[0]]);
 				startActivity(i);
 			} else if (item.getItemId() == R.id.action_delete) {
+				//Delete all selected courses
 				long[] checked = getListView().getCheckedItemIds();
                 for (long id : checked) {
                 	Curriculum.getCurrentCurriculum().removeCourse(Curriculum.getCurrentCurriculum().getCourse(courseNames[(int)id]));
@@ -180,9 +190,7 @@ public abstract class CoursesActivity extends ListActivity implements ListAdapte
 		@Override
 		public void onItemCheckedStateChanged(ActionMode mode, int position,
 				long id, boolean checked) {
-			//View item = getListView().getChildAt(position-getListView().getFirstVisiblePosition());
-			//if (checked) item.setBackgroundColor(Color.argb(127, 180, 225, 255));
-			//else item.setBackgroundColor(Color.TRANSPARENT);
+			//If more than one item is selected, don't show the edit button
 			if (getListView().getCheckedItemCount() == 1) mode.getMenu().findItem(R.id.action_edit).setVisible(true);
 			else mode.getMenu().findItem(R.id.action_edit).setVisible(false);
 		}
