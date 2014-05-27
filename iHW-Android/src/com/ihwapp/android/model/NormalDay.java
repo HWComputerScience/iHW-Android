@@ -59,6 +59,7 @@ public class NormalDay extends Day {
 	}
 	
 	public NormalDay(JSONObject obj) {
+		//Populate Day fields first, then populate NormalDay fields
 		super(obj);
 		try {
 			dayNumber = obj.optInt("dayNumber");

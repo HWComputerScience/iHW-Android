@@ -52,6 +52,10 @@ public class Note implements Parcelable {
 	public boolean isChecked() { return checked; }
 	public boolean isImportant() { return isImportant; }
 	
+	
+	
+	//Stuff to comply with Parcelable -- You don't need to care about this
+	
 	@Override
 	public int describeContents() {
 		return 0;

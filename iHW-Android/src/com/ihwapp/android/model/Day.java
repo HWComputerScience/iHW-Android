@@ -16,20 +16,21 @@ public abstract class Day {
 	public Day(JSONObject obj) {
 		try {
 			date = new Date(obj.getString("date"));
-			caption = obj.getString("caption");
-			captionLink = obj.getString("captionLink");
+			caption = obj.optString("caption");
+			captionLink = obj.optString("captionLink");
 		} catch (JSONException ignored) {}
 	}
 	
 	public com.ihwapp.android.model.Date getDate() { return date; }
 	public ArrayList<Period> getPeriods() { return periods; }
 	
+	//Not really ever used...
 	public JSONObject saveDay() {
 		try {
 			JSONObject toReturn = new JSONObject();
 			toReturn.put("date", date);
-			toReturn.put("caption", caption);
-			toReturn.put("captionLink", captionLink);
+			if (caption != null) toReturn.put("caption", caption);
+			if (captionLink != null) toReturn.put("captionLink", captionLink);
 			return toReturn;
 		} catch (JSONException e) {return null;}
 	}

@@ -830,6 +830,7 @@ public class Curriculum {
 		List<Integer> terms = termsFromDate(d);
 		Course[] courseList = new Course[campus+4]; //campus+3 is numPeriods, add 1 to keep 0 index empty
 		int[] maxMeetings = new int[campus+4];
+		for (int i=0; i<maxMeetings.length; i++) maxMeetings[i] = 1;
 		for (Course c : courses) {
 			if (!terms.contains(c.getTerm())) continue;
 			if (dayNum==0) {

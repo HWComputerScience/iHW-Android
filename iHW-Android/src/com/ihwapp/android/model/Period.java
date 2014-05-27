@@ -66,6 +66,7 @@ public class Period implements Parcelable {
 	}
 	
 	public JSONObject savePeriod() {
+		//Notes DO NOT SAVE when period is saved! Must save them separately!
 		JSONObject obj = new JSONObject();
 		try {
 			obj.put("name", name);
