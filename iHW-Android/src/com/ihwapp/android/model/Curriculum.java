@@ -579,9 +579,7 @@ public class Curriculum {
 				JSONObject captionObj = dayCaptions.get(d);
 				if (captionObj != null && day.getCaption() == null) {
 					day.setCaption(captionObj.optString("text"));
-					if (captionObj.optString("link") != "") {
-						day.setCaptionLink(captionObj.optString("link"));
-					}
+					day.setCaptionLink(captionObj.optString("link"));
 				}
 				loadedDays.put(d, day);
 				return true;
@@ -590,9 +588,7 @@ public class Curriculum {
 				JSONObject captionObj = dayCaptions.get(d);
 				if (captionObj != null && day.getCaption() == null) {
 					day.setCaption(captionObj.optString("text"));
-					if (captionObj.optString("link") != null) {
-						day.setCaptionLink(captionObj.optString("link"));
-					}
+					day.setCaptionLink(captionObj.optString("link"));
 				}
 				loadedDays.put(d, day);
 				return true;
@@ -623,9 +619,7 @@ public class Curriculum {
 			JSONObject captionObj = dayCaptions.get(d);
 			if (captionObj != null && day.getCaption() == null) {
 				day.setCaption(captionObj.optString("text"));
-				if (captionObj.optString("link") != null) {
-					day.setCaptionLink(captionObj.optString("link"));
-				}
+				day.setCaptionLink(captionObj.optString("link"));
 			}
 			
 			loadedDays.put(d, day);

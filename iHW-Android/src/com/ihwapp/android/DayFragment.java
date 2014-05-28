@@ -11,6 +11,7 @@ import android.content.Intent;
 import android.graphics.Typeface;
 import android.net.Uri;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.*;
 import android.view.View.OnClickListener;
 import android.widget.*;
@@ -49,7 +50,7 @@ public class DayFragment extends Fragment {
 	}
 
 	public View onCreateView(final LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-		//Log.d("iHW-lc", "DayFragment onCreateView: " + date);
+		Log.d("iHW-lc", "DayFragment onCreateView: " + date);
 		final View v = inflater.inflate(R.layout.fragment_day, null);
 		if (!Curriculum.getCurrentCurriculum().isLoaded()) return v;
         assert v != null;
@@ -91,8 +92,10 @@ public class DayFragment extends Fragment {
 		else dayNameText.setText(dayName);
 		
 		TextView dayCaptionText = ((TextView)v.findViewById(R.id.text_day_caption));
+		Log.d("iHW", "Caption: " + day.getCaption());
 		if (day.getCaption() != null && day.getCaption() != "") {
 			dayCaptionText.setText(day.getCaption());
+			Log.d("iHW", "Creating caption link: " + day.getCaptionLink());
 			if (day.getCaptionLink() != null && day.getCaptionLink() != "") {
 				v.findViewById(R.id.layout_caption).setOnClickListener(new OnClickListener() {
 					public void onClick(View v) {

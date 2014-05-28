@@ -18,6 +18,8 @@ public abstract class Day {
 			date = new Date(obj.getString("date"));
 			caption = obj.optString("caption");
 			captionLink = obj.optString("captionLink");
+			if (caption.equals("")) caption = null;
+			if (captionLink.equals("")) captionLink = null;
 		} catch (JSONException ignored) {}
 	}
 	
@@ -43,5 +45,8 @@ public abstract class Day {
 	public String getCaptionLink() { return captionLink; }
 	
 	public void setCaption(String c) { caption = c; }
-	public void setCaptionLink(String l) { captionLink = l; }
+	public void setCaptionLink(String l) { 
+		if (l.equals("")) captionLink = null;
+		else captionLink = l;
+	}
 }
