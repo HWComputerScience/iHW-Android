@@ -89,6 +89,12 @@ public class ScheduleActivity extends FragmentActivity implements Curriculum.Mod
 	}
 	
 	@Override
+	protected void onResume() {
+		super.onResume();
+		Log.d("iHW-lc", "ScheduleActivity onResume");
+	}
+	
+	@Override
 	protected void onRestoreInstanceState(Bundle savedInstanceState) {
 		Log.d("iHW-lc", "ScheduleActivity onRestoreInstanceState: " + lastIndex);
 		//Disable restoring of instance state
@@ -207,7 +213,6 @@ public class ScheduleActivity extends FragmentActivity implements Curriculum.Mod
 	}
 	
 	public void onSaveInstanceState(Bundle outState) {
-		this.pager.setAdapter(null);
 		super.onSaveInstanceState(outState);
 		Log.d("iHW-lc", "ScheduleActivity onSaveInstanceState: " + lastIndex);
 		outState.putInt("lastIndex", lastIndex);
@@ -219,6 +224,7 @@ public class ScheduleActivity extends FragmentActivity implements Curriculum.Mod
 	}
 	
 	public void onStop() {
+		this.pager.setAdapter(null);
 		Log.d("iHW-lc", "ScheduleActivity onStop");
 		pager.setAdapter(null);
 		if (progressDialog != null) progressDialog.dismiss();
