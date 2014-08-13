@@ -60,6 +60,13 @@ public class PreferencesActivity extends IHWActivity implements ListAdapter {
 		
 	}
 	
+	protected void onStart() {
+		super.onStart();
+		if (getIntent().getBooleanExtra("showYearOptions", false)) {
+			showYearOptions();
+		}
+	}
+	
 	@Override
 	public boolean onOptionsItemSelected(MenuItem item) {
 		int id = item.getItemId();
