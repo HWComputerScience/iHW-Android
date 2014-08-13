@@ -1,12 +1,12 @@
 package com.ihwapp.android;
 
 import com.ihwapp.android.model.Curriculum;
-import com.ihwapp.android.model.Date;
 
 import android.app.*;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.*;
 import android.widget.*;
 
@@ -18,11 +18,6 @@ public class FirstRunActivity extends IHWActivity implements Curriculum.ModelLoa
 	
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		if (Curriculum.getCurrentYear() == 0) {
-			Date d = new Date();
-			d.add(Date.MONTH, -6);
-			Curriculum.setCurrentYear(d.get(Date.YEAR));
-		}
 		
 		this.setContentView(R.layout.activity_firstrun);
 		campusLayout = (LinearLayout)this.findViewById(R.id.layout_choose_campus);
@@ -36,6 +31,7 @@ public class FirstRunActivity extends IHWActivity implements Curriculum.ModelLoa
 				//Log.d("iHW", "Loading curriculum: " + Curriculum.loadCurrentCurriculum(FirstRunActivity.this));
 				campusLayout.setVisibility(View.GONE);
 				coursesLayout.setVisibility(View.VISIBLE);
+				FirstRunActivity.this.getIntent().putExtra("skipToCourses", true);
 			}
 		});
 		
@@ -47,6 +43,7 @@ public class FirstRunActivity extends IHWActivity implements Curriculum.ModelLoa
 				//Log.d("iHW", "Loading curriculum: " + Curriculum.loadCurrentCurriculum(FirstRunActivity.this));
 				campusLayout.setVisibility(View.GONE);
 				coursesLayout.setVisibility(View.VISIBLE);
+				FirstRunActivity.this.getIntent().putExtra("skipToCourses", true);
 			}
 		});
 		
@@ -70,8 +67,9 @@ public class FirstRunActivity extends IHWActivity implements Curriculum.ModelLoa
 	}
 	
 	@Override
-	protected void onStart() {
-		super.onStart();
+	protected void onResume() {
+		super.onResume();
+		Log.d("iHW", "FirstRunActivity onResume: " + Curriculum.getCurrentYear() + " " + Curriculum.getCurrentCampus());
 		if (this.getIntent().getBooleanExtra("skipToCourses", false)) {
 			Curriculum.reloadCurrentCurriculum().addModelLoadingListener(FirstRunActivity.this);
 			campusLayout.setVisibility(View.GONE);
@@ -120,6 +118,7 @@ public class FirstRunActivity extends IHWActivity implements Curriculum.ModelLoa
 			public void onClick(DialogInterface dialog, int which) {
 				Intent i = new Intent(FirstRunActivity.this, PreferencesActivity.class);
 				i.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_NEW_TASK);
+				i.putExtra("showYearOptions", true);
 				startActivity(i);
 			}
 		}).setCancelable(false).create();

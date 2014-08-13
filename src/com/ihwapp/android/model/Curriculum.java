@@ -13,7 +13,6 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import com.ihwapp.android.Constants;
-import com.ihwapp.android.LaunchActivity;
 import com.ihwapp.android.NotificationService;
 import com.ihwapp.android.UpdateService;
 
@@ -26,7 +25,6 @@ import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.net.Uri;
 import android.os.AsyncTask;
-import android.os.SystemClock;
 import android.util.Log;
 
 public class Curriculum {
@@ -66,7 +64,27 @@ public class Curriculum {
 	}
 	
 	public static void setCurrentYear(int year) {
-		ctx.getSharedPreferences("iHW", Context.MODE_PRIVATE).edit().putInt("year", year).commit();
+		Date d = new Date();
+		d.add(Date.MONTH, -6);
+		ctx.getSharedPreferences("iHW", Context.MODE_PRIVATE).edit()
+		   .putInt("year", year)
+		   .putInt("manualYear", d.get(Date.YEAR)).commit();
+	}
+	
+	public static void updateCurrentYear() {
+		Date d = new Date();
+		d.add(Date.MONTH, -6);
+		ctx.getSharedPreferences("iHW", Context.MODE_PRIVATE).edit()
+		   .putInt("year", d.get(Date.YEAR))
+		   .putInt("campus", 0)
+		   .putInt("manualYear", 0).commit();
+	}
+	
+	public static boolean yearSetManually() {
+		Date d = new Date();
+		d.add(Date.MONTH, -6);
+		SharedPreferences prefs = ctx.getSharedPreferences("iHW", Context.MODE_PRIVATE);
+		return (prefs.getInt("manualYear", 0) == d.get(Date.YEAR));
 	}
 	
 	public static void setCurrentCampus(int campus) {
@@ -196,7 +214,7 @@ public class Curriculum {
 	/*********************************BEGIN LOADING STUFF**************************************/
 	
 	public void addModelLoadingListener(ModelLoadingListener ofll) { mlls.add(ofll); }
-	//public void removeOnFinishedLoadingListener(ModelLoadingListener ofll) { mlls.remove(ofll); }
+	public void removeModelLoadingListener(ModelLoadingListener ofll) { mlls.remove(ofll); }
 	
 	private void loadEverything(final Date startingDate) {
 		if (loadingProgress >= 0) {

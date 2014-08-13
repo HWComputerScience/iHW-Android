@@ -30,9 +30,9 @@ public class ScheduleActivity extends FragmentActivity implements Curriculum.Mod
 	@SuppressWarnings("deprecation")
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
-		
 		Curriculum.ctx = this.getApplicationContext();
 		super.onCreate(savedInstanceState);
+		
 		setContentView(R.layout.activity_schedule);
 		this.setTitle("View Schedule");
 		if (savedInstanceState != null) lastIndex = savedInstanceState.getInt("lastIndex");
@@ -72,7 +72,7 @@ public class ScheduleActivity extends FragmentActivity implements Curriculum.Mod
 	
 	protected void onStart() {
 		super.onStart();
-		Log.d("iHW-lc", "ScheduleActivity onStart: first loaded date " + Curriculum.getCurrentCurriculum().getFirstLoadedDate());
+		//Log.d("iHW-lc", "ScheduleActivity onStart: first loaded date " + Curriculum.getCurrentCurriculum().getFirstLoadedDate());
 		//Typeface georgia = Typeface.createFromAsset(getAssets(), "fonts/Georgia.ttf");
 		if (Curriculum.getCurrentCurriculum().isLoaded()) {
 			Log.d("iHW", "Setting adapter: " + lastIndex);
@@ -125,6 +125,7 @@ public class ScheduleActivity extends FragmentActivity implements Curriculum.Mod
 	public void onLoadFailed(Curriculum c) {
 		if (progressDialog != null) progressDialog.dismiss();
 		progressDialog = null;
+		Curriculum.getCurrentCurriculum().removeModelLoadingListener(this);
 		if (this.isFinishing()) return;
 		new AlertDialog.Builder(this, R.style.PopupTheme).setMessage("The schedule for the campus and year you selected is not available. Check your internet connection and try again, or choose a different campus or year.")
 		.setPositiveButton("Cancel", new DialogInterface.OnClickListener() {
@@ -137,6 +138,7 @@ public class ScheduleActivity extends FragmentActivity implements Curriculum.Mod
 			public void onClick(DialogInterface dialog, int which) {
 				Intent i = new Intent(ScheduleActivity.this, PreferencesActivity.class);
 				i.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_NEW_TASK);
+				i.putExtra("showYearOptions", true);
 				startActivity(i);
 			}
 		})
