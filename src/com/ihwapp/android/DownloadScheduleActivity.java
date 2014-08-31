@@ -18,7 +18,7 @@ import android.widget.*;
 import android.webkit.*;
 
 public class DownloadScheduleActivity extends IHWActivity {
-	private boolean alreadyLoaded = false;
+	private int alreadyLoaded = 0;
     private final Activity thisActivity = this;
 
 	@SuppressLint("SetJavaScriptEnabled")
@@ -32,33 +32,33 @@ public class DownloadScheduleActivity extends IHWActivity {
 		webview.getSettings().setBuiltInZoomControls(true);
 		webview.setWebViewClient(new WebViewClient() {
             public boolean shouldOverrideUrlLoading(WebView view, String url) {
-                if (url.equals("http://www.hw.com/students/SchoolResources/MyScheduleEvents.aspx") ||
-                        url.equals("https://www.hw.com/students/SchoolResources/MyScheduleEvents.aspx") ||
-                        url.equals("https://www.hw.com/students/Login/tabid/2279/Default.aspx?returnurl=%2fstudents%2fSchoolResources%2fMyScheduleEvents.aspx")) {
-                    //Log.d(TAG, "Loading URL: " + url);
+                if (url.equals("https://www.hw.com/students/Login?returnurl=/students/School-Resources/My-Schedule-Events") ||
+                		url.equals("https://www.hw.com/students/School-Resources/My-Schedule-Events") ||
+                        url.equals("http://www.hw.com/students/School-Resources/My-Schedule-Events")) {
+                    //Log.d("iHW-dl", "Loading URL: " + url);
                     return false;
                 }
-                //Log.d(TAG, "Preventing you from loading URL: " + url);
+                //Log.d("iHW-dl", "Preventing you from loading URL: " + url);
                 return true;
             }
 
             public void onPageFinished(WebView view, String url) {
-                if (url.equals("https://www.hw.com/students/Login/tabid/2279/Default.aspx?returnurl=%2fstudents%2fSchoolResources%2fMyScheduleEvents.aspx")) {
+                if (url.equals("https://www.hw.com/students/Login?returnurl=/students/School-Resources/My-Schedule-Events")) {
                     view.setVisibility(View.VISIBLE);
                     changeInfoText("Please log into HW.com below.");
                     ((LinearLayout) findViewById(R.id.layout_notes)).setGravity(Gravity.TOP | Gravity.LEFT);
-                } else if (url.equals("http://www.hw.com/students/SchoolResources/MyScheduleEvents.aspx")) {
-                    //Log.d(TAG, "Loaded My Schedule and Events");
-                    if (!alreadyLoaded) {
+                } else if (url.equals("http://www.hw.com/students/School-Resources/My-Schedule-Events")) {
+                    //Log.d("iHW-dl", "Loaded My Schedule and Events: " + alreadyLoaded);
+                    if (alreadyLoaded == 0) {
                         ((LinearLayout) findViewById(R.id.layout_notes)).setGravity(Gravity.CENTER);
                         changeInfoText("Please wait, finding schedule...");
                         view.setVisibility(View.INVISIBLE);
                         view.setLayoutParams(new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT, 0));
-                        alreadyLoaded = true;
                         view.loadUrl("javascript:__doPostBack(\"dnn$ctr8420$InteractiveSchedule$lnkStudentScheduleHTML\", \"\");");
-                    } else {
+                    } else if (alreadyLoaded == 2) {
                         view.loadUrl("javascript:console.log(\"SCHEDULE_URL=\"+document.getElementById(\"dnn_ctr8420_InteractiveSchedule_txtWindowPopupUrl\").value)");
                     }
+                    alreadyLoaded++;
                 }/* else {
 					new AlertDialog.Builder(DownloadScheduleActivity.this)
 						.setTitle("Schedule Unavailable")
@@ -74,7 +74,7 @@ public class DownloadScheduleActivity extends IHWActivity {
             }
 
             public void onReceivedError(WebView view, int errorCode, String description, String failingUrl) {
-                //Log.e("iHW", errorCode + ": " + description);
+                //Log.e("iHW-dl", errorCode + ": " + description);
                 showScheduleUnavailableError();
             }
         });
@@ -82,8 +82,10 @@ public class DownloadScheduleActivity extends IHWActivity {
             public boolean onConsoleMessage(ConsoleMessage consoleMessage) {
                 if (consoleMessage.message().startsWith("SCHEDULE_URL=")) {
                     String url = consoleMessage.message().substring(13);
-                    if (url.length() != 0) new DownloadParseScheduleTask().execute(url);
-                    else {
+                    if (url.length() != 0) {
+                    	new DownloadParseScheduleTask().execute(url);
+                    } else {
+                    	//Log.e("iHW-dl", "Failed to get Schedule URL: " + consoleMessage.message());
                         showScheduleUnavailableError();
                     }
                 }
@@ -91,7 +93,7 @@ public class DownloadScheduleActivity extends IHWActivity {
             }
         });
 		android.webkit.CookieManager.getInstance().removeAllCookie();
-		webview.loadUrl("https://www.hw.com/students/Login/tabid/2279/Default.aspx?returnurl=%2fstudents%2fSchoolResources%2fMyScheduleEvents.aspx");
+		webview.loadUrl("https://www.hw.com/students/Login?returnurl=/students/School-Resources/My-Schedule-Events");
         setupActionBar();
 	}
 	
@@ -115,12 +117,12 @@ public class DownloadScheduleActivity extends IHWActivity {
 			changeInfoText("Schedule found. Downloading...");
 		}
 		protected Document doInBackground(String...url) {
-			//Log.d("iHW", "Downloading/parsing HTML");
+			//Log.d("iHW-dl", "Downloading/parsing HTML");
 			Document doc = null;
 			try {
 				doc = Jsoup.connect(url[0]).get();
 			} catch (Exception e) {
-				//Log.e("iHW", e.getClass().getName() + " Downloading/parsing HTML");
+				//Log.e("iHW-dl", e.getClass().getName() + " Downloading/parsing HTML");
 				e.printStackTrace();
 			}
 			return doc;

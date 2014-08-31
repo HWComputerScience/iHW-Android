@@ -74,10 +74,14 @@ public class Curriculum {
 	public static void updateCurrentYear() {
 		Date d = new Date();
 		d.add(Date.MONTH, -6);
-		ctx.getSharedPreferences("iHW", Context.MODE_PRIVATE).edit()
-		   .putInt("year", d.get(Date.YEAR))
-		   .putInt("campus", 0)
-		   .putInt("manualYear", 0).commit();
+		SharedPreferences p = ctx.getSharedPreferences("iHW", Context.MODE_PRIVATE);
+		SharedPreferences.Editor ed = p.edit();
+		if (p.getInt("year", 0) != d.get(Date.YEAR)) {
+			ed.putInt("campus", 0);
+		}
+		ed.putInt("year", d.get(Date.YEAR));
+		ed.putInt("manualYear", 0);
+		ed.commit();
 	}
 	
 	public static boolean yearSetManually() {
