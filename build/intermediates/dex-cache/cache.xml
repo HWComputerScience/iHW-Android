@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<pre-dex-items>
+
+    <item
+        dex="/home/ethan/Documents/iHW/app/build/intermediates/pre-dexed/debug/jsoup-1.7.2-0244ef986e1e9f10f9cc52b51b3c5f12efafa61b.jar"
+        jar="/home/ethan/Documents/iHW/app/libs/jsoup-1.7.2.jar"
+        jumboMode="false"
+        revision="20.0.0"
+        sha1="872693211fd68d1c4e116cf90021603207725e19"/>
+    <item
+        dex="/home/ethan/Documents/iHW/app/build/intermediates/pre-dexed/debug/classes-f6e276fd9ce4652f4e5f9a3ebfa33f6d763e8417.jar"
+        jar="/home/ethan/Documents/iHW/app/build/intermediates/exploded-aar/com.android.support/support-v4/20.0.0/classes.jar"
+        jumboMode="false"
+        revision="20.0.0"
+        sha1="8694693636ab36910c8100ce527c258ff3ebece0"/>
+    <item
+        dex="/home/ethan/Documents/iHW/app/build/intermediates/pre-dexed/debug/internal_impl-20.0.0-8954a60866f37f1a211b39a95f435b0d3a82a946.jar"
+        jar="/home/ethan/Documents/iHW/app/build/intermediates/exploded-aar/com.android.support/support-v4/20.0.0/libs/internal_impl-20.0.0.jar"
+        jumboMode="false"
+        revision="20.0.0"
+        sha1="e40b3078e3fbd353c9f44da8df25a8fc0078209d"/>
+    <item
+        dex="/home/ethan/Documents/iHW/app/build/intermediates/pre-dexed/debug/support-annotations-20.0.0-820090ec777e85e5f91abc11b0ce2cdd64f29191.jar"
+        jar="/usr/share/android-studio/data/sdk/extras/android/m2repository/com/android/support/support-annotations/20.0.0/support-annotations-20.0.0.jar"
+        jumboMode="false"
+        revision="20.0.0"
+        sha1="9d9013e9ff35fc3756411e62873c363c70c638fa"/>
+
+</pre-dex-items>

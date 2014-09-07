@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merger version="2" >
+
+    <dataSet config="21.0.0-rc1" >
+        <source path="/home/ethan/Documents/iHW/app/build/intermediates/exploded-aar/com.android.support/support-v4/21.0.0-rc1/assets" />
+    </dataSet>
+    <dataSet config="main" >
+        <source path="/home/ethan/Documents/iHW/app/src/main/assets" >
+            <file
+                name="disclaimer.html"
+                path="/home/ethan/Documents/iHW/app/src/main/assets/disclaimer.html" />
+            <file
+                name="about.html"
+                path="/home/ethan/Documents/iHW/app/src/main/assets/about.html" />
+        </source>
+    </dataSet>
+    <dataSet config="debug" >
+        <source path="/home/ethan/Documents/iHW/app/src/debug/assets" />
+    </dataSet>
+
+</merger>
