@@ -26,8 +26,3 @@ proguard/
 
 # Log Files
 *.log
-=======
-.DS_Store
-.metadata/
-publicity/
->>>>>>> 48579dd1f1d2cebdc781e9d1476ff9182fa00933
