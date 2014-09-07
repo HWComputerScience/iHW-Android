@@ -17,7 +17,830 @@
     <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="app: com.ihwapp.android" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8f480bd7-025b-4e7c-bfcb-d6e6679f8dda" name="Default" comment="" />
+    <list default="true" id="8f480bd7-025b-4e7c-bfcb-d6e6679f8dda" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iHW-Android/bin/classes/com/ihwapp/android/BackgroundImageButton$SAutoBgButtonBackgroundDrawable.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iHW-Android/out/production/iHW-Android/com/ihwapp/android/BackgroundImageButton$SAutoBgButtonBackgroundDrawable.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iHW-Android/bin/classes/com/ihwapp/android/BackgroundImageButton.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iHW-Android/out/production/iHW-Android/com/ihwapp/android/BackgroundImageButton.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iHW-Android/bin/classes/com/ihwapp/android/BuildConfig.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iHW-Android/out/production/iHW-Android/com/ihwapp/android/BuildConfig.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iHW-Android/bin/classes/com/ihwapp/android/Constants.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iHW-Android/out/production/iHW-Android/com/ihwapp/android/Constants.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iHW-Android/bin/classes/com/ihwapp/android/model/Course.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iHW-Android/out/production/iHW-Android/com/ihwapp/android/model/Course.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iHW-Android/out/production/iHW-Android/com/ihwapp/android/CoursesActivity$1.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iHW-Android/bin/classes/com/ihwapp/android/CoursesActivity$ListSelectionListener.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iHW-Android/out/production/iHW-Android/com/ihwapp/android/CoursesActivity$ListSelectionListener.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iHW-Android/bin/classes/com/ihwapp/android/CoursesActivity.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iHW-Android/out/production/iHW-Android/com/ihwapp/android/CoursesActivity.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iHW-Android/bin/classes/com/ihwapp/android/model/Curriculum$1.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iHW-Android/out/production/iHW-Android/com/ihwapp/android/model/Curriculum$1.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iHW-Android/bin/classes/com/ihwapp/android/model/Curriculum$2.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iHW-Android/out/production/iHW-Android/com/ihwapp/android/model/Curriculum$2.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iHW-Android/bin/classes/com/ihwapp/android/model/Curriculum$3.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iHW-Android/out/production/iHW-Android/com/ihwapp/android/model/Curriculum$3.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iHW-Android/bin/classes/com/ihwapp/android/model/Curriculum$4.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iHW-Android/out/production/iHW-Android/com/ihwapp/android/model/Curriculum$4.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iHW-Android/bin/classes/com/ihwapp/android/model/Curriculum$DownloadTask.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iHW-Android/out/production/iHW-Android/com/ihwapp/android/model/Curriculum$DownloadTask.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iHW-Android/bin/classes/com/ihwapp/android/model/Curriculum$ModelLoadingListener.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iHW-Android/out/production/iHW-Android/com/ihwapp/android/model/Curriculum$ModelLoadingListener.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iHW-Android/bin/classes/com/ihwapp/android/model/Curriculum.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iHW-Android/out/production/iHW-Android/com/ihwapp/android/model/Curriculum.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iHW-Android/bin/classes/com/ihwapp/android/CustomFontPagerTitleStrip.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iHW-Android/out/production/iHW-Android/com/ihwapp/android/CustomFontPagerTitleStrip.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iHW-Android/bin/classes/com/ihwapp/android/model/Date.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iHW-Android/out/production/iHW-Android/com/ihwapp/android/model/Date.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iHW-Android/bin/classes/com/ihwapp/android/model/Day.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iHW-Android/out/production/iHW-Android/com/ihwapp/android/model/Day.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iHW-Android/bin/classes/com/ihwapp/android/DayFragment$1.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iHW-Android/out/production/iHW-Android/com/ihwapp/android/DayFragment$1.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iHW-Android/out/production/iHW-Android/com/ihwapp/android/DayFragment$2$1.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iHW-Android/bin/classes/com/ihwapp/android/DayFragment$2.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iHW-Android/out/production/iHW-Android/com/ihwapp/android/DayFragment$2.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iHW-Android/bin/classes/com/ihwapp/android/DayFragment$3$1.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iHW-Android/bin/classes/com/ihwapp/android/DayFragment$3.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iHW-Android/bin/classes/com/ihwapp/android/DayFragment$OnFragmentVisibilityChangedListener.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iHW-Android/out/production/iHW-Android/com/ihwapp/android/DayFragment$OnFragmentVisibilityChangedListener.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iHW-Android/bin/classes/com/ihwapp/android/DayFragment.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iHW-Android/out/production/iHW-Android/com/ihwapp/android/DayFragment.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iHW-Android/bin/classes/com/ihwapp/android/DownloadScheduleActivity$1.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iHW-Android/out/production/iHW-Android/com/ihwapp/android/DownloadScheduleActivity$1.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iHW-Android/bin/classes/com/ihwapp/android/DownloadScheduleActivity$2.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iHW-Android/out/production/iHW-Android/com/ihwapp/android/DownloadScheduleActivity$2.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iHW-Android/bin/classes/com/ihwapp/android/DownloadScheduleActivity$3.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iHW-Android/out/production/iHW-Android/com/ihwapp/android/DownloadScheduleActivity$3.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iHW-Android/bin/classes/com/ihwapp/android/DownloadScheduleActivity$4.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iHW-Android/out/production/iHW-Android/com/ihwapp/android/DownloadScheduleActivity$4.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iHW-Android/bin/classes/com/ihwapp/android/DownloadScheduleActivity$DownloadParseScheduleTask$1.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iHW-Android/out/production/iHW-Android/com/ihwapp/android/DownloadScheduleActivity$DownloadParseScheduleTask$1.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iHW-Android/bin/classes/com/ihwapp/android/DownloadScheduleActivity$DownloadParseScheduleTask$2.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iHW-Android/out/production/iHW-Android/com/ihwapp/android/DownloadScheduleActivity$DownloadParseScheduleTask$2.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iHW-Android/bin/classes/com/ihwapp/android/DownloadScheduleActivity$DownloadParseScheduleTask.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iHW-Android/out/production/iHW-Android/com/ihwapp/android/DownloadScheduleActivity$DownloadParseScheduleTask.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iHW-Android/bin/classes/com/ihwapp/android/DownloadScheduleActivity.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iHW-Android/out/production/iHW-Android/com/ihwapp/android/DownloadScheduleActivity.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iHW-Android/bin/classes/com/ihwapp/android/EditCourseActivity$1.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iHW-Android/out/production/iHW-Android/com/ihwapp/android/EditCourseActivity$1.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iHW-Android/bin/classes/com/ihwapp/android/EditCourseActivity$DoublePeriodsEnforcer.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iHW-Android/out/production/iHW-Android/com/ihwapp/android/EditCourseActivity$DoublePeriodsEnforcer.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iHW-Android/bin/classes/com/ihwapp/android/EditCourseActivity$PeriodBoxFilter.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iHW-Android/out/production/iHW-Android/com/ihwapp/android/EditCourseActivity$PeriodBoxFilter.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iHW-Android/bin/classes/com/ihwapp/android/EditCourseActivity.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iHW-Android/out/production/iHW-Android/com/ihwapp/android/EditCourseActivity.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/FeatureGraphic.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/FeatureGraphic.psd" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iHW-Android/bin/classes/com/ihwapp/android/FirstRunActivity$1.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iHW-Android/out/production/iHW-Android/com/ihwapp/android/FirstRunActivity$1.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iHW-Android/bin/classes/com/ihwapp/android/FirstRunActivity$2.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iHW-Android/out/production/iHW-Android/com/ihwapp/android/FirstRunActivity$2.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iHW-Android/bin/classes/com/ihwapp/android/FirstRunActivity$3.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iHW-Android/out/production/iHW-Android/com/ihwapp/android/FirstRunActivity$3.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iHW-Android/bin/classes/com/ihwapp/android/FirstRunActivity$4.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iHW-Android/out/production/iHW-Android/com/ihwapp/android/FirstRunActivity$4.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iHW-Android/bin/classes/com/ihwapp/android/FirstRunActivity$5.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iHW-Android/out/production/iHW-Android/com/ihwapp/android/FirstRunActivity$5.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iHW-Android/bin/classes/com/ihwapp/android/FirstRunActivity$6.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iHW-Android/out/production/iHW-Android/com/ihwapp/android/FirstRunActivity$6.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iHW-Android/bin/classes/com/ihwapp/android/FirstRunActivity.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iHW-Android/out/production/iHW-Android/com/ihwapp/android/FirstRunActivity.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iHW-Android/bin/classes/com/ihwapp/android/GuidedCoursesActivity$1.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iHW-Android/out/production/iHW-Android/com/ihwapp/android/GuidedCoursesActivity$1.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iHW-Android/bin/classes/com/ihwapp/android/GuidedCoursesActivity.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iHW-Android/out/production/iHW-Android/com/ihwapp/android/GuidedCoursesActivity.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/HW Coat of Arms.ai" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iHW-Android/bin/classes/com/ihwapp/android/model/Holiday.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iHW-Android/out/production/iHW-Android/com/ihwapp/android/model/Holiday.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iHW-Android/bin/classes/com/ihwapp/android/IHWActivity.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iHW-Android/bin/classes/com/ihwapp/android/LaunchActivity.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iHW-Android/out/production/iHW-Android/com/ihwapp/android/LaunchActivity.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iHW-Android/bin/classes/com/ihwapp/android/NormalCoursesActivity.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iHW-Android/out/production/iHW-Android/com/ihwapp/android/NormalCoursesActivity.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iHW-Android/bin/classes/com/ihwapp/android/model/NormalDay.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iHW-Android/out/production/iHW-Android/com/ihwapp/android/model/NormalDay.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iHW-Android/bin/classes/com/ihwapp/android/model/Note$1.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iHW-Android/out/production/iHW-Android/com/ihwapp/android/model/Note$1.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iHW-Android/bin/classes/com/ihwapp/android/model/Note.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iHW-Android/out/production/iHW-Android/com/ihwapp/android/model/Note.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iHW-Android/bin/classes/com/ihwapp/android/NotificationService.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iHW-Android/bin/classes/com/ihwapp/android/OldPreferencesActivity$1.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iHW-Android/bin/classes/com/ihwapp/android/OldPreferencesActivity$2.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iHW-Android/bin/classes/com/ihwapp/android/OldPreferencesActivity$3.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iHW-Android/bin/classes/com/ihwapp/android/OldPreferencesActivity$4.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iHW-Android/bin/classes/com/ihwapp/android/OldPreferencesActivity$5.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iHW-Android/bin/classes/com/ihwapp/android/OldPreferencesActivity.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iHW-Android/bin/classes/com/ihwapp/android/model/Period$1.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iHW-Android/out/production/iHW-Android/com/ihwapp/android/model/Period$1.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iHW-Android/bin/classes/com/ihwapp/android/model/Period.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iHW-Android/out/production/iHW-Android/com/ihwapp/android/model/Period.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iHW-Android/bin/classes/com/ihwapp/android/PeriodView$1.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iHW-Android/out/production/iHW-Android/com/ihwapp/android/PeriodView$1.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iHW-Android/bin/classes/com/ihwapp/android/PeriodView$2$1.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iHW-Android/out/production/iHW-Android/com/ihwapp/android/PeriodView$2$1.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iHW-Android/bin/classes/com/ihwapp/android/PeriodView$2.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iHW-Android/out/production/iHW-Android/com/ihwapp/android/PeriodView$2.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iHW-Android/bin/classes/com/ihwapp/android/PeriodView$NoteTextWatcher.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iHW-Android/out/production/iHW-Android/com/ihwapp/android/PeriodView$NoteTextWatcher.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iHW-Android/bin/classes/com/ihwapp/android/PeriodView$OptionsMenuListener.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iHW-Android/out/production/iHW-Android/com/ihwapp/android/PeriodView$OptionsMenuListener.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iHW-Android/bin/classes/com/ihwapp/android/PeriodView.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iHW-Android/out/production/iHW-Android/com/ihwapp/android/PeriodView.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iHW-Android/bin/classes/com/ihwapp/android/PreferencesActivity$1.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iHW-Android/out/production/iHW-Android/com/ihwapp/android/PreferencesActivity$1.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iHW-Android/bin/classes/com/ihwapp/android/PreferencesActivity$2.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iHW-Android/out/production/iHW-Android/com/ihwapp/android/PreferencesActivity$2.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iHW-Android/bin/classes/com/ihwapp/android/PreferencesActivity$3.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iHW-Android/out/production/iHW-Android/com/ihwapp/android/PreferencesActivity$3.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iHW-Android/bin/classes/com/ihwapp/android/PreferencesActivity$4.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iHW-Android/out/production/iHW-Android/com/ihwapp/android/PreferencesActivity$4.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iHW-Android/bin/classes/com/ihwapp/android/PreferencesActivity$5.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iHW-Android/out/production/iHW-Android/com/ihwapp/android/PreferencesActivity$5.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iHW-Android/bin/classes/com/ihwapp/android/PreferencesActivity.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iHW-Android/out/production/iHW-Android/com/ihwapp/android/PreferencesActivity.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iHW-Android/bin/classes/com/ihwapp/android/R$array.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iHW-Android/out/production/iHW-Android/com/ihwapp/android/R$array.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iHW-Android/bin/classes/com/ihwapp/android/R$attr.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iHW-Android/out/production/iHW-Android/com/ihwapp/android/R$attr.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iHW-Android/bin/classes/com/ihwapp/android/R$color.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iHW-Android/out/production/iHW-Android/com/ihwapp/android/R$color.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iHW-Android/bin/classes/com/ihwapp/android/R$dimen.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iHW-Android/out/production/iHW-Android/com/ihwapp/android/R$dimen.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iHW-Android/bin/classes/com/ihwapp/android/R$drawable.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iHW-Android/out/production/iHW-Android/com/ihwapp/android/R$drawable.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iHW-Android/bin/classes/com/ihwapp/android/R$id.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iHW-Android/out/production/iHW-Android/com/ihwapp/android/R$id.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iHW-Android/bin/classes/com/ihwapp/android/R$layout.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iHW-Android/out/production/iHW-Android/com/ihwapp/android/R$layout.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iHW-Android/bin/classes/com/ihwapp/android/R$menu.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iHW-Android/out/production/iHW-Android/com/ihwapp/android/R$menu.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iHW-Android/bin/classes/com/ihwapp/android/R$string.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iHW-Android/out/production/iHW-Android/com/ihwapp/android/R$string.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iHW-Android/bin/classes/com/ihwapp/android/R$style.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iHW-Android/out/production/iHW-Android/com/ihwapp/android/R$style.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iHW-Android/bin/classes/com/ihwapp/android/R.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iHW-Android/out/production/iHW-Android/com/ihwapp/android/R.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iHW-Android/bin/classes/com/ihwapp/android/RotatedTextView.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iHW-Android/out/production/iHW-Android/com/ihwapp/android/RotatedTextView.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iHW-Android/bin/classes/com/ihwapp/android/ScheduleActivity$1.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iHW-Android/out/production/iHW-Android/com/ihwapp/android/ScheduleActivity$1.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iHW-Android/bin/classes/com/ihwapp/android/ScheduleActivity$2.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iHW-Android/out/production/iHW-Android/com/ihwapp/android/ScheduleActivity$2.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iHW-Android/bin/classes/com/ihwapp/android/ScheduleActivity$3.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iHW-Android/out/production/iHW-Android/com/ihwapp/android/ScheduleActivity$3.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iHW-Android/bin/classes/com/ihwapp/android/ScheduleActivity$4.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iHW-Android/out/production/iHW-Android/com/ihwapp/android/ScheduleActivity$4.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iHW-Android/bin/classes/com/ihwapp/android/ScheduleActivity$5.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iHW-Android/out/production/iHW-Android/com/ihwapp/android/ScheduleActivity$5.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iHW-Android/bin/classes/com/ihwapp/android/ScheduleActivity$6.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iHW-Android/bin/classes/com/ihwapp/android/ScheduleActivity$DayPagerAdapter.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iHW-Android/out/production/iHW-Android/com/ihwapp/android/ScheduleActivity$DayPagerAdapter.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iHW-Android/bin/classes/com/ihwapp/android/ScheduleActivity.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iHW-Android/out/production/iHW-Android/com/ihwapp/android/ScheduleActivity.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/screenshots/1.0/Screenshot_2013-09-14-16-53-39.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/screenshots/1.0/Screenshot_2013-09-14-16-54-39.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/screenshots/1.0/Screenshot_2013-09-14-16-54-48.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/screenshots/1.1/Screenshot_2014-05-15-08-17-30.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/screenshots/1.1/Screenshot_2014-05-15-08-28-13.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/screenshots/1.1/Screenshot_2014-05-15-08-28-55.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/screenshots/1.1/Screenshot_2014-05-15-08-29-13.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iHW-Android/bin/classes/com/ihwapp/android/Separator.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iHW-Android/out/production/iHW-Android/com/ihwapp/android/Separator.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iHW-Android/bin/classes/com/ihwapp/android/model/TestDay.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iHW-Android/out/production/iHW-Android/com/ihwapp/android/model/TestDay.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iHW-Android/bin/classes/com/ihwapp/android/model/Time$1.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iHW-Android/out/production/iHW-Android/com/ihwapp/android/model/Time$1.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iHW-Android/bin/classes/com/ihwapp/android/model/Time.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iHW-Android/out/production/iHW-Android/com/ihwapp/android/model/Time.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iHW-Android/bin/classes/com/ihwapp/android/UpdateService.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iHW-Android/bin/classes/com/ihwapp/android/WebViewActivity.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iHW-Android/bin/dexedLibs/android-support-v4-b027ae562bdcff0b265b95cdc8bf8f3b.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iHW-Android/bin/dexedLibs/android-support-v4-fbdea0ca29c6a4ca86e8ab1162469560.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iHW-Android/libs/android-support-v4.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iHW-Android/bin/classes.dex" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/gear.psd" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/graygear.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/graygear.psd" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/graygear@2x.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/hwlogo.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/hwlogo_small.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iHW-Android-1.0-Beta.apk" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iHW-Android-1.0.apk" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iHW-Android-1.1-Beta.apk" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iHW-Android-1.1.1.apk" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iHW-Android-1.1.2.apk" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iHW-Android-1.1.3.apk" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iHW-Android-1.1.4.apk" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iHW-Android-1.1.apk" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iHW-Android/bin/iHW-Android.apk" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iHW-Android/out/production/iHW-Android/iHW-Android.apk" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iHW-Android/out/production/iHW-Android/iHW-Android.unaligned.apk" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iHW-Android/bin/res/crunch/drawable-hdpi/ic_action_date.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iHW-Android/bin/res/crunch/drawable-mdpi/ic_action_date.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iHW-Android/bin/res/crunch/drawable-xhdpi/ic_action_date.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iHW-Android/bin/res/crunch/drawable-xxhdpi/ic_action_date.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iHW-Android/out/res-cache/iHW-Android/drawable-hdpi/ic_action_date.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iHW-Android/out/res-cache/iHW-Android/drawable-mdpi/ic_action_date.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iHW-Android/out/res-cache/iHW-Android/drawable-xhdpi/ic_action_date.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iHW-Android/res/drawable-hdpi/ic_action_date.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iHW-Android/res/drawable-mdpi/ic_action_date.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iHW-Android/res/drawable-xhdpi/ic_action_date.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iHW-Android/res/drawable-xxhdpi/ic_action_date.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iHW-Android/bin/res/crunch/drawable-hdpi/ic_action_delete.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iHW-Android/bin/res/crunch/drawable-mdpi/ic_action_delete.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iHW-Android/bin/res/crunch/drawable-xhdpi/ic_action_delete.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iHW-Android/bin/res/crunch/drawable-xxhdpi/ic_action_delete.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iHW-Android/out/res-cache/iHW-Android/drawable-hdpi/ic_action_delete.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iHW-Android/out/res-cache/iHW-Android/drawable-mdpi/ic_action_delete.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iHW-Android/out/res-cache/iHW-Android/drawable-xhdpi/ic_action_delete.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iHW-Android/res/drawable-hdpi/ic_action_delete.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iHW-Android/res/drawable-mdpi/ic_action_delete.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iHW-Android/res/drawable-xhdpi/ic_action_delete.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iHW-Android/res/drawable-xxhdpi/ic_action_delete.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iHW-Android/bin/res/crunch/drawable-hdpi/ic_action_done.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iHW-Android/bin/res/crunch/drawable-mdpi/ic_action_done.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iHW-Android/bin/res/crunch/drawable-xhdpi/ic_action_done.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iHW-Android/bin/res/crunch/drawable-xxhdpi/ic_action_done.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iHW-Android/out/res-cache/iHW-Android/drawable-hdpi/ic_action_done.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iHW-Android/out/res-cache/iHW-Android/drawable-mdpi/ic_action_done.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iHW-Android/out/res-cache/iHW-Android/drawable-xhdpi/ic_action_done.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iHW-Android/res/drawable-hdpi/ic_action_done.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iHW-Android/res/drawable-mdpi/ic_action_done.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iHW-Android/res/drawable-xhdpi/ic_action_done.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iHW-Android/res/drawable-xxhdpi/ic_action_done.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iHW-Android/bin/res/crunch/drawable-hdpi/ic_action_done_disabled.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iHW-Android/bin/res/crunch/drawable-mdpi/ic_action_done_disabled.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iHW-Android/bin/res/crunch/drawable-xhdpi/ic_action_done_disabled.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iHW-Android/bin/res/crunch/drawable-xxhdpi/ic_action_done_disabled.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iHW-Android/out/res-cache/iHW-Android/drawable-hdpi/ic_action_done_disabled.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iHW-Android/out/res-cache/iHW-Android/drawable-mdpi/ic_action_done_disabled.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iHW-Android/out/res-cache/iHW-Android/drawable-xhdpi/ic_action_done_disabled.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iHW-Android/res/drawable-hdpi/ic_action_done_disabled.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iHW-Android/res/drawable-mdpi/ic_action_done_disabled.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iHW-Android/res/drawable-xhdpi/ic_action_done_disabled.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iHW-Android/res/drawable-xxhdpi/ic_action_done_disabled.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iHW-Android/bin/res/crunch/drawable-hdpi/ic_action_edit.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iHW-Android/bin/res/crunch/drawable-mdpi/ic_action_edit.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iHW-Android/bin/res/crunch/drawable-xhdpi/ic_action_edit.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iHW-Android/bin/res/crunch/drawable-xxhdpi/ic_action_edit.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iHW-Android/out/res-cache/iHW-Android/drawable-hdpi/ic_action_edit.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iHW-Android/out/res-cache/iHW-Android/drawable-mdpi/ic_action_edit.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iHW-Android/out/res-cache/iHW-Android/drawable-xhdpi/ic_action_edit.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iHW-Android/res/drawable-hdpi/ic_action_edit.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iHW-Android/res/drawable-mdpi/ic_action_edit.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iHW-Android/res/drawable-xhdpi/ic_action_edit.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iHW-Android/res/drawable-xxhdpi/ic_action_edit.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iHW-Android/bin/res/crunch/drawable-hdpi/ic_action_go_to_today.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iHW-Android/bin/res/crunch/drawable-mdpi/ic_action_go_to_today.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iHW-Android/bin/res/crunch/drawable-xhdpi/ic_action_go_to_today.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iHW-Android/bin/res/crunch/drawable-xxhdpi/ic_action_go_to_today.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iHW-Android/res/drawable-hdpi/ic_action_go_to_today.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iHW-Android/res/drawable-mdpi/ic_action_go_to_today.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iHW-Android/res/drawable-xhdpi/ic_action_go_to_today.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iHW-Android/res/drawable-xxhdpi/ic_action_go_to_today.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/ic_action_goto_date.ai" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iHW-Android/bin/res/crunch/drawable-hdpi/ic_action_goto_date.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iHW-Android/bin/res/crunch/drawable-mdpi/ic_action_goto_date.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iHW-Android/bin/res/crunch/drawable-xhdpi/ic_action_goto_date.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iHW-Android/bin/res/crunch/drawable-xxhdpi/ic_action_goto_date.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iHW-Android/res/drawable-hdpi/ic_action_goto_date.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iHW-Android/res/drawable-mdpi/ic_action_goto_date.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iHW-Android/res/drawable-xhdpi/ic_action_goto_date.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iHW-Android/res/drawable-xxhdpi/ic_action_goto_date.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/ic_action_goto_date_hdpi.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/ic_action_goto_date_mdpi.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/ic_action_goto_date_xhdpi.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/ic_action_goto_date_xxhdpi.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iHW-Android/bin/res/crunch/drawable-hdpi/ic_action_refresh.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iHW-Android/bin/res/crunch/drawable-mdpi/ic_action_refresh.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iHW-Android/bin/res/crunch/drawable-xhdpi/ic_action_refresh.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iHW-Android/bin/res/crunch/drawable-xxhdpi/ic_action_refresh.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iHW-Android/out/res-cache/iHW-Android/drawable-hdpi/ic_action_refresh.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iHW-Android/out/res-cache/iHW-Android/drawable-mdpi/ic_action_refresh.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iHW-Android/out/res-cache/iHW-Android/drawable-xhdpi/ic_action_refresh.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iHW-Android/res/drawable-hdpi/ic_action_refresh.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iHW-Android/res/drawable-mdpi/ic_action_refresh.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iHW-Android/res/drawable-xhdpi/ic_action_refresh.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iHW-Android/res/drawable-xxhdpi/ic_action_refresh.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iHW-Android/bin/res/crunch/drawable-hdpi/ic_action_settings.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iHW-Android/bin/res/crunch/drawable-mdpi/ic_action_settings.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iHW-Android/bin/res/crunch/drawable-xhdpi/ic_action_settings.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iHW-Android/bin/res/crunch/drawable-xxhdpi/ic_action_settings.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iHW-Android/out/res-cache/iHW-Android/drawable-hdpi/ic_action_settings.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iHW-Android/out/res-cache/iHW-Android/drawable-mdpi/ic_action_settings.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iHW-Android/out/res-cache/iHW-Android/drawable-xhdpi/ic_action_settings.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iHW-Android/res/drawable-hdpi/ic_action_settings.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iHW-Android/res/drawable-mdpi/ic_action_settings.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iHW-Android/res/drawable-xhdpi/ic_action_settings.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iHW-Android/res/drawable-xxhdpi/ic_action_settings.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iHW-Android/bin/res/crunch/drawable-hdpi/ic_content_new.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iHW-Android/bin/res/crunch/drawable-mdpi/ic_content_new.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iHW-Android/bin/res/crunch/drawable-xhdpi/ic_content_new.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iHW-Android/bin/res/crunch/drawable-xxhdpi/ic_content_new.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iHW-Android/out/res-cache/iHW-Android/drawable-hdpi/ic_content_new.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iHW-Android/out/res-cache/iHW-Android/drawable-mdpi/ic_content_new.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iHW-Android/out/res-cache/iHW-Android/drawable-xhdpi/ic_content_new.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iHW-Android/res/drawable-hdpi/ic_content_new.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iHW-Android/res/drawable-mdpi/ic_content_new.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iHW-Android/res/drawable-xhdpi/ic_content_new.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iHW-Android/res/drawable-xxhdpi/ic_content_new.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iHW-Android/ic_launcher-web.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iHW-Android/bin/res/crunch/drawable-hdpi/ic_launcher.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iHW-Android/bin/res/crunch/drawable-mdpi/ic_launcher.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iHW-Android/bin/res/crunch/drawable-xhdpi/ic_launcher.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iHW-Android/bin/res/crunch/drawable-xxhdpi/ic_launcher.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iHW-Android/out/res-cache/iHW-Android/drawable-hdpi/ic_launcher.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iHW-Android/out/res-cache/iHW-Android/drawable-mdpi/ic_launcher.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iHW-Android/out/res-cache/iHW-Android/drawable-xhdpi/ic_launcher.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iHW-Android/res/drawable-hdpi/ic_launcher.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iHW-Android/res/drawable-mdpi/ic_launcher.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iHW-Android/res/drawable-xhdpi/ic_launcher.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iHW-Android/res/drawable-xxhdpi/ic_launcher.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iHW-Android/out/res-cache/iHW-Android/drawable-hdpi/ic_launcher_2.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iHW-Android/out/res-cache/iHW-Android/drawable-mdpi/ic_launcher_2.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iHW-Android/out/res-cache/iHW-Android/drawable-xhdpi/ic_launcher_2.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/icon2_android.psd" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/icon2_android_fullsize.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/icon2_android_hdpi.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/icon2_android_mdpi.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/icon2_android_xhdpi.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/icon2_favicon.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/icon_android.psd" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/icon_android_fullsize.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/icon_android_hdpi.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/icon_android_mdpi.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/icon_android_playstore.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/icon_android_website.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/icon_android_xhdpi.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/icon_android_xxhdpi.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/icon_favicon.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iHW-Android/bin/dexedLibs/jsoup-1.7.2-4c1861b079d51ef263fed43584bc15ee.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iHW-Android/bin/dexedLibs/jsoup-1.7.2-a90b3cbda22948525122e55df1c4dedb.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iHW-Android/libs/jsoup-1.7.2.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iHW-Android/bin/res/crunch/drawable-hdpi/link.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iHW-Android/bin/res/crunch/drawable-mdpi/link.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iHW-Android/bin/res/crunch/drawable-xhdpi/link.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iHW-Android/bin/res/crunch/drawable-xxhdpi/link.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iHW-Android/res/drawable-hdpi/link.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iHW-Android/res/drawable-mdpi/link.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iHW-Android/res/drawable-xhdpi/link.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iHW-Android/res/drawable-xxhdpi/link.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/link.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/link.psd" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/link@2x.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/link_hdpi.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/link_mdpi.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/link_xhdpi.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/link_xxhdpi.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iHW-Android/res/drawable/mscampus.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/mscampus.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/mscampus.psd" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/notification.ai" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iHW-Android/bin/res/crunch/drawable-hdpi/notification_small.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iHW-Android/bin/res/crunch/drawable-mdpi/notification_small.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iHW-Android/bin/res/crunch/drawable-xhdpi/notification_small.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iHW-Android/bin/res/crunch/drawable-xxhdpi/notification_small.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iHW-Android/res/drawable-hdpi/notification_small.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iHW-Android/res/drawable-mdpi/notification_small.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iHW-Android/res/drawable-xhdpi/notification_small.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iHW-Android/res/drawable-xxhdpi/notification_small.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/psd-gears-icons.psd" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iHW-Android/bin/resources.ap_" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iHW-Android/bin/res/crunch/drawable/smallgear.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iHW-Android/out/res-cache/iHW-Android/drawable/smallgear.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iHW-Android/res/drawable/smallgear.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iHW-Android/res/drawable/uscampus.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/uscampus.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/uscampus.psd" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iHW-Android/.classpath" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iHW-Android/.idea/.name" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iHW-Android/.project" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iHW-Android/AndroidManifest.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iHW-Android/bin/AndroidManifest.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iHW-Android/src/com/ihwapp/android/BackgroundImageButton.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iHW-Android/gen/com/ihwapp/android/BuildConfig.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iHW-Android/src/com/ihwapp/android/Constants.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iHW-Android/src/com/ihwapp/android/model/Course.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iHW-Android/src/com/ihwapp/android/CoursesActivity.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iHW-Android/src/com/ihwapp/android/model/Curriculum.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iHW-Android/src/com/ihwapp/android/CustomFontPagerTitleStrip.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iHW-Android/src/com/ihwapp/android/model/Date.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iHW-Android/src/com/ihwapp/android/model/Day.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iHW-Android/src/com/ihwapp/android/DayFragment.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iHW-Android/src/com/ihwapp/android/DownloadScheduleActivity.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iHW-Android/src/com/ihwapp/android/EditCourseActivity.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iHW-Android/src/com/ihwapp/android/FirstRunActivity.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iHW-Android/src/com/ihwapp/android/GuidedCoursesActivity.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iHW-Android/src/com/ihwapp/android/model/Holiday.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iHW-Android/src/com/ihwapp/android/IHWActivity.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iHW-Android/src/com/ihwapp/android/LaunchActivity.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iHW-Android/src/com/ihwapp/android/NormalCoursesActivity.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iHW-Android/src/com/ihwapp/android/model/NormalDay.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iHW-Android/src/com/ihwapp/android/model/Note.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iHW-Android/src/com/ihwapp/android/NotificationService.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iHW-Android/src/com/ihwapp/android/OldPreferencesActivity.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iHW-Android/src/com/ihwapp/android/model/Period.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iHW-Android/src/com/ihwapp/android/PeriodView.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iHW-Android/src/com/ihwapp/android/PreferencesActivity.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iHW-Android/gen/com/ihwapp/android/R.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iHW-Android/bin/R.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iHW-Android/src/com/ihwapp/android/RotatedTextView.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iHW-Android/src/com/ihwapp/android/ScheduleActivity.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iHW-Android/src/com/ihwapp/android/Separator.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iHW-Android/src/com/ihwapp/android/model/TestDay.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iHW-Android/src/com/ihwapp/android/model/Time.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iHW-Android/src/com/ihwapp/android/UpdateService.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iHW-Android/src/com/ihwapp/android/WebViewActivity.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iHW-Android/assets/about.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iHW-Android/res/drawable/action_item_selector.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iHW-Android/res/layout/activity_courses.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iHW-Android/res/layout/activity_download.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iHW-Android/res/layout/activity_edit_course.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iHW-Android/res/layout/activity_firstrun.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iHW-Android/res/layout/activity_old_preferences.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iHW-Android/res/layout/activity_schedule.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iHW-Android/res/layout/activity_web_view.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iHW-Android/res/drawable/cab_background.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iHW-Android/res/menu/cab_courses.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iHW-Android/res/values/colors.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iHW-Android/.idea/compiler.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iHW-Android/res/menu/courses.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iHW-Android/res/drawable/cursor.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iHW-Android/.idea/libraries/dexedLibs.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iHW-Android/res/layout/dialog_change_year.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iHW-Android/res/values/dimens.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iHW-Android/res/values-sw600dp/dimens.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iHW-Android/res/values-sw720dp-land/dimens.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iHW-Android/res/values-w820dp/dimens.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iHW-Android/assets/disclaimer.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iHW-Android/res/menu/edit_course.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iHW-Android/.idea/encodings.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iHW-Android/res/layout/fragment_day.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iHW-Android/res/menu/guided_courses.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iHW-Android/iHW-Android.iml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iHW-Android/bin/jarlist.cache" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iHW-Android/.idea/libraries/libs.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iHW-Android/res/layout/list_item_course.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iHW-Android/res/layout/list_item_preferences.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iHW-Android/res/drawable/list_item_selector.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iHW-Android/.idea/misc.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iHW-Android/.idea/modules.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iHW-Android/.settings/org.eclipse.core.resources.prefs" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iHW-Android/res/menu/popup_note.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iHW-Android/res/menu/preferences.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iHW-Android/.idea/copyright/profiles_settings.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iHW-Android/proguard-project.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iHW-Android/project.properties" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iHW-Android/res/menu/schedule.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iHW-Android/.idea/scopes/scope_settings.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iHW-Android/res/drawable/selected_background.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iHW-Android/res/layout/spinner_layout.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iHW-Android/res/values/strings.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iHW-Android/res/values/styles.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iHW-Android/.idea/vcs.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iHW-Android/res/layout/view_note.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iHW-Android/res/layout/view_period.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iHW-Android/res/menu/web_view.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iHW-Android/.idea/workspace.xml" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build.gradle" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/generated/source/buildConfig/debug/com/ihwapp/android/BuildConfig.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/generated/source/r/debug/com/ihwapp/android/R.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/assets/debug/about.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/assets/debug/disclaimer.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/ihwapp/android/BackgroundImageButton$SAutoBgButtonBackgroundDrawable.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/ihwapp/android/BackgroundImageButton.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/ihwapp/android/BuildConfig.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/ihwapp/android/Constants.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/ihwapp/android/CoursesActivity$1.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/ihwapp/android/CoursesActivity$ListSelectionListener.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/ihwapp/android/CoursesActivity.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/ihwapp/android/CustomFontPagerTitleStrip.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/ihwapp/android/DayFragment$1.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/ihwapp/android/DayFragment$2.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/ihwapp/android/DayFragment$3$1.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/ihwapp/android/DayFragment$3.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/ihwapp/android/DayFragment$OnFragmentVisibilityChangedListener.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/ihwapp/android/DayFragment.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/ihwapp/android/DownloadScheduleActivity$1.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/ihwapp/android/DownloadScheduleActivity$2.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/ihwapp/android/DownloadScheduleActivity$3.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/ihwapp/android/DownloadScheduleActivity$4.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/ihwapp/android/DownloadScheduleActivity$DownloadParseScheduleTask$1.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/ihwapp/android/DownloadScheduleActivity$DownloadParseScheduleTask$2.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/ihwapp/android/DownloadScheduleActivity$DownloadParseScheduleTask.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/ihwapp/android/DownloadScheduleActivity.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/ihwapp/android/EditCourseActivity$1.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/ihwapp/android/EditCourseActivity$DoublePeriodsEnforcer.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/ihwapp/android/EditCourseActivity$PeriodBoxFilter.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/ihwapp/android/EditCourseActivity.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/ihwapp/android/FirstRunActivity$1.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/ihwapp/android/FirstRunActivity$2.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/ihwapp/android/FirstRunActivity$3.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/ihwapp/android/FirstRunActivity$4.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/ihwapp/android/FirstRunActivity$5.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/ihwapp/android/FirstRunActivity$6.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/ihwapp/android/FirstRunActivity.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/ihwapp/android/GuidedCoursesActivity$1.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/ihwapp/android/GuidedCoursesActivity.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/ihwapp/android/IHWActivity.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/ihwapp/android/LaunchActivity.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/ihwapp/android/NormalCoursesActivity.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/ihwapp/android/NotificationService.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/ihwapp/android/PeriodView$1.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/ihwapp/android/PeriodView$2$1.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/ihwapp/android/PeriodView$2.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/ihwapp/android/PeriodView$NoteTextWatcher.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/ihwapp/android/PeriodView$OptionsMenuListener.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/ihwapp/android/PeriodView.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/ihwapp/android/PreferencesActivity$1.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/ihwapp/android/PreferencesActivity$2.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/ihwapp/android/PreferencesActivity$3.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/ihwapp/android/PreferencesActivity$4.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/ihwapp/android/PreferencesActivity$5.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/ihwapp/android/PreferencesActivity.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/ihwapp/android/R$array.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/ihwapp/android/R$attr.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/ihwapp/android/R$color.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/ihwapp/android/R$dimen.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/ihwapp/android/R$drawable.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/ihwapp/android/R$id.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/ihwapp/android/R$layout.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/ihwapp/android/R$menu.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/ihwapp/android/R$string.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/ihwapp/android/R$style.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/ihwapp/android/R.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/ihwapp/android/RotatedTextView.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/ihwapp/android/ScheduleActivity$1.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/ihwapp/android/ScheduleActivity$2.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/ihwapp/android/ScheduleActivity$3.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/ihwapp/android/ScheduleActivity$4.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/ihwapp/android/ScheduleActivity$5.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/ihwapp/android/ScheduleActivity$6.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/ihwapp/android/ScheduleActivity$DayPagerAdapter.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/ihwapp/android/ScheduleActivity.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/ihwapp/android/Separator.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/ihwapp/android/UpdateService.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/ihwapp/android/WebViewActivity.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/ihwapp/android/model/Course.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/ihwapp/android/model/Curriculum$1.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/ihwapp/android/model/Curriculum$2.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/ihwapp/android/model/Curriculum$3.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/ihwapp/android/model/Curriculum$4.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/ihwapp/android/model/Curriculum$DownloadTask.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/ihwapp/android/model/Curriculum$ModelLoadingListener.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/ihwapp/android/model/Curriculum.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/ihwapp/android/model/Date.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/ihwapp/android/model/Day.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/ihwapp/android/model/Holiday.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/ihwapp/android/model/NormalDay.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/ihwapp/android/model/Note$1.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/ihwapp/android/model/Note.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/ihwapp/android/model/Period$1.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/ihwapp/android/model/Period.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/ihwapp/android/model/TestDay.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/ihwapp/android/model/Time$1.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/ihwapp/android/model/Time.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/dex/debug/classes.dex" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/exploded-aar/com.android.support/support-v4/20.0.0/AndroidManifest.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/exploded-aar/com.android.support/support-v4/20.0.0/aidl/android/support/v4/app/INotificationSideChannel.aidl" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/exploded-aar/com.android.support/support-v4/20.0.0/classes.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/exploded-aar/com.android.support/support-v4/20.0.0/libs/internal_impl-20.0.0.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/exploded-aar/com.android.support/support-v4/21.0.0-rc1/AndroidManifest.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/exploded-aar/com.android.support/support-v4/21.0.0-rc1/classes.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/exploded-aar/com.android.support/support-v4/21.0.0-rc1/libs/internal_impl-21.0.0-rc1.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/incremental/aidl/debug/dependency.store" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/incremental/mergeAssets/debug/merger.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/incremental/mergeResources/debug/merger.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/libs/app-debug.ap_" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/manifests/debug/AndroidManifest.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/pre-dexed/debug/classes-f6e276fd9ce4652f4e5f9a3ebfa33f6d763e8417.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/pre-dexed/debug/internal_impl-20.0.0-8954a60866f37f1a211b39a95f435b0d3a82a946.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/pre-dexed/debug/jsoup-1.7.2-0244ef986e1e9f10f9cc52b51b3c5f12efafa61b.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/pre-dexed/debug/support-annotations-20.0.0-820090ec777e85e5f91abc11b0ce2cdd64f29191.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/res/debug/drawable-hdpi-v4/ic_action_date.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/res/debug/drawable-hdpi-v4/ic_action_delete.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/res/debug/drawable-hdpi-v4/ic_action_done.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/res/debug/drawable-hdpi-v4/ic_action_done_disabled.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/res/debug/drawable-hdpi-v4/ic_action_edit.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/res/debug/drawable-hdpi-v4/ic_action_go_to_today.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/res/debug/drawable-hdpi-v4/ic_action_goto_date.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/res/debug/drawable-hdpi-v4/ic_action_refresh.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/res/debug/drawable-hdpi-v4/ic_action_settings.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/res/debug/drawable-hdpi-v4/ic_content_new.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/res/debug/drawable-hdpi-v4/ic_launcher.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/res/debug/drawable-hdpi-v4/link.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/res/debug/drawable-hdpi-v4/notification_small.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/res/debug/drawable-mdpi-v4/ic_action_date.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/res/debug/drawable-mdpi-v4/ic_action_delete.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/res/debug/drawable-mdpi-v4/ic_action_done.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/res/debug/drawable-mdpi-v4/ic_action_done_disabled.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/res/debug/drawable-mdpi-v4/ic_action_edit.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/res/debug/drawable-mdpi-v4/ic_action_go_to_today.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/res/debug/drawable-mdpi-v4/ic_action_goto_date.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/res/debug/drawable-mdpi-v4/ic_action_refresh.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/res/debug/drawable-mdpi-v4/ic_action_settings.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/res/debug/drawable-mdpi-v4/ic_content_new.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/res/debug/drawable-mdpi-v4/ic_launcher.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/res/debug/drawable-mdpi-v4/link.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/res/debug/drawable-mdpi-v4/notification_small.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/res/debug/drawable-xhdpi-v4/ic_action_date.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/res/debug/drawable-xhdpi-v4/ic_action_delete.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/res/debug/drawable-xhdpi-v4/ic_action_done.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/res/debug/drawable-xhdpi-v4/ic_action_done_disabled.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/res/debug/drawable-xhdpi-v4/ic_action_edit.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/res/debug/drawable-xhdpi-v4/ic_action_go_to_today.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/res/debug/drawable-xhdpi-v4/ic_action_goto_date.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/res/debug/drawable-xhdpi-v4/ic_action_refresh.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/res/debug/drawable-xhdpi-v4/ic_action_settings.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/res/debug/drawable-xhdpi-v4/ic_content_new.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/res/debug/drawable-xhdpi-v4/ic_launcher.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/res/debug/drawable-xhdpi-v4/link.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/res/debug/drawable-xhdpi-v4/notification_small.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/res/debug/drawable-xxhdpi-v4/ic_action_date.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/res/debug/drawable-xxhdpi-v4/ic_action_delete.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/res/debug/drawable-xxhdpi-v4/ic_action_done.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/res/debug/drawable-xxhdpi-v4/ic_action_done_disabled.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/res/debug/drawable-xxhdpi-v4/ic_action_edit.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/res/debug/drawable-xxhdpi-v4/ic_action_go_to_today.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/res/debug/drawable-xxhdpi-v4/ic_action_goto_date.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/res/debug/drawable-xxhdpi-v4/ic_action_refresh.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/res/debug/drawable-xxhdpi-v4/ic_action_settings.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/res/debug/drawable-xxhdpi-v4/ic_content_new.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/res/debug/drawable-xxhdpi-v4/ic_launcher.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/res/debug/drawable-xxhdpi-v4/link.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/res/debug/drawable-xxhdpi-v4/notification_small.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/res/debug/drawable/action_item_selector.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/res/debug/drawable/cab_background.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/res/debug/drawable/cursor.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/res/debug/drawable/list_item_selector.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/res/debug/drawable/mscampus.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/res/debug/drawable/selected_background.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/res/debug/drawable/smallgear.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/res/debug/drawable/uscampus.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/res/debug/layout/activity_courses.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/res/debug/layout/activity_download.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/res/debug/layout/activity_edit_course.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/res/debug/layout/activity_firstrun.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/res/debug/layout/activity_old_preferences.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/res/debug/layout/activity_schedule.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/res/debug/layout/activity_web_view.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/res/debug/layout/dialog_change_year.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/res/debug/layout/fragment_day.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/res/debug/layout/list_item_course.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/res/debug/layout/list_item_preferences.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/res/debug/layout/spinner_layout.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/res/debug/layout/view_note.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/res/debug/layout/view_period.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/res/debug/menu/cab_courses.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/res/debug/menu/courses.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/res/debug/menu/edit_course.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/res/debug/menu/guided_courses.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/res/debug/menu/popup_note.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/res/debug/menu/preferences.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/res/debug/menu/schedule.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/res/debug/menu/web_view.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/res/debug/values-sw720dp-land-v13/values.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/res/debug/values-w820dp-v13/values.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/res/debug/values/values.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/symbols/debug/R.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/outputs/apk/app-debug-unaligned.apk" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/outputs/apk/app-debug.apk" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/libs/jsoup-1.7.2.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/src/main/assets/about.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/src/main/assets/disclaimer.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/src/main/java/com/ihwapp/android/BackgroundImageButton.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/src/main/java/com/ihwapp/android/Constants.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/src/main/java/com/ihwapp/android/CoursesActivity.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/src/main/java/com/ihwapp/android/CustomFontPagerTitleStrip.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/src/main/java/com/ihwapp/android/DayFragment.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/src/main/java/com/ihwapp/android/DownloadScheduleActivity.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/src/main/java/com/ihwapp/android/EditCourseActivity.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/src/main/java/com/ihwapp/android/FirstRunActivity.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/src/main/java/com/ihwapp/android/GuidedCoursesActivity.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/src/main/java/com/ihwapp/android/IHWActivity.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/src/main/java/com/ihwapp/android/LaunchActivity.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/src/main/java/com/ihwapp/android/NormalCoursesActivity.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/src/main/java/com/ihwapp/android/NotificationService.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/src/main/java/com/ihwapp/android/PeriodView.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/src/main/java/com/ihwapp/android/PreferencesActivity.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/src/main/java/com/ihwapp/android/RotatedTextView.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/src/main/java/com/ihwapp/android/ScheduleActivity.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/src/main/java/com/ihwapp/android/Separator.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/src/main/java/com/ihwapp/android/UpdateService.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/src/main/java/com/ihwapp/android/WebViewActivity.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/src/main/java/com/ihwapp/android/model/Course.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/src/main/java/com/ihwapp/android/model/Curriculum.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/src/main/java/com/ihwapp/android/model/Date.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/src/main/java/com/ihwapp/android/model/Day.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/src/main/java/com/ihwapp/android/model/Holiday.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/src/main/java/com/ihwapp/android/model/NormalDay.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/src/main/java/com/ihwapp/android/model/Note.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/src/main/java/com/ihwapp/android/model/Period.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/src/main/java/com/ihwapp/android/model/TestDay.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/src/main/java/com/ihwapp/android/model/Time.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/src/main/res/drawable-hdpi/ic_action_date.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/src/main/res/drawable-hdpi/ic_action_delete.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/src/main/res/drawable-hdpi/ic_action_done.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/src/main/res/drawable-hdpi/ic_action_done_disabled.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/src/main/res/drawable-hdpi/ic_action_edit.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/src/main/res/drawable-hdpi/ic_action_go_to_today.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/src/main/res/drawable-hdpi/ic_action_goto_date.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/src/main/res/drawable-hdpi/ic_action_refresh.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/src/main/res/drawable-hdpi/ic_action_settings.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/src/main/res/drawable-hdpi/ic_content_new.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/src/main/res/drawable-hdpi/ic_launcher.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/src/main/res/drawable-hdpi/link.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/src/main/res/drawable-hdpi/notification_small.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/src/main/res/drawable-mdpi/ic_action_date.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/src/main/res/drawable-mdpi/ic_action_delete.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/src/main/res/drawable-mdpi/ic_action_done.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/src/main/res/drawable-mdpi/ic_action_done_disabled.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/src/main/res/drawable-mdpi/ic_action_edit.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/src/main/res/drawable-mdpi/ic_action_go_to_today.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/src/main/res/drawable-mdpi/ic_action_goto_date.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/src/main/res/drawable-mdpi/ic_action_refresh.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/src/main/res/drawable-mdpi/ic_action_settings.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/src/main/res/drawable-mdpi/ic_content_new.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/src/main/res/drawable-mdpi/ic_launcher.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/src/main/res/drawable-mdpi/link.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/src/main/res/drawable-mdpi/notification_small.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/src/main/res/drawable-xhdpi/ic_action_date.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/src/main/res/drawable-xhdpi/ic_action_delete.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/src/main/res/drawable-xhdpi/ic_action_done.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/src/main/res/drawable-xhdpi/ic_action_done_disabled.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/src/main/res/drawable-xhdpi/ic_action_edit.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/src/main/res/drawable-xhdpi/ic_action_go_to_today.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/src/main/res/drawable-xhdpi/ic_action_goto_date.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/src/main/res/drawable-xhdpi/ic_action_refresh.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/src/main/res/drawable-xhdpi/ic_action_settings.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/src/main/res/drawable-xhdpi/ic_content_new.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/src/main/res/drawable-xhdpi/ic_launcher.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/src/main/res/drawable-xhdpi/link.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/src/main/res/drawable-xhdpi/notification_small.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/src/main/res/drawable-xxhdpi/ic_action_date.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/src/main/res/drawable-xxhdpi/ic_action_delete.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/src/main/res/drawable-xxhdpi/ic_action_done.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/src/main/res/drawable-xxhdpi/ic_action_done_disabled.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/src/main/res/drawable-xxhdpi/ic_action_edit.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/src/main/res/drawable-xxhdpi/ic_action_go_to_today.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/src/main/res/drawable-xxhdpi/ic_action_goto_date.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/src/main/res/drawable-xxhdpi/ic_action_refresh.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/src/main/res/drawable-xxhdpi/ic_action_settings.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/src/main/res/drawable-xxhdpi/ic_content_new.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/src/main/res/drawable-xxhdpi/ic_launcher.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/src/main/res/drawable-xxhdpi/link.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/src/main/res/drawable-xxhdpi/notification_small.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/src/main/res/drawable/action_item_selector.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/src/main/res/drawable/cab_background.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/src/main/res/drawable/cursor.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/src/main/res/drawable/list_item_selector.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/src/main/res/drawable/mscampus.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/src/main/res/drawable/selected_background.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/src/main/res/drawable/smallgear.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/src/main/res/drawable/uscampus.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_courses.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_download.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_edit_course.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_firstrun.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_old_preferences.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_schedule.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_web_view.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/src/main/res/layout/dialog_change_year.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_day.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/src/main/res/layout/list_item_course.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/src/main/res/layout/list_item_preferences.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/src/main/res/layout/spinner_layout.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/src/main/res/layout/view_note.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/src/main/res/layout/view_period.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/src/main/res/menu/cab_courses.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/src/main/res/menu/courses.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/src/main/res/menu/edit_course.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/src/main/res/menu/guided_courses.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/src/main/res/menu/popup_note.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/src/main/res/menu/preferences.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/src/main/res/menu/schedule.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/src/main/res/menu/web_view.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/src/main/res/values-sw600dp/dimens.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/src/main/res/values-sw720dp-land/dimens.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/src/main/res/values-w820dp/dimens.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/src/main/res/values/colors.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/src/main/res/values/dimens.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/src/main/res/values/styles.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build.gradle" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/dex-cache/cache.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/gradlew" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/gradlew.bat" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/iHW.iml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/import-summary.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/local.properties" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/settings.gradle" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+    </list>
     <ignored path="iHW-Android.iws" />
     <ignored path=".idea/workspace.xml" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -38,54 +861,15 @@
     <favorites_list name="iHW-Android" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file leaf-file-name="build.gradle" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/build.gradle">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="315">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="build.gradle" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/build.gradle">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="495">
-              <caret line="24" column="11" selection-start-line="24" selection-start-column="11" selection-end-line="24" selection-end-column="11" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="AndroidManifest.xml" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/src/main/AndroidManifest.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.3579952" vertical-offset="585" max-vertical-offset="1440">
-              <caret line="59" column="62" selection-start-line="59" selection-start-column="62" selection-end-line="59" selection-end-column="62" />
-              <folding>
-                <element signature="e#475#493#0" expanded="true" />
-                <element signature="e#641#659#0" expanded="true" />
-                <element signature="e#993#1011#0" expanded="true" />
-                <element signature="e#1190#1223#0" expanded="true" />
-                <element signature="e#1487#1524#0" expanded="true" />
-                <element signature="e#2028#2070#0" expanded="true" />
-                <element signature="e#2264#2308#0" expanded="true" />
-                <element signature="e#2608#2644#0" expanded="true" />
-                <element signature="e#3068#3104#0" expanded="true" />
-                <element signature="e#3467#3500#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf />
   </component>
   <component name="FindManager">
     <FindUsagesManager>
       <setting name="OPEN_NEW_TAB" value="true" />
     </FindUsagesManager>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="GradleLocalSettings">
     <option name="tasksExpandState">
@@ -775,14 +1559,15 @@
         <option value="$PROJECT_DIR$/app/build.gradle" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/ihwapp/android/OldPreferencesActivity.java" />
         <option value="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" />
+        <option value="$PROJECT_DIR$/.gitignore" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="1280" />
+    <option name="x" value="-1" />
     <option name="y" value="30" />
-    <option name="width" value="1280" />
-    <option name="height" value="1410" />
+    <option name="width" value="2562" />
+    <option name="height" value="1411" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -817,15 +1602,9 @@
               <option name="myItemId" value="iHW-Android" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
-          </PATH>
-          <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="iHW-Android" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="iHW" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+              <option name="myItemId" value="External Libraries" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ExternalLibrariesNode" />
             </PATH_ELEMENT>
           </PATH>
           <PATH>
@@ -835,32 +1614,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="iHW" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="iHW-Android" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="iHW" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -874,23 +1627,73 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
+              <option name="myItemId" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="iHW-Android" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="iHW" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
+              <option name="myItemId" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
+              <option name="myItemId" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
+              <option name="myItemId" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="iHW-Android" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="iHW" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="android" />
+              <option name="myItemId" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="iHW-Android" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="iHW" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value=".idea" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -913,6 +1716,7 @@
     <property name="recentsLimit" value="5" />
     <property name="ANDROID_EXTENDED_DEVICE_CHOOSER_SERIALS" value="0071f58be14cce89" />
     <property name="ANDROID_EXTENDED_DEVICE_CHOOSER_AVD" value="NexusS" />
+    <property name="FullScreen" value="false" />
   </component>
   <component name="RunManager" selected="Android Application.app">
     <configuration default="true" type="Remote" factoryName="Remote">
@@ -1089,8 +1893,8 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="1280" y="30" width="1280" height="1410" extended-state="5" />
-    <editor active="true" />
+    <frame x="-1" y="30" width="2562" height="1411" extended-state="6" />
+    <editor active="false" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -1106,9 +1910,9 @@
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Gradle Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
-      <window_info id="Android" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32945737" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Android" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32920218" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3607199" sideWeight="0.49942195" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.18007812" sideWeight="0.49942195" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -1141,114 +1945,11 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/import-summary.txt">
+    <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="3060">
-          <caret line="13" column="31" selection-start-line="13" selection-start-column="31" selection-end-line="13" selection-end-column="31" />
+        <state vertical-scroll-proportion="0.1966627" vertical-offset="0" max-vertical-offset="839">
+          <caret line="11" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/build.gradle">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="838">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/ihwapp/android/DayFragment.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-1.5238663" vertical-offset="3077" max-vertical-offset="3915">
-          <caret line="124" column="25" selection-start-line="124" selection-start-column="25" selection-end-line="124" selection-end-column="25" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/ihwapp/android/CustomFontPagerTitleStrip.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="465">
-          <caret line="4" column="0" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="47" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/ihwapp/android/PeriodView.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="1675" max-vertical-offset="5160">
-          <caret line="134" column="36" selection-start-line="134" selection-start-column="36" selection-end-line="134" selection-end-column="36" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/ihwapp/android/IHWActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="240">
-          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/ihwapp/android/Separator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.071599044" vertical-offset="0" max-vertical-offset="838">
-          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/ihwapp/android/WebViewActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.071599044" vertical-offset="0" max-vertical-offset="838">
-          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/ihwapp/android/BackgroundImageButton.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.14319809" vertical-offset="270" max-vertical-offset="1305">
-          <caret line="19" column="13" selection-start-line="19" selection-start-column="13" selection-end-line="19" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/ihwapp/android/LaunchActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.071599044" vertical-offset="0" max-vertical-offset="838">
-          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/build.gradle">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="495">
-          <caret line="24" column="11" selection-start-line="24" selection-start-column="11" selection-end-line="24" selection-end-column="11" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/AndroidManifest.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.3579952" vertical-offset="585" max-vertical-offset="1440">
-          <caret line="59" column="62" selection-start-line="59" selection-start-column="62" selection-end-line="59" selection-end-column="62" />
-          <folding>
-            <element signature="e#475#493#0" expanded="true" />
-            <element signature="e#641#659#0" expanded="true" />
-            <element signature="e#993#1011#0" expanded="true" />
-            <element signature="e#1190#1223#0" expanded="true" />
-            <element signature="e#1487#1524#0" expanded="true" />
-            <element signature="e#2028#2070#0" expanded="true" />
-            <element signature="e#2264#2308#0" expanded="true" />
-            <element signature="e#2608#2644#0" expanded="true" />
-            <element signature="e#3068#3104#0" expanded="true" />
-            <element signature="e#3467#3500#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>

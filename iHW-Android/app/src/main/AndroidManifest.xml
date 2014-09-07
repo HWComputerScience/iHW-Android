@@ -1,16 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.ihwapp.android"
-    android:versionCode="8"
-    android:versionName="1.1.4" >
-
-    <uses-sdk
-        android:minSdkVersion="15"
-        android:targetSdkVersion="19" />
+    package="com.ihwapp.android" >
 
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.VIBRATE"/>
 
     <application
         android:allowBackup="true"
@@ -62,15 +56,6 @@
             android:configChanges="orientation|screenSize" >
         </activity>
         <activity
-            android:name="com.ihwapp.android.OldPreferencesActivity"
-            android:label="@string/title_activity_preferences"
-            android:parentActivityName="com.ihwapp.android.ScheduleActivity"
-            android:windowSoftInputMode="stateUnchanged" >
-            <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.ihwapp.android.ScheduleActivity" />
-        </activity>
-        <activity
             android:name="com.ihwapp.android.PreferencesActivity"
             android:label="@string/title_activity_preferences"
             android:parentActivityName="com.ihwapp.android.ScheduleActivity" >
@@ -86,15 +71,12 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="PreferencesActivity" />
         </activity>
-
-        <service
-            android:name="com.ihwapp.android.NotificationService"
-            android:exported="false" >
-        </service>
-        <service
-            android:name="com.ihwapp.android.UpdateService"
-            android:exported="false" >
-        </service>
+        <service android:name="com.ihwapp.android.NotificationService"
+            android:exported="false">
+    	</service>
+    	<service android:name="com.ihwapp.android.UpdateService"
+            android:exported="false">
+    	</service>
     </application>
 
 </manifest>
