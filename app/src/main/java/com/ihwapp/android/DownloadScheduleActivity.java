@@ -1,21 +1,30 @@
 package com.ihwapp.android;
 
-import org.jsoup.Jsoup;
-import org.jsoup.nodes.*;
-import org.jsoup.select.Elements;
-
-import com.ihwapp.android.model.Curriculum;
-import com.ihwapp.android.model.Course;
-
-import android.os.*;
-import android.annotation.*;
+import android.annotation.SuppressLint;
+import android.annotation.TargetApi;
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
-import android.view.*;
-import android.widget.*;
-import android.webkit.*;
+import android.os.AsyncTask;
+import android.os.Build;
+import android.os.Bundle;
+import android.view.Gravity;
+import android.view.View;
+import android.webkit.ConsoleMessage;
+import android.webkit.WebChromeClient;
+import android.webkit.WebView;
+import android.webkit.WebViewClient;
+import android.widget.LinearLayout;
+import android.widget.TextView;
+
+import com.ihwapp.android.model.Course;
+import com.ihwapp.android.model.Curriculum;
+
+import org.jsoup.Jsoup;
+import org.jsoup.nodes.Document;
+import org.jsoup.nodes.Element;
+import org.jsoup.select.Elements;
 
 public class DownloadScheduleActivity extends IHWActivity {
 	private int alreadyLoaded = 0;
@@ -102,7 +111,8 @@ public class DownloadScheduleActivity extends IHWActivity {
 	 */
 	@TargetApi(Build.VERSION_CODES.HONEYCOMB)
 	private void setupActionBar() {
-		if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.HONEYCOMB && !this.getIntent().getBooleanExtra("firstRun", false)) {
+		if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.HONEYCOMB && !this.getIntent()
+                .getBooleanExtra("firstRun", false)) {
 			getActionBar().setDisplayHomeAsUpEnabled(true);
 		}
 	}
@@ -156,7 +166,8 @@ public class DownloadScheduleActivity extends IHWActivity {
 					String[] tokens = lastPeriodList.split("\\.");
 					//Log.d("iHW", "Number of tokens: " + tokens.length);
 					if (tokens.length != Curriculum.getCurrentCampus()) {
-						new AlertDialog.Builder(DownloadScheduleActivity.this, R.style.PopupTheme).setTitle("Wrong Campus!")
+						new AlertDialog.Builder(DownloadScheduleActivity.this, R.style.PopupTheme)
+                                .setTitle("Wrong Campus!")
 						.setMessage("You chose the wrong campus during the setup. Please start again.")
 						.setPositiveButton("Back", new DialogInterface.OnClickListener() {
 							public void onClick(DialogInterface dialog, int which) {
@@ -169,7 +180,7 @@ public class DownloadScheduleActivity extends IHWActivity {
 						return;
 					}
 					Course c = parseCourse(lastCode, lastName, tokens);
-					if (c!=null) Curriculum.getCurrentCurriculum().addCourse(c);
+					if (c != null) Curriculum.getCurrentCurriculum().addCourse(c);
 					lastCode = null;
 					lastName = null;
 					lastPeriodList = null;
@@ -183,8 +194,10 @@ public class DownloadScheduleActivity extends IHWActivity {
 			pb.setVisibility(View.INVISIBLE);*/
 			
 			if (shouldShowWarning) {
-				new AlertDialog.Builder(DownloadScheduleActivity.this, R.style.PopupTheme).setTitle("Full Schedule Unavailable")
-				.setMessage("The full schedule is not yet available, so you will need to edit the courses that are not full-year and set the right semester/trimester.")
+				new AlertDialog.Builder(DownloadScheduleActivity.this, R.style.PopupTheme)
+                        .setTitle("Full Schedule Unavailable")
+				.setMessage("The full schedule is not yet available, so you will need to edit the " +
+                        "courses that are not full-year and set the right semester/trimester.")
 				.setPositiveButton("OK", new DialogInterface.OnClickListener() {
 					public void onClick(DialogInterface dialog, int which) {
 						Intent i = new Intent(thisActivity, LaunchActivity.class);
@@ -227,18 +240,18 @@ public class DownloadScheduleActivity extends IHWActivity {
 	private static Course parseCourse(String code, String name, String[] periodTokens) {
 		//parse for term
 		int term = Constants.TERM_FULL_YEAR;
-		if (code.length() >= 6) term = Integer.parseInt(code.substring(5,6));
+		if (code.length() >= 6) term = Integer.parseInt(code.substring(5, 6));
 		
 		//parse period list
 		int numDays = Curriculum.getCurrentCampus();
-		int numPeriods = numDays+3;
-		boolean[][] periods = new boolean[numDays][numPeriods+1];
-		int[] periodFrequency = new int[numPeriods+1];
-		int minPeriod = numPeriods+1;
+		int numPeriods = numDays + 3;
+		boolean[][] periods = new boolean[numDays][numPeriods + 1];
+		int[] periodFrequency = new int[numPeriods + 1];
+		int minPeriod = numPeriods + 1;
 		int maxPeriod = 0;
 		int day = 0;
 		for (String token : periodTokens) {
-			for (int i=0; i<token.length(); i++) {
+			for (int i = 0; i < token.length(); i++) {
 				int period = 0;
 				try { period = Integer.parseInt(token.substring(i,i+1)); }
 				catch (NumberFormatException ignored) {}
@@ -254,16 +267,16 @@ public class DownloadScheduleActivity extends IHWActivity {
 		//determine course period
 		int coursePeriod;
 		if (minPeriod==maxPeriod) coursePeriod = minPeriod;
-		else if (maxPeriod-minPeriod == 2) coursePeriod = maxPeriod-1;
+		else if (maxPeriod-minPeriod == 2) coursePeriod = maxPeriod - 1;
 		else if (maxPeriod-minPeriod == 1 && periodFrequency[maxPeriod] > periodFrequency[minPeriod]) coursePeriod = maxPeriod;
 		else if (maxPeriod-minPeriod == 1 && periodFrequency[maxPeriod] <= periodFrequency[minPeriod]) coursePeriod = minPeriod;
 		else return null;
 		//create meetings array
 		int[] meetings = new int[numDays];
-		for (int i=0; i<numDays; i++) {
+		for (int i = 0; i < numDays; i++) {
 			if (!periods[i][coursePeriod]) meetings[i] = Constants.MEETING_X_DAY; 
-			else if (coursePeriod-1 > 0 && periods[i][coursePeriod-1]) meetings[i] = Constants.MEETING_DOUBLE_BEFORE;
-			else if (coursePeriod+1 <= numPeriods && periods[i][coursePeriod+1]) meetings[i] = Constants.MEETING_DOUBLE_AFTER;
+			else if (coursePeriod - 1 > 0 && periods[i][coursePeriod-1]) meetings[i] = Constants.MEETING_DOUBLE_BEFORE;
+			else if (coursePeriod + 1 <= numPeriods && periods[i][coursePeriod+1]) meetings[i] = Constants.MEETING_DOUBLE_AFTER;
 			else meetings[i] = Constants.MEETING_SINGLE_PERIOD;
 		}
 		
