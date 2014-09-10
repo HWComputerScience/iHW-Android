@@ -1,15 +1,31 @@
 package com.ihwapp.android;
 
-import com.ihwapp.android.model.Course;
-import com.ihwapp.android.model.Curriculum;
-
 import android.content.Context;
 import android.content.res.Resources;
 import android.os.Bundle;
-import android.text.*;
-import android.view.*;
+import android.text.Editable;
+import android.text.InputFilter;
+import android.text.Spanned;
+import android.text.TextWatcher;
+import android.view.Gravity;
+import android.view.Menu;
+import android.view.MenuItem;
+import android.view.View;
+import android.view.WindowManager;
 import android.view.inputmethod.InputMethodManager;
-import android.widget.*;
+import android.widget.ArrayAdapter;
+import android.widget.CheckBox;
+import android.widget.CompoundButton;
+import android.widget.EditText;
+import android.widget.LinearLayout;
+import android.widget.Spinner;
+import android.widget.TableLayout;
+import android.widget.TableRow;
+import android.widget.TextView;
+import android.widget.Toast;
+
+import com.ihwapp.android.model.Course;
+import com.ihwapp.android.model.Curriculum;
 
 public class EditCourseActivity extends IHWActivity {
 	private int numPeriods;
@@ -27,7 +43,7 @@ public class EditCourseActivity extends IHWActivity {
 		super.onCreate(savedInstanceState);
 		this.setContentView(R.layout.activity_edit_course);
 		this.setTitle("Add a Course");
-		getActionBar().setDisplayHomeAsUpEnabled(true);
+		getActionBar().setDisplayHomeAsUpEnabled(true); // TODO eliminate possibility of NPE
 		
 		numDays = Curriculum.getCurrentCampus();
 		numPeriods = numDays+3;
@@ -125,7 +141,7 @@ public class EditCourseActivity extends IHWActivity {
 		if (existingCourseName != null) {
 			this.getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_HIDDEN);
 			Course c = Curriculum.getCurrentCurriculum().getCourse(existingCourseName);
-			getActionBar().setTitle(c.getName());
+			getActionBar().setTitle(c.getName()); // TODO eliminate NPE possibility
 			nameBox.setText(c.getName());
 			periodBox.setText("" + c.getPeriod());
 			termSpinner.setSelection(c.getTerm());
@@ -149,11 +165,11 @@ public class EditCourseActivity extends IHWActivity {
 		else meetingsContainer.setVisibility(View.VISIBLE);
 		this.numMeetings = 0;
 		this.invalidateOptionsMenu();
-		for (int r=0; r<3; r++) {
+		for (int r = 0; r < 3; r++) {
 			int thisPeriod = period+r-1;
 			if (thisPeriod > 0 && thisPeriod <= numPeriods) periodHeaders[r].setText(getOrdinal(thisPeriod));
 			else periodHeaders[r].setText("");
-			for (int c=0; c<numDays; c++) {
+			for (int c = 0; c < numDays; c++) {
 				if (thisPeriod > 0 && thisPeriod <= numPeriods) {
 					meetingBoxes[r][c].setEnabled(true);
 					meetingBoxes[r][c].setVisibility(View.VISIBLE);
@@ -168,11 +184,11 @@ public class EditCourseActivity extends IHWActivity {
 	
 	private static String getOrdinal(int num) {
 		String suffix;
-		if (num%10==1) suffix="st";
-		else if (num%10==2) suffix="nd";
-		else if (num%10==3) suffix="rd";
+		if (num % 10 == 1) suffix = "st";
+		else if (num % 10 == 2) suffix = "nd";
+		else if (num % 10 == 3) suffix = "rd";
 		else suffix = "th";
-		return num+suffix;
+		return num + suffix;
 	}
 	
 	public boolean onCreateOptionsMenu(Menu menu) {
@@ -214,7 +230,8 @@ public class EditCourseActivity extends IHWActivity {
 				else success = Curriculum.getCurrentCurriculum().addCourse(toAdd);
 				if (!success) {
 					//Curriculum rejected the course
-					Toast.makeText(this, "The course meetings you selected conflict with one or more of your other courses. Please change them and try again.", Toast.LENGTH_LONG).show();
+					Toast.makeText(this, "The course meetings you selected conflict with one or " +
+                            "more of your other courses. Please change them and try again.", Toast.LENGTH_LONG).show();
 				} else {
 					//Curriculum accepted the course
 					Curriculum.getCurrentCurriculum().saveCourses();
@@ -228,7 +245,8 @@ public class EditCourseActivity extends IHWActivity {
 					Toast.makeText(this, "Changes discarded.", Toast.LENGTH_SHORT).show();
 					finish();
 				} else {
-					Toast.makeText(this, "The course must have a name and at least one class meeting.", Toast.LENGTH_SHORT).show();
+					Toast.makeText(this, "The course must have a name and at least one class " +
+                            "meeting.", Toast.LENGTH_SHORT).show();
 				}
 			}
 			return true;
@@ -243,7 +261,9 @@ public class EditCourseActivity extends IHWActivity {
 	
 	private class PeriodBoxFilter implements InputFilter {
 		public CharSequence filter(CharSequence source, int start, int end, Spanned dest, int dstart, int dend) {
-			String after = dest.subSequence(0, dstart).toString() + source.subSequence(start, end).toString() + dest.subSequence(dend, dest.length()).toString();
+			String after = dest.subSequence(0, dstart).toString() +
+                    source.subSequence(start, end).toString() + dest.subSequence(dend, dest.length())
+                    .toString();
 			try {
 				int period = Integer.parseInt(after);
 				if (period > 0 && period <= numPeriods) {
@@ -269,12 +289,12 @@ public class EditCourseActivity extends IHWActivity {
 			else numMeetings--;
 			int r = ((int[])cb.getTag())[0];
 			int c = ((int[])cb.getTag())[1];
-			if (r==1 && !isChecked) {
+			if (r == 1 && !isChecked) {
 				meetingBoxes[0][c].setChecked(false);
 				meetingBoxes[2][c].setChecked(false);
 			} else if (r!=1 && isChecked) {
-				if (r==0 && meetingBoxes[2][c].isChecked()) meetingBoxes[2][c].setChecked(false);
-				if (r==2 && meetingBoxes[0][c].isChecked()) meetingBoxes[0][c].setChecked(false);
+				if (r == 0 && meetingBoxes[2][c].isChecked()) meetingBoxes[2][c].setChecked(false);
+				if (r == 2 && meetingBoxes[0][c].isChecked()) meetingBoxes[0][c].setChecked(false);
 				meetingBoxes[1][c].setChecked(true);
 			}
 			invalidateOptionsMenu();
