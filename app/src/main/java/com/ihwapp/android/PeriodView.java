@@ -36,6 +36,7 @@ public class PeriodView extends LinearLayout implements DayFragment.OnFragmentVi
 	boolean changesSaved = true;
 	private TextView countdownView;
 	private Timer countdownTimer;
+    private static Timer staticCountDownTimer;
 
 	public PeriodView(Context context) {
 		super(context);
@@ -173,7 +174,9 @@ public class PeriodView extends LinearLayout implements DayFragment.OnFragmentVi
 		this.period.saveNotes();
 		changesSaved = true;
 	}
-	
+
+
+    /* Each PeriodView has it's own timer and it only shows up when it's needed */
 	public void addCountdownTimerIfNeeded() {
 		if (this.period.getIndex() == -1) return;
 		if (this.period.getDate().equals(new Date())) {
@@ -182,7 +185,7 @@ public class PeriodView extends LinearLayout implements DayFragment.OnFragmentVi
 			Day d = Curriculum.getCurrentCurriculum().getDay(this.period.getDate());
 			if (secondsUntil > 0 &&
 				((this.period.getIndex() > 0 && d.getPeriods().get(this.period.getIndex()-1).getStartTime().secondsUntil(now) > 0)
-				|| (this.period.getIndex() == 0 && secondsUntil < 60*60))) {
+				|| (this.period.getIndex() == 0 && secondsUntil < 60 * 60))) {
 				countdownView.setVisibility(View.VISIBLE);
 				if (countdownTimer != null) countdownTimer.cancel();
 				countdownTimer = new Timer();
@@ -192,9 +195,10 @@ public class PeriodView extends LinearLayout implements DayFragment.OnFragmentVi
 							public void run() {
 								int secsUntil = new Time().secondsUntil(period.getStartTime());
 								if (secsUntil >= 0) {
-									String secs = "" + secsUntil%60;
-									if (secsUntil%60 < 10) secs = "0" + secs;
-									countdownView.setText("Starts in " + secsUntil/60 + ":" + secs);
+									String secs = "" + secsUntil % 60;
+									if (secsUntil % 60 < 10) secs = "0" + secs;
+									countdownView.setText("Starts in " + secsUntil / 60 + ":" + secs);
+                                    staticCountDownTimer = countdownTimer;
 								} else {
 									PeriodView.this.findViewById(R.id.text_countdown).setVisibility(View.GONE);
 									if (countdownTimer != null) {

@@ -203,7 +203,11 @@ public class DayFragment extends Fragment {
 	}
 	
 	/*****OTHER METHODS*****/
-	
+
+    public Timer getCountdownTimer() {
+
+    }
+
 	/*public void resetCountdownTimer() {
 		countdownTimer.cancel();
 		countdownTimer = null;
