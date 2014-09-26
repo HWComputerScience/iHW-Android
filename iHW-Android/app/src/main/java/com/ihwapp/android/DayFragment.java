@@ -1,20 +1,30 @@
 package com.ihwapp.android;
 
-import java.util.*;
-
-import com.ihwapp.android.model.*;
-import com.ihwapp.android.model.Date;
-
-import android.support.v4.app.Fragment;
 import android.app.Activity;
 import android.content.Intent;
 import android.graphics.Typeface;
 import android.net.Uri;
 import android.os.Bundle;
+import android.support.v4.app.Fragment;
 import android.util.Log;
-import android.view.*;
+import android.view.LayoutInflater;
+import android.view.View;
 import android.view.View.OnClickListener;
-import android.widget.*;
+import android.view.ViewGroup;
+import android.widget.LinearLayout;
+import android.widget.ScrollView;
+import android.widget.TextView;
+
+import com.ihwapp.android.model.Curriculum;
+import com.ihwapp.android.model.Date;
+import com.ihwapp.android.model.Day;
+import com.ihwapp.android.model.Holiday;
+import com.ihwapp.android.model.Period;
+import com.ihwapp.android.model.Time;
+
+import java.util.ArrayList;
+import java.util.Timer;
+import java.util.TimerTask;
 
 public class DayFragment extends Fragment {
 	private Date date;
@@ -203,10 +213,6 @@ public class DayFragment extends Fragment {
 	}
 	
 	/*****OTHER METHODS*****/
-
-    public Timer getCountdownTimer() {
-
-    }
 
 	/*public void resetCountdownTimer() {
 		countdownTimer.cancel();

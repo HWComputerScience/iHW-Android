@@ -37,6 +37,7 @@ public class PeriodView extends LinearLayout implements DayFragment.OnFragmentVi
 	private TextView countdownView;
 	private Timer countdownTimer;
     private static Timer staticCountDownTimer;
+    public static long staticSecsUntil;
 
 	public PeriodView(Context context) {
 		super(context);
@@ -193,7 +194,7 @@ public class PeriodView extends LinearLayout implements DayFragment.OnFragmentVi
 					public void run() {
 						((Activity)PeriodView.this.getContext()).runOnUiThread(new Runnable() {
 							public void run() {
-								int secsUntil = new Time().secondsUntil(period.getStartTime());
+								long secsUntil = new Time().secondsUntil(period.getStartTime());
 								if (secsUntil >= 0) {
 									String secs = "" + secsUntil % 60;
 									if (secsUntil % 60 < 10) secs = "0" + secs;
