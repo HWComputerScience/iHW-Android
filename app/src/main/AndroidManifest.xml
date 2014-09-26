@@ -77,6 +77,22 @@
     	<service android:name="com.ihwapp.android.UpdateService"
             android:exported="false">
     	</service>
+
+        <service android:name="com.ihwapp.android.iHWDashClockExtension"
+            android:icon="@drawable/ic_launcher"
+            android:label="@string/app_name"
+            android:permission="com.google.android.apps.dashclock.permission.READ_EXTENSION_DATA">
+            <intent-filter>
+                <action android:name="com.google.android.apps.dashclock.Extension" />
+            </intent-filter>
+            <meta-data android:name="protocolVersion" android:value="2" />
+            <meta-data android:name="worldReadable" android:value="true" />
+            <meta-data android:name="description"
+                android:value="Time until next period." />
+            <meta-data android:name="settingsActivity"
+                android:value=".ExampleSettingsActivity" />
+            </service>
+
     </application>
 
 </manifest>
