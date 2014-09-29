@@ -2,8 +2,8 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:focusableInTouchMode="true" >
+    android:focusableInTouchMode="true"
+    android:orientation="vertical">
 
     <TextView
         android:id="@+id/date_view"
@@ -34,7 +34,7 @@
         android:id="@+id/layout_caption"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/orange" >
+        android:background="@color/orange">
 
         <TextView
             android:id="@+id/text_day_caption"
@@ -60,14 +60,14 @@
     <ScrollView
         android:id="@+id/scroll_periods"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" >
+        android:layout_height="wrap_content">
 
         <LinearLayout
             android:id="@+id/layout_periods"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            android:paddingBottom="5dp" >
+            android:paddingBottom="5dp">
 
         </LinearLayout>
     </ScrollView>
