@@ -1,8 +1,6 @@
 package com.ihwapp.android;
 
 import android.content.Intent;
-import android.content.SharedPreferences;
-import android.preference.PreferenceManager;
 
 import com.google.android.apps.dashclock.api.DashClockExtension;
 import com.google.android.apps.dashclock.api.ExtensionData;
@@ -11,9 +9,8 @@ import com.google.android.apps.dashclock.api.ExtensionData;
  * Created by ethan on 9/22/14.
  */
 public class iHWDashClockExtension extends DashClockExtension {
-    private static final String TAG = "iHW-DashClockExtension";
-
     public static final String PREF_NAME = "pref_name";
+    private static final String TAG = "iHW-DashClockExtension";
 
     @Override
     protected void onInitialize(boolean isReconnect) {
@@ -21,10 +18,6 @@ public class iHWDashClockExtension extends DashClockExtension {
     }
 
     protected void onUpdateData(int reason) {
-        // Get preference value
-        SharedPreferences sp = PreferenceManager.getDefaultSharedPreferences(this);
-        String name = sp.getString(PREF_NAME, "testing");
-        // Timer time =  TODO: read time from the active countDownTimer in PeriodView or DayFragment and format it
         long secsUntil = PeriodView.staticSecsUntil;
         String secs = "" + secsUntil % 60;
         if (secsUntil % 60 < 10) secs = "0" + secs;
@@ -32,7 +25,7 @@ public class iHWDashClockExtension extends DashClockExtension {
         // Publish the extension data update.
         publishUpdate(new ExtensionData()
                 .visible(true)
-                .icon(R.drawable.ic_launcher)
+                .icon(R.drawable.notification_small)
                 .status(secsUntil / 60 + ":" + secs)
                 .expandedTitle("iHW")
                 .expandedBody("Next period starts in " + secsUntil / 60 + ":" + secs)
@@ -40,7 +33,6 @@ public class iHWDashClockExtension extends DashClockExtension {
                 .clickIntent(new Intent(this, LaunchActivity.class)));
 
         // Hide extension if there's no data.
-        if (secsUntil == 0)
-            publishUpdate(null);
+        if (secsUntil == 0) publishUpdate(null);
     }
 }

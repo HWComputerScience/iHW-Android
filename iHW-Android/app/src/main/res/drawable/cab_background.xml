@@ -3,14 +3,14 @@
     android:insetBottom="0dp"
     android:insetLeft="-5dp"
     android:insetRight="-5dp"
-    android:insetTop="-5dp" >
- 
+    android:insetTop="-5dp">
+
     <shape>
         <solid android:color="@drawable/lighter_red" />
- 
+
         <stroke
             android:width="4dp"
             android:color="@drawable/orange" />
     </shape>
- 
+
 </inset>

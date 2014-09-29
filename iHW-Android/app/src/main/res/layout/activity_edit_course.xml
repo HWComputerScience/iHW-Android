@@ -2,13 +2,13 @@
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/scroll_periods"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content" >
+    android:layout_height="wrap_content">
 
     <LinearLayout
         android:id="@+id/layout_notes"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical" >
+        android:orientation="vertical">
 
         <EditText
             android:id="@+id/courseNameBox"
@@ -17,14 +17,14 @@
             android:ems="10"
             android:hint="@string/hint_course_name"
             android:inputType="text|textCapWords"
-            android:textAppearance="?android:attr/textAppearanceLarge" >
+            android:textAppearance="?android:attr/textAppearanceLarge">
 
             <requestFocus />
         </EditText>
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" >
+            android:layout_height="wrap_content">
 
             <EditText
                 android:id="@+id/coursePeriodBox"
@@ -46,7 +46,7 @@
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            android:visibility="gone" >
+            android:visibility="gone">
 
             <TextView
                 android:id="@+id/text_course_name"
@@ -58,7 +58,7 @@
             <LinearLayout
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:layout_gravity="center" >
+                android:layout_gravity="center">
 
                 <com.ihwapp.android.RotatedTextView
                     android:id="@+id/RotatedTextView1"
@@ -73,8 +73,7 @@
                 <TableLayout
                     android:id="@+id/courseMeetingsLayout"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content" >
-                </TableLayout>
+                    android:layout_height="wrap_content"></TableLayout>
             </LinearLayout>
         </LinearLayout>
     </LinearLayout>
