@@ -4,7 +4,7 @@
         android:id="@+id/action_add"
         android:checkable="false"
         android:icon="@drawable/ic_content_new"
-        android:showAsAction="always|withText"
+        android:showAsAction="always"
         android:title="@string/action_add_course"
         android:titleCondensed="@string/action_add" />
 
