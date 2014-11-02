@@ -18,6 +18,7 @@
         android:scrollHorizontally="true"
         android:singleLine="true"
         android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textColor="@android:color/black"
         android:textIsSelectable="false" />
 
 </LinearLayout>
