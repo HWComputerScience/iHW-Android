@@ -4,7 +4,7 @@
     <string name="app_name">iHW</string>
     <string name="hello_world">Hello world!</string>
     <string name="prompt_welcome">Welcome to iHW for Android!</string>
-    <string name="title_activity_schedule">View Schedule</string>
+    <string name="title_activity_schedule">Schedule</string>
     <string name="title_activity_edit_courses">Edit Courses</string>
     <string name="button_download">Download from HW.com</string>
     <string name="button_add_manually">Add Courses Manually</string>
