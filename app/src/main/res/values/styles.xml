@@ -4,6 +4,7 @@
         Base application theme, dependent on API level. This theme is replaced
         by AppBaseTheme from res/values-vXX/styles.xml on newer devices.
     -->
+
     <style name="AppBaseTheme" parent="android:Theme.Holo">
         <!--
             Theme customizations available in newer API levels can go in
@@ -13,33 +14,45 @@
     </style>
 
     <!-- Application theme. -->
-    <style name="AppTheme" parent="AppBaseTheme">
+    <style name="AppTheme" parent="android:Theme.Material.Light.DarkActionBar">
+
+        <!-- Main theme colors -->
+        <!--   app branding color for the app bar -->
+        <item name="android:colorPrimary">@color/lighter_red</item>
+        <!--   darker variant for the status bar and contextual app bars -->
+        <item name="android:colorPrimaryDark">@color/dark_red</item>
+        <!--   theme UI controls like checkboxes and text fields -->
+        <item name="android:colorAccent">@color/accent_red</item>
+
+        <item name="android:overScrollFooter">@color/accent_red</item>
+        <item name="android:overScrollHeader">@color/accent_red</item>
+
         <item name="android:windowBackground">@android:color/background_light</item>
         <item name="android:textColor">@android:color/background_dark</item>
         <item name="android:actionBarStyle">@style/AppTheme.ActionBar</item>
         <item name="android:selectableItemBackground">@drawable/action_item_selector</item>
         <item name="android:actionModeBackground">@drawable/cab_background</item>
         <item name="android:actionMenuTextColor">@color/white</item>
-        <item name="android:spinnerStyle">@android:style/Widget.Holo.Light.Spinner</item>
+        <item name="android:spinnerStyle">@android:style/Widget.Material.Light.Spinner</item>
         <item name="android:spinnerItemStyle">
-            @android:style/Widget.Holo.Light.TextView.SpinnerItem
+            @android:style/Widget.Material.Light.TextView.SpinnerItem
         </item>
-        <item name="android:textViewStyle">@android:style/Widget.Holo.Light.TextView</item>
-        <item name="android:editTextStyle">@android:style/Widget.Holo.Light.EditText</item>
-        <item name="android:buttonStyle">@android:style/Widget.Holo.Light.Button</item>
+        <item name="android:textViewStyle">@android:style/Widget.Material.Light.TextView</item>
+        <item name="android:editTextStyle">@android:style/Widget.Material.Light.EditText</item>
+        <item name="android:buttonStyle">@android:style/Widget.Material.Light.Button</item>
         <item name="android:checkboxStyle">
-            @android:style/Widget.Holo.Light.CompoundButton.CheckBox
+            @android:style/Widget.Material.Light.CompoundButton.CheckBox
         </item>
-        <item name="android:popupMenuStyle">@android:style/Widget.Holo.Light.PopupMenu</item>
+        <item name="android:popupMenuStyle">@android:style/Widget.Material.Light.PopupMenu</item>
         <item name="android:textColorHint">#808080</item>
         <item name="android:editTextColor">@android:color/background_dark</item>
     </style>
 
-    <style name="PopupTheme" parent="android:Theme.Holo.Light.Dialog">
-        <item name="android:windowBackground">@android:color/transparent</item>
+    <style name="PopupTheme" parent="android:Theme.Material.Light.Dialog">
+        <item name="android:colorAccent">@color/accent_red</item>
     </style>
 
-    <style name="AppTheme.ActionBar" parent="@android:style/Widget.Holo.ActionBar">
+    <style name="AppTheme.ActionBar" parent="@android:style/Widget.Material.ActionBar">
         <item name="android:background">@drawable/dark_red</item>
         <item name="android:selectableItemBackground">@drawable/action_item_selector</item>
         <item name="android:titleTextStyle">@style/AppTheme.ActionBar.TitleTextStyle</item>
