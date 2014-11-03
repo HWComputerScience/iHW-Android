@@ -44,7 +44,7 @@ public class ScheduleActivity extends FragmentActivity implements Curriculum.Mod
         super.onCreate(savedInstanceState);
 
         setContentView(R.layout.activity_schedule);
-        this.setTitle("View Schedule");
+        this.setTitle(R.string.title_activity_schedule);
         if (savedInstanceState != null) lastIndex = savedInstanceState.getInt("lastIndex");
         else lastIndex = -1;
         Log.d("iHW-lc", "ScheduleActivity onCreate: " + lastIndex);
