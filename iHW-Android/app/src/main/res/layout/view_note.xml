@@ -4,7 +4,7 @@
     android:layout_height="match_parent"
     android:gravity="center_vertical"
     android:orientation="horizontal"
-    android:paddingRight="4dp" >
+    android:paddingRight="4dp">
 
     <TextView
         android:id="@+id/text_bullet"
@@ -37,7 +37,7 @@
         android:paddingRight="4dp"
         android:scrollHorizontally="false"
         android:textColorHint="#FFCCCCCC"
-        android:textCursorDrawable="@drawable/cursor" >
+        android:textCursorDrawable="@drawable/cursor">
 
         <requestFocus />
     </EditText>
@@ -48,7 +48,7 @@
         android:layout_width="22dp"
         android:layout_height="22dp"
         android:layout_gravity="center_vertical"
-        android:background="@drawable/smallgear"
+        android:background="@drawable/ic_smallgear"
         android:visibility="gone" />
 
 </LinearLayout>

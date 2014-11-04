@@ -15,9 +15,10 @@
         android:ellipsize="end"
         android:linksClickable="false"
         android:maxLines="1"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:textIsSelectable="false"
         android:scrollHorizontally="true"
-		android:singleLine="true"/>
+        android:singleLine="true"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textColor="@android:color/black"
+        android:textIsSelectable="false" />
 
 </LinearLayout>
