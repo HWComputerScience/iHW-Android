@@ -1,15 +1,16 @@
-<menu xmlns:android="http://schemas.android.com/apk/res/android">
-    <item
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:android1="http://schemas.android.com/apk/res-auto" >
+
+    <item android:title="@string/action_goto_today"
         android:id="@+id/action_goto_today"
         android:enabled="false"
         android:icon="@drawable/ic_action_go_to_today"
-        android:showAsAction="ifRoom"
-        android:title="@string/action_goto_today"
+        android1:showAsAction="ifRoom"
         android:visible="false" />
     <item
         android:id="@+id/action_goto_date"
         android:icon="@drawable/ic_action_goto_date"
-        android:showAsAction="ifRoom"
+        android1:showAsAction="ifRoom"
         android:title="@string/action_goto_date" />
     <item
         android:id="@+id/action_edit_courses"
