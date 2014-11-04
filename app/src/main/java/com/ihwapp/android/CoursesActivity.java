@@ -19,7 +19,7 @@ import com.ihwapp.android.model.Curriculum;
 
 import java.util.Arrays;
 
-public abstract class CoursesActivity extends ListActivity implements ListAdapter {
+public abstract class CoursesActivity extends ActionBarListActivity implements ListAdapter {
     private String[] courseNames;
 
     @Override
