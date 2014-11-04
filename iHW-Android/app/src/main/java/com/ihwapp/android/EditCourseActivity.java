@@ -2,6 +2,8 @@ package com.ihwapp.android;
 
 import android.content.Context;
 import android.content.res.Resources;
+import android.graphics.Color;
+import android.os.Build;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.InputFilter;
@@ -18,6 +20,7 @@ import android.widget.CheckBox;
 import android.widget.CompoundButton;
 import android.widget.EditText;
 import android.widget.LinearLayout;
+import android.widget.ScrollView;
 import android.widget.Spinner;
 import android.widget.TableLayout;
 import android.widget.TableRow;
@@ -52,14 +55,14 @@ public class EditCourseActivity extends IHWActivity {
         super.onCreate(savedInstanceState);
         this.setContentView(R.layout.activity_edit_course);
         this.setTitle("Add a Course");
-        getActionBar().setDisplayHomeAsUpEnabled(true); // TODO eliminate possibility of NPE
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         numDays = Curriculum.getCurrentCampus();
         numPeriods = numDays + 3;
         nameBox = (EditText) this.findViewById(R.id.courseNameBox);
         periodBox = (EditText) this.findViewById(R.id.coursePeriodBox);
         termSpinner = (Spinner) this.findViewById(R.id.courseTermBox);
-        int etid = Resources.getSystem().getIdentifier("edit_text_holo_light", "drawable", "android");
+        int etid = Resources.getSystem().getIdentifier("edit_text_material_light", "drawable", "android");
         nameBox.setBackgroundResource(etid);
         periodBox.setBackgroundResource(etid);
         ArrayAdapter<CharSequence> a = ArrayAdapter.createFromResource(this, R.array.term_options, R.layout.spinner_layout);
@@ -116,7 +119,12 @@ public class EditCourseActivity extends IHWActivity {
             for (int c = 0; c < numDays; c++) {
                 if (r == 0) meetingsLayout.setColumnStretchable(c + 1, true);
                 CheckBox cb = new CheckBox(this);
-                int cbid = Resources.getSystem().getIdentifier("btn_check_holo_light", "drawable", "android");
+                int cbid;
+                if (Build.VERSION.SDK_INT >= 21)
+                    cbid = Resources.getSystem().getIdentifier("btn_check_material_anim", "drawable",
+                            "android");
+                else cbid = Resources.getSystem().getIdentifier("btn_check_holo_light", "drawable",
+                        "android");
                 cb.setButtonDrawable(cbid);
                 cb.setVisibility(View.INVISIBLE);
                 cb.setEnabled(false);
@@ -154,7 +162,7 @@ public class EditCourseActivity extends IHWActivity {
         if (existingCourseName != null) {
             this.getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_HIDDEN);
             Course c = Curriculum.getCurrentCurriculum().getCourse(existingCourseName);
-            getActionBar().setTitle(c.getName()); // TODO eliminate NPE possibility
+            getSupportActionBar().setTitle(c.getName());
             nameBox.setText(c.getName());
             periodBox.setText("" + c.getPeriod());
             termSpinner.setSelection(c.getTerm());

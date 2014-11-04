@@ -13,6 +13,7 @@ public class WebViewActivity extends IHWActivity {
         setContentView(R.layout.activity_web_view);
         this.title = getIntent().getStringExtra("title");
         this.url = getIntent().getStringExtra("urlstr");
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
     }
 
     @Override

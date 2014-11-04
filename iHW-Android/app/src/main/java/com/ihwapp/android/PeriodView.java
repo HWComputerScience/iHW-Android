@@ -5,6 +5,7 @@ import android.content.Context;
 import android.content.res.Resources;
 import android.graphics.Color;
 import android.graphics.Typeface;
+import android.os.Build;
 import android.os.Parcelable;
 import android.support.v4.app.Fragment;
 import android.text.Editable;
@@ -38,8 +39,6 @@ import java.util.TimerTask;
 public class PeriodView extends LinearLayout implements DayFragment.OnFragmentVisibilityChangedListener {
     public static final int SIZE_MEDIUM = 18;
     public static final int SIZE_LARGE = 24;
-    public static long staticSecsUntil;
-    private static Timer staticCountDownTimer;
     boolean changesSaved = true;
     private Period period;
     private LinearLayout notesLayout;
@@ -111,7 +110,12 @@ public class PeriodView extends LinearLayout implements DayFragment.OnFragmentVi
 
     private void addAnotherNoteBox(Note n) {
         View v = LayoutInflater.from(this.getContext()).inflate(R.layout.view_note, null);
-        int id = Resources.getSystem().getIdentifier("btn_check_holo_light", "drawable", "android");
+        int id;
+        if (Build.VERSION.SDK_INT >= 21)
+            id = Resources.getSystem().getIdentifier("btn_check_material_anim", "drawable",
+                    "android");
+        else id = Resources.getSystem().getIdentifier("btn_check_holo_light", "drawable",
+                "android");
         ((CheckBox) v.findViewById(R.id.checkbox)).setButtonDrawable(id);
         ((CheckBox) v.findViewById(R.id.checkbox)).setOnCheckedChangeListener(new CheckBox.OnCheckedChangeListener() {
             public void onCheckedChanged(CompoundButton arg0, boolean arg1) {
@@ -157,7 +161,7 @@ public class PeriodView extends LinearLayout implements DayFragment.OnFragmentVi
         View row = notesLayout.getChildAt(index);
         EditText et = (EditText) row.findViewById(R.id.text_note);
         et.setTextSize(SIZE_LARGE);
-        et.setTextColor(getResources().getColor(R.drawable.dark_red));
+        et.setTextColor(getResources().getColor(R.color.dark_red));
         et.setTypeface(Typeface.DEFAULT_BOLD);
         if (et.getText().toString().equals("")) return;
         removeNoteBox(index);
@@ -226,7 +230,6 @@ public class PeriodView extends LinearLayout implements DayFragment.OnFragmentVi
                                     String secs = "" + secsUntil % 60;
                                     if (secsUntil % 60 < 10) secs = "0" + secs;
                                     countdownView.setText("Starts in " + secsUntil / 60 + ":" + secs);
-                                    staticCountDownTimer = countdownTimer;
                                 } else {
                                     PeriodView.this.findViewById(R.id.text_countdown).setVisibility(View.GONE);
                                     if (countdownTimer != null) {

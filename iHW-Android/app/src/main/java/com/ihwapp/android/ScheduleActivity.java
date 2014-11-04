@@ -2,6 +2,7 @@ package com.ihwapp.android;
 
 import android.app.AlertDialog;
 import android.app.DatePickerDialog;
+import android.app.Notification;
 import android.app.NotificationManager;
 import android.app.ProgressDialog;
 import android.content.Context;
@@ -15,6 +16,7 @@ import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentStatePagerAdapter;
 import android.support.v4.view.ViewPager;
+import android.support.v7.app.ActionBarActivity;
 import android.util.Log;
 import android.view.Gravity;
 import android.view.Menu;
@@ -28,7 +30,7 @@ import com.ihwapp.android.model.Date;
 
 import java.util.Locale;
 
-public class ScheduleActivity extends FragmentActivity implements Curriculum.ModelLoadingListener {
+public class ScheduleActivity extends ActionBarActivity implements Curriculum.ModelLoadingListener {
     private ViewPager pager;
     private DayPagerAdapter adapter;
     private Date currentDate;
