@@ -1,4 +1,5 @@
-<?xml version="1.0" encoding="utf-8"?><!--<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<?xml version="1.0" encoding="utf-8"?>
+<!--<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
@@ -12,7 +13,7 @@
         android:layout_height="match_parent"
         android:layout_gravity="center_vertical"
         android:layout_marginLeft="3dp"
-        android:orientation="vertical">
+        android:orientation="vertical" >
 
         <TextView
             android:id="@+id/text_starttime"
@@ -48,11 +49,11 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:minHeight="72dp"
-        android:orientation="vertical">
+        android:orientation="vertical" >
 
         <LinearLayout
             android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="wrap_content" 
             android:orientation="horizontal">
 
             <TextView
@@ -62,11 +63,11 @@
                 android:layout_weight="1"
                 android:ellipsize="end"
                 android:lines="1"
-                android:scrollHorizontally="true"
-                android:singleLine="true"
                 android:textAppearance="?android:attr/textAppearanceMedium"
                 android:textIsSelectable="false"
-                android:textStyle="bold" />
+                android:textStyle="bold" 
+                android:scrollHorizontally="true"
+				android:singleLine="true"/>
 
             <TextView
                 android:id="@+id/text_countdown"
@@ -85,4 +86,5 @@
 
         </LinearLayout>
     </LinearLayout>
-</merge><!-- </LinearLayout> -->
+</merge>
+<!-- </LinearLayout> -->

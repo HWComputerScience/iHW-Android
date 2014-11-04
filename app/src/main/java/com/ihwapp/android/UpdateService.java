@@ -1,18 +1,18 @@
 package com.ihwapp.android;
 
+import com.ihwapp.android.model.Curriculum;
+
 import android.app.IntentService;
 import android.content.Intent;
 
-import com.ihwapp.android.model.Curriculum;
-
 public class UpdateService extends IntentService {
-    public UpdateService() {
-        super("UpdateService");
-    }
+	public UpdateService() {
+		super("UpdateService");
+	}
 
-    @Override
-    protected void onHandleIntent(Intent intent) {
-        Curriculum.reloadCurrentCurriculum();
-    }
+	@Override
+	protected void onHandleIntent(Intent intent) {
+		Curriculum.reloadCurrentCurriculum();
+	}
 
 }
