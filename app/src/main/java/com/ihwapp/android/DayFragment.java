@@ -200,7 +200,9 @@ public class DayFragment extends Fragment {
         periodViews = null;
         //countdownTimer = null;
         //countdownView = null;
-        ((ViewGroup) this.getView()).removeAllViews(); // TODO eliminate NPE possibility
+        if (((ViewGroup) this.getView()) != null) {
+            ((ViewGroup) this.getView()).removeAllViews(); // TODO eliminate NPE possibility
+        }
     }
 
     public void onDestroy() {

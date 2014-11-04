@@ -4,6 +4,7 @@ import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.database.DataSetObserver;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.Gravity;
@@ -56,6 +57,7 @@ public class PreferencesActivity extends IHWActivity implements ListAdapter {
     }
 
     public boolean onCreateOptionsMenu(Menu menu) {
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         return super.onCreateOptionsMenu(menu);
 
     }
