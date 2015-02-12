@@ -1,0 +1,5 @@
+/home/ethan/Development/iHW/iHW-Android/app/build/intermediates/classes/debug
+/home/ethan/Development/iHW/iHW-Android/app/build/intermediates/pre-dexed/debug/support-annotations-21.0.3-aba517225b13c033594ac07b2c1e4e11a7736d03.jar
+/home/ethan/Development/iHW/iHW-Android/app/build/intermediates/pre-dexed/debug/internal_impl-21.0.3-e619b1bbd6428c06a34a162cc3ed60b5d1501c27.jar
+/home/ethan/Development/iHW/iHW-Android/app/build/intermediates/pre-dexed/debug/jsoup-1.7.2-75e966eeb8038fe50578c772a533f281c74c6234.jar
+/home/ethan/Development/iHW/iHW-Android/app/build/intermediates/pre-dexed/debug/classes-061477352dcd1c4070e7c5235ae92efa2da4c59b.jar

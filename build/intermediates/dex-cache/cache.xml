@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        jar="/home/ethan/Development/iHW/iHW-Android/app/libs/jsoup-1.7.2.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="872693211fd68d1c4e116cf90021603207725e19">
+        <dex dex="/home/ethan/Development/iHW/iHW-Android/app/build/intermediates/pre-dexed/debug/jsoup-1.7.2-75e966eeb8038fe50578c772a533f281c74c6234.jar" />
+    </item>
+    <item
+        jar="/home/ethan/Development/iHW/iHW-Android/app/build/intermediates/exploded-aar/com.android.support/support-v4/21.0.3/classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="2c91c949a45a21cdecf26e03951e46c7beec9ad8">
+        <dex dex="/home/ethan/Development/iHW/iHW-Android/app/build/intermediates/pre-dexed/debug/classes-061477352dcd1c4070e7c5235ae92efa2da4c59b.jar" />
+    </item>
+    <item
+        jar="/home/ethan/Development/iHW/iHW-Android/app/build/intermediates/exploded-aar/com.android.support/support-v4/21.0.3/libs/internal_impl-21.0.3.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="01ec05bfbafcc07646ba813000bf2ef11742dd03">
+        <dex dex="/home/ethan/Development/iHW/iHW-Android/app/build/intermediates/pre-dexed/debug/internal_impl-21.0.3-e619b1bbd6428c06a34a162cc3ed60b5d1501c27.jar" />
+    </item>
+    <item
+        jar="/home/ethan/Android/Sdk/extras/android/m2repository/com/android/support/support-annotations/21.0.3/support-annotations-21.0.3.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="4b74cefe1f0c1b819e7260c8627a14674e37fd35">
+        <dex dex="/home/ethan/Development/iHW/iHW-Android/app/build/intermediates/pre-dexed/debug/support-annotations-21.0.3-aba517225b13c033594ac07b2c1e4e11a7736d03.jar" />
+    </item>
+
+</items>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android"> 
+  
+  <item android:state_pressed="true"
+        android:drawable="@drawable/orange" />
+  
+  <item android:state_activated="true"
+        android:drawable="@drawable/dark_tan" />
+  
+</selector> <!-- From: file:/home/ethan/Development/iHW/iHW-Android/app/src/main/res/drawable/list_item_selector.xml -->
