@@ -1,6 +1,0 @@
-<menu xmlns:android="http://schemas.android.com/apk/res/android" >
-
-    <item android:id="@+id/action_add" android:showAsAction="always|withText" android:title="@string/action_add_course" android:checkable="false" android:icon="@drawable/ic_content_new" android:titleCondensed="@string/action_add"/>
-
-
-</menu><!-- From: file:/home/ethan/Development/iHW/iHW-Android/app/src/main/res/menu/courses.xml -->
