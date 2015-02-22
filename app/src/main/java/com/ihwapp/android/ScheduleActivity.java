@@ -1,24 +1,35 @@
 package com.ihwapp.android;
 
-import java.util.Locale;
-
-import com.ihwapp.android.model.*;
-
-import android.graphics.*;
-import android.os.Bundle;
 import android.app.AlertDialog;
 import android.app.DatePickerDialog;
 import android.app.NotificationManager;
 import android.app.ProgressDialog;
-import android.content.*;
-import android.support.v4.app.*;
-import android.support.v4.view.*;
+import android.content.Context;
+import android.content.DialogInterface;
+import android.content.Intent;
+import android.graphics.Color;
+import android.graphics.Typeface;
+import android.os.Bundle;
+import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentManager;
+import android.support.v4.app.FragmentStatePagerAdapter;
+import android.support.v4.view.ViewPager;
+import android.support.v7.app.ActionBarActivity;
+import android.support.v7.widget.Toolbar;
 import android.util.Log;
-import android.view.*;
+import android.view.Gravity;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.ViewGroup.LayoutParams;
-import android.widget.*;
+import android.widget.DatePicker;
+import android.widget.Toast;
 
-public class ScheduleActivity extends FragmentActivity implements Curriculum.ModelLoadingListener{
+import com.ihwapp.android.model.Curriculum;
+import com.ihwapp.android.model.Date;
+
+import java.util.Locale;
+
+public class ScheduleActivity extends ActionBarActivity implements Curriculum.ModelLoadingListener{
 	private ViewPager pager;
     private DayPagerAdapter adapter;
 	private Date currentDate;
@@ -27,11 +38,17 @@ public class ScheduleActivity extends FragmentActivity implements Curriculum.Mod
 	private ProgressDialog progressDialog;
 	private Menu optionsMenu;
 
-	@SuppressWarnings("deprecation")
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_schedule);
+
+        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        toolbar.setTitle("Schedule");
+        toolbar.inflateMenu(R.menu.schedule);
+        setSupportActionBar(toolbar);
+
 		Curriculum.ctx = this.getApplicationContext();
-		super.onCreate(savedInstanceState);
 		
 		setContentView(R.layout.activity_schedule);
 		this.setTitle("View Schedule");
@@ -180,15 +197,21 @@ public class ScheduleActivity extends FragmentActivity implements Curriculum.Mod
 	}
 	
 	public boolean onOptionsItemSelected(MenuItem item) {
-		if (item.getItemId() == R.id.action_edit_courses) {
+        // Handle action bar item clicks here. The action bar will
+        // automatically handle clicks on the Home/Up button, so long
+        // as you specify a parent activity in AndroidManifest.xml.
+        int id = item.getItemId();
+
+        //noinspection SimplifiableIfStatement
+        if (id == R.id.action_edit_courses) {
 			Intent i = new Intent(this, NormalCoursesActivity.class);
 			startActivity(i);
 			return true;
-		} else if (item.getItemId() == R.id.action_goto_today) {
+		} else if (id == R.id.action_goto_today) {
 			//int pos = Math.min(new Date(7,1,Curriculum.getCurrentYear(this)).getDaysUntil(new Date()), adapter.getCount()-1);
 			//pager.setCurrentItem(pos);
 			gotoDate(new Date(), true);
-		} else if (item.getItemId() == R.id.action_goto_date) {
+		} else if (id == R.id.action_goto_date) {
 			DatePickerDialog dpd = new DatePickerDialog(this, R.style.PopupTheme, null, currentDate.getYear(), currentDate.getMonth()-1, currentDate.getDay());
 			dpd.getDatePicker().init(currentDate.getYear(), currentDate.getMonth()-1, currentDate.getDay(), new DatePicker.OnDateChangedListener() {
 				public void onDateChanged(DatePicker view, int year, int monthOfYear,
@@ -204,14 +227,15 @@ public class ScheduleActivity extends FragmentActivity implements Curriculum.Mod
 				}
 			});
 			dpd.show();
-		} else if (item.getItemId() == R.id.action_refresh) {
+		} else if (id == R.id.action_refresh) {
 			Curriculum.reloadCurrentCurriculum().addModelLoadingListener(this);
-		} else if (item.getItemId() == R.id.action_options) {
+		} else if (id == R.id.action_settings) {
 			Intent i = new Intent(this, PreferencesActivity.class);
 			startActivity(i);
 			return true;
 		}
-		return false;
+
+        return super.onOptionsItemSelected(item);
 	}
 	
 	public void onSaveInstanceState(Bundle outState) {
