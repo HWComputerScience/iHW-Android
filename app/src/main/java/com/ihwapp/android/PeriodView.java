@@ -127,7 +127,7 @@ public class PeriodView extends LinearLayout implements DayFragment.OnFragmentVi
 		View row = notesLayout.getChildAt(index);
         EditText et = (EditText)row.findViewById(R.id.text_note);
 		et.setTextSize(SIZE_LARGE);
-		et.setTextColor(getResources().getColor(R.drawable.dark_red));
+		et.setTextColor(getResources().getColor(R.color.primaryDark));
 		et.setTypeface(Typeface.DEFAULT_BOLD);
 		if (et.getText().toString().equals("")) return;
 		removeNoteBox(index);

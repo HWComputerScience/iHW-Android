@@ -43,11 +43,6 @@ public class ScheduleActivity extends ActionBarActivity implements Curriculum.Mo
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_schedule);
 
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-        toolbar.setTitle("Schedule");
-        toolbar.inflateMenu(R.menu.schedule);
-        setSupportActionBar(toolbar);
-
 		Curriculum.ctx = this.getApplicationContext();
 		
 		setContentView(R.layout.activity_schedule);
@@ -103,6 +98,11 @@ public class ScheduleActivity extends ActionBarActivity implements Curriculum.Mo
 		NotificationManager mNotificationManager =
 			    (NotificationManager)this.getSystemService(Context.NOTIFICATION_SERVICE);
 		mNotificationManager.cancelAll();
+
+        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        toolbar.setTitle("Schedule");
+        toolbar.inflateMenu(R.menu.schedule);
+        setSupportActionBar(toolbar);
 	}
 	
 	@Override
