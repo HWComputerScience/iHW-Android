@@ -10,38 +10,32 @@
             res/values-vXX/styles.xml, while customizations related to
             backward-compatibility can go here.
         -->
-    </style>
-
-    <!-- Application theme. -->
-    <style name="AppTheme" parent="AppBaseTheme">
         <item name="colorPrimary">@color/primary</item>
         <item name="colorPrimaryDark">@color/primaryDark</item>
         <item name="colorControlHighlight">@color/primary</item>
         <item name="colorAccent">@color/accent</item>
+    </style>
 
-
+    <!-- Application theme. -->
+    <style name="AppTheme" parent="AppBaseTheme">
         <item name="android:windowBackground">@android:color/background_light</item>
         <item name="android:textColor">@android:color/background_dark</item>
         <item name="android:actionBarStyle">@style/AppTheme.ActionBar</item>
         <item name="android:selectableItemBackground">@drawable/action_item_selector</item>
         <item name="android:actionModeBackground">@drawable/cab_background</item>
         <item name="android:actionMenuTextColor">@color/white</item>
-        <item name="android:spinnerStyle">@android:style/Widget.Holo.Light.Spinner</item>
-        <item name="android:spinnerItemStyle">@android:style/Widget.Holo.Light.TextView.SpinnerItem</item>
-        <item name="android:textViewStyle">@android:style/Widget.Holo.Light.TextView</item>
-        <item name="android:editTextStyle">@android:style/Widget.Holo.Light.EditText</item>
-        <item name="android:buttonStyle">@android:style/Widget.Holo.Light.Button</item>
-        <item name="android:checkboxStyle">@android:style/Widget.Holo.Light.CompoundButton.CheckBox</item>
-        <item name="android:popupMenuStyle">@android:style/Widget.Holo.Light.PopupMenu</item>
         <item name="android:textColorHint">#808080</item>
         <item name="android:editTextColor">@android:color/background_dark</item>
     </style>
     
-    <style name="PopupTheme" parent="Theme.AppCompat.Dialog">
-	    <item name="android:windowBackground">@android:color/transparent</item>
-	</style>
+    <style name="PopupTheme" parent="Theme.AppCompat.Light.Dialog">
+        <item name="colorAccent">@color/accent</item>
+    </style>
 
-    <style name="AppTheme.ActionBar" parent="@android:style/Widget.Holo.ActionBar">
+    <style name="spinnerStyle" parent="Widget.AppCompat.Spinner" />
+
+
+    <style name="AppTheme.ActionBar" parent="Widget.AppCompat.ActionBar">
 	    <item name="android:background">@color/primaryDark</item>
 	    <item name="android:selectableItemBackground">@drawable/action_item_selector</item>
 	    <item name="android:titleTextStyle">@style/AppTheme.ActionBar.TitleTextStyle</item>
