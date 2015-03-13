@@ -1,14 +1,11 @@
 package com.ihwapp.android;
 
-import java.util.ArrayList;
-
-import com.ihwapp.android.model.Curriculum;
-
 import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.database.DataSetObserver;
 import android.os.Bundle;
+import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.Gravity;
 import android.view.Menu;
@@ -23,6 +20,10 @@ import android.widget.ListView;
 import android.widget.RadioButton;
 import android.widget.TextView;
 
+import com.ihwapp.android.model.Curriculum;
+
+import java.util.ArrayList;
+
 public class PreferencesActivity extends IHWActivity implements ListAdapter {
 	private ListView mainList;	
 	private ArrayList<String> titles;
@@ -35,24 +36,29 @@ public class PreferencesActivity extends IHWActivity implements ListAdapter {
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
+        setContentView(R.layout.preferences);
+
 		titles = new ArrayList<String>(5);
 		subtitles = new ArrayList<String>(5);
-		titles.add("Notifications");
-		subtitles.add("Get notified during frees before class");
-		titles.add("Change year or campus");
-		subtitles.add("Choose school year, and select MS or US");
-		titles.add("Redownload schedule");
-		subtitles.add("Download your schedule from HW.com");
-		titles.add("Disclaimer");
-		subtitles.add("Don't blame us if you are late to class!");
-        titles.add("Credits / About iHW");
+		titles.add(getString(R.string.pref_notifications));
+		subtitles.add(getString(R.string.pref_notifications_desc));
+		titles.add(getString(R.string.pref_change));
+		subtitles.add(getString(R.string.pref_change_desc));
+		titles.add(getString(R.string.pref_redownload));
+		subtitles.add(getString(R.string.pref_redownload_desc));
+		titles.add(getString(R.string.pref_disclaimer));
+		subtitles.add(getString(R.string.pref_disclaimer_desc));
+        titles.add(getString(R.string.pref_about));
         subtitles.add("");
-		mainList = new ListView(this);
+		mainList = (ListView) findViewById(R.id.preference_list);
 		mainList.setDivider(this.getResources().getDrawable(android.R.drawable.divider_horizontal_bright));
 		mainList.setAdapter(this);
-		this.setContentView(mainList);
 		newCampus = Curriculum.getCurrentCampus();
 		newYear = Curriculum.getCurrentYear();
+
+
+        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
 	}
 
 	public boolean onCreateOptionsMenu(Menu menu) {
@@ -152,19 +158,19 @@ public class PreferencesActivity extends IHWActivity implements ListAdapter {
 		yearText = ((TextView)view.findViewById(R.id.text_year));
 		yearText.setText(getYearStr(newYear));
 		AlertDialog d = new AlertDialog.Builder(this, R.style.PopupTheme)
-			.setTitle("Change year or campus")
+			.setTitle(R.string.pref_change)
 			.setView(view)
 			.setPositiveButton("OK", new DialogInterface.OnClickListener() {
-				@Override
-				public void onClick(DialogInterface dialog, int which) {
-					Curriculum.setCurrentCampus(newCampus);
-					Curriculum.setCurrentYear(newYear);
-					Intent i = new Intent(PreferencesActivity.this, LaunchActivity.class);
-					i.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_NEW_TASK);
-					startActivity(i);
-				}
-			})
-			.setNegativeButton("Cancel", null)
+                @Override
+                public void onClick(DialogInterface dialog, int which) {
+                    Curriculum.setCurrentCampus(newCampus);
+                    Curriculum.setCurrentYear(newYear);
+                    Intent i = new Intent(PreferencesActivity.this, LaunchActivity.class);
+                    i.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_NEW_TASK);
+                    startActivity(i);
+                }
+            })
+			.setNegativeButton(R.string.action_cancel, null)
 			.create();
 		d.setOnDismissListener(new DialogInterface.OnDismissListener() {
 				@Override
@@ -194,7 +200,7 @@ public class PreferencesActivity extends IHWActivity implements ListAdapter {
 	public void showRedownloadOptions() {
 		new AlertDialog.Builder(this, R.style.PopupTheme)
 			.setMessage("Are you sure you want to delete your courses and redownload them from HW.com?")
-			.setNegativeButton("Cancel", null)
+			.setNegativeButton(R.string.action_cancel, null)
 			.setPositiveButton("Redownload", new DialogInterface.OnClickListener() {
 				@Override
 				public void onClick(DialogInterface dialog, int which) {
@@ -212,7 +218,7 @@ public class PreferencesActivity extends IHWActivity implements ListAdapter {
 	
 	public void showDisclaimer() {
 		Intent i = new Intent(this, WebViewActivity.class);
-		i.putExtra("title", "Disclaimer");
+		i.putExtra("title", R.string.pref_disclaimer);
 		i.putExtra("urlstr", "file:///android_asset/disclaimer.html");
 		//Log.d("iHW", i.getStringExtra("urlstr"));
 		startActivity(i);
@@ -220,7 +226,7 @@ public class PreferencesActivity extends IHWActivity implements ListAdapter {
 	
 	public void showAbout() {
 		Intent i = new Intent(this, WebViewActivity.class);
-		i.putExtra("title", "Credits / About iHW");
+		i.putExtra("title", R.string.pref_about);
 		i.putExtra("urlstr", "file:///android_asset/about.html");
 		//Log.d("iHW", i.getStringExtra("urlstr"));
 		startActivity(i);
