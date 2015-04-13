@@ -144,7 +144,9 @@ public class ScheduleActivity extends ActionBarActivity implements Curriculum.Mo
 		progressDialog = null;
 		Curriculum.getCurrentCurriculum().removeModelLoadingListener(this);
 		if (this.isFinishing()) return;
-		new AlertDialog.Builder(this, R.style.PopupTheme).setMessage("The schedule for the campus and year you selected is not available. Check your internet connection and try again, or choose a different campus or year.")
+		new AlertDialog.Builder(this, R.style.PopupTheme).setMessage("The schedule for the campus " +
+                "and year you selected is not available. Check your internet connection and try " +
+                "again, or choose a different campus or year.")
 		.setPositiveButton("Cancel", new DialogInterface.OnClickListener() {
 			public void onClick(DialogInterface dialog, int which) {
 				Intent i = new Intent(ScheduleActivity.this, LaunchActivity.class);
@@ -167,9 +169,13 @@ public class ScheduleActivity extends ActionBarActivity implements Curriculum.Mo
 	}
 	
 	public void gotoDate(Date d, boolean animated) {
-		int position = new Date(7,1,Curriculum.getCurrentYear()).getDaysUntil(d);
-		if (position < 0) Toast.makeText(ScheduleActivity.this, "Please select a previous year (if available) from the \"Options\" menu item to view that date.", Toast.LENGTH_LONG).show();
-		else if (position > adapter.getCount()) Toast.makeText(ScheduleActivity.this, "Please select a future year (if available) from the \"Options\" menu item to view that date.", Toast.LENGTH_LONG).show();
+		int position = new Date(7, 1,Curriculum.getCurrentYear()).getDaysUntil(d);
+		if (position < 0) Toast.makeText(ScheduleActivity.this, "Please select a previous year " +
+                "(if available) from the \"Options\" menu item to view that date.",
+                Toast.LENGTH_LONG).show();
+		else if (position > adapter.getCount()) Toast.makeText(ScheduleActivity.this, "Please " +
+                "select a future year (if available) from the \"Options\" menu item to view" +
+                " that date.", Toast.LENGTH_LONG).show();
 		position = Math.max(0, Math.min(adapter.getCount()-1, position));
 		gotoPosition(position, animated);
 	}
@@ -212,21 +218,30 @@ public class ScheduleActivity extends ActionBarActivity implements Curriculum.Mo
 			//pager.setCurrentItem(pos);
 			gotoDate(new Date(), true);
 		} else if (id == R.id.action_goto_date) {
-			DatePickerDialog dpd = new DatePickerDialog(this, R.style.PopupTheme, null, currentDate.getYear(), currentDate.getMonth()-1, currentDate.getDay());
-			dpd.getDatePicker().init(currentDate.getYear(), currentDate.getMonth()-1, currentDate.getDay(), new DatePicker.OnDateChangedListener() {
+
+
+			DatePickerDialog datePickerDialog = new DatePickerDialog(this, R.style.PopupTheme, null,
+                    currentDate.getYear(), currentDate.getMonth()-1, currentDate.getDay());
+
+
+			datePickerDialog.getDatePicker().init(currentDate.getYear(), currentDate.getMonth()-1,
+                    currentDate.getDay(), new DatePicker.OnDateChangedListener() {
 				public void onDateChanged(DatePicker view, int year, int monthOfYear,
 						int dayOfMonth) {
 					newDate = new int[] {year, monthOfYear, dayOfMonth};
 				}
 			});
-			dpd.setButton(DatePickerDialog.BUTTON_POSITIVE, "Go", new DialogInterface.OnClickListener() {
-				public void onClick(DialogInterface dialog, int which) {
-					if (newDate==null) return;
-					Date d = new Date(newDate[1]+1, newDate[2], newDate[0]);
-					gotoDate(d, true);
-				}
-			});
-			dpd.show();
+			datePickerDialog.setButton(DatePickerDialog.BUTTON_POSITIVE, "Go",
+                    new DialogInterface.OnClickListener() {
+                public void onClick(DialogInterface dialog, int which) {
+                    if (newDate == null) return;
+                    Date d = new Date(newDate[1] + 1, newDate[2], newDate[0]);
+                    gotoDate(d, true);
+                }
+            });
+
+
+			datePickerDialog.show();
 		} else if (id == R.id.action_refresh) {
 			Curriculum.reloadCurrentCurriculum().addModelLoadingListener(this);
 		} else if (id == R.id.action_settings) {
@@ -270,8 +285,8 @@ public class ScheduleActivity extends ActionBarActivity implements Curriculum.Mo
 	}*/
 	
 	private class DayPagerAdapter extends FragmentStatePagerAdapter {
-		private final int count = new Date(7,1,Curriculum.getCurrentYear())
-		.getDaysUntil(new Date(7,1,Curriculum.getCurrentYear()+1));
+		private final int count = new Date(7, 1, Curriculum.getCurrentYear())
+		.getDaysUntil(new Date(7, 1, Curriculum.getCurrentYear() + 1));
 		
 		public DayPagerAdapter(FragmentManager fm) {
 			super(fm);
@@ -285,7 +300,7 @@ public class ScheduleActivity extends ActionBarActivity implements Curriculum.Mo
 
 		@Override
 		public Fragment getItem(int position) {
-			Date date = new Date(7,1,Curriculum.getCurrentYear()).dateByAdding(position);
+			Date date = new Date(7, 1, Curriculum.getCurrentYear()).dateByAdding(position);
 			DayFragment f = new DayFragment();
 			Bundle b = new Bundle();
 			//Log.d("iHW", "pager: " + pager + " asked for " + date.toString());
