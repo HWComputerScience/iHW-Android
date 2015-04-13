@@ -5,3 +5,10 @@ The application scapes automatically downloads students' schedules from the HW w
 ##Developers
  - Jonathan Burns '14 (original developer)
  - Ethan Madison '15 (2014-2015 maintainer)
+
+##Todo
+ - [ ] Use new icon
+ - [ ] Fix edit courses crash
+ - [ ] Use faster layout for schedule
+ - [ ] Get ripple effect in Settings working
+ - [ ] Android Wear support (show next class, time until that period)
