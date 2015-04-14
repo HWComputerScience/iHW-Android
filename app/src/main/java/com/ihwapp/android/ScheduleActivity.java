@@ -9,6 +9,7 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.Typeface;
+import android.os.Build;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
@@ -66,18 +67,22 @@ public class ScheduleActivity extends ActionBarActivity implements Curriculum.Mo
 		}
 		pager.setOnPageChangeListener(new ViewPager.OnPageChangeListener() {
 			public void onPageSelected(int position) {
-				currentDate = new Date(7,1,Curriculum.getCurrentYear()).dateByAdding(position);
+				currentDate = new Date(7, 1, Curriculum.getCurrentYear()).dateByAdding(position);
 				Log.d("iHW", "Page changed to " + currentDate.toString());
 				lastIndex = position;
 				if (optionsMenu != null) {
-					optionsMenu.findItem(R.id.action_goto_today).setVisible(!currentDate.equals(new Date()));
+					optionsMenu.findItem(R.id.action_goto_today).setVisible(!currentDate.equals(new
+							Date()));
 					optionsMenu.findItem(R.id.action_goto_today).setEnabled(!currentDate.equals(new Date()));
 				}
 				Curriculum.getCurrentCurriculum().clearUnnededItems(currentDate);
 			}
-			
-			public void onPageScrolled(int arg0, float arg1, int arg2) { }
-			public void onPageScrollStateChanged(int arg0) { }
+
+			public void onPageScrolled(int arg0, float arg1, int arg2) {
+			}
+
+			public void onPageScrollStateChanged(int arg0) {
+			}
 		});
 		pager.setOffscreenPageLimit(2);
 	}
@@ -199,6 +204,9 @@ public class ScheduleActivity extends ActionBarActivity implements Curriculum.Mo
 			optionsMenu.findItem(R.id.action_goto_today).setVisible(!currentDate.equals(new Date()));
 			optionsMenu.findItem(R.id.action_goto_today).setEnabled(!currentDate.equals(new Date()));
 		}
+		if (android.os.Build.VERSION.SDK_INT < Build.VERSION_CODES.LOLLIPOP_MR1) { // AppCompat datepicker broken on Android < 5.1
+			optionsMenu.findItem(R.id.action_goto_date).setVisible(false);
+		}
 		return true;
 	}
 	
@@ -218,30 +226,30 @@ public class ScheduleActivity extends ActionBarActivity implements Curriculum.Mo
 			//pager.setCurrentItem(pos);
 			gotoDate(new Date(), true);
 		} else if (id == R.id.action_goto_date) {
+			if (android.os.Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP_MR1) {
+
+				DatePickerDialog datePickerDialog = new DatePickerDialog(this, R.style.PopupTheme, null,
+						currentDate.getYear(), currentDate.getMonth() - 1, currentDate.getDay());
+
+				datePickerDialog.getDatePicker().init(currentDate.getYear(), currentDate.getMonth() - 1,
+						currentDate.getDay(), new DatePicker.OnDateChangedListener() {
+							public void onDateChanged(DatePicker view, int year, int monthOfYear,
+													  int dayOfMonth) {
+								newDate = new int[]{year, monthOfYear, dayOfMonth};
+							}
+						});
+				datePickerDialog.setButton(DatePickerDialog.BUTTON_POSITIVE, "Go",
+						new DialogInterface.OnClickListener() {
+							public void onClick(DialogInterface dialog, int which) {
+								if (newDate == null) return;
+								Date d = new Date(newDate[1] + 1, newDate[2], newDate[0]);
+								gotoDate(d, true);
+							}
+						});
 
 
-			DatePickerDialog datePickerDialog = new DatePickerDialog(this, R.style.PopupTheme, null,
-                    currentDate.getYear(), currentDate.getMonth()-1, currentDate.getDay());
-
-
-			datePickerDialog.getDatePicker().init(currentDate.getYear(), currentDate.getMonth()-1,
-                    currentDate.getDay(), new DatePicker.OnDateChangedListener() {
-				public void onDateChanged(DatePicker view, int year, int monthOfYear,
-						int dayOfMonth) {
-					newDate = new int[] {year, monthOfYear, dayOfMonth};
-				}
-			});
-			datePickerDialog.setButton(DatePickerDialog.BUTTON_POSITIVE, "Go",
-                    new DialogInterface.OnClickListener() {
-                public void onClick(DialogInterface dialog, int which) {
-                    if (newDate == null) return;
-                    Date d = new Date(newDate[1] + 1, newDate[2], newDate[0]);
-                    gotoDate(d, true);
-                }
-            });
-
-
-			datePickerDialog.show();
+				datePickerDialog.show();
+			}
 		} else if (id == R.id.action_refresh) {
 			Curriculum.reloadCurrentCurriculum().addModelLoadingListener(this);
 		} else if (id == R.id.action_settings) {
