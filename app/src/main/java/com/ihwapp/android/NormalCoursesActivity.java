@@ -1,15 +1,21 @@
 package com.ihwapp.android;
 
 import android.os.Bundle;
-import android.view.*;
+import android.support.v7.widget.Toolbar;
+import android.view.Menu;
 
 public class NormalCoursesActivity extends CoursesActivity {
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		getActionBar().setDisplayHomeAsUpEnabled(true);
-		this.setTitle("Edit Courses");
+
+        setContentView(R.layout.activity_edit_course);
+        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+		toolbar.setTitle("Edit Courses");
+        toolbar.inflateMenu(R.menu.courses);
+        setSupportActionBar(toolbar);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 	}
 
 	@Override

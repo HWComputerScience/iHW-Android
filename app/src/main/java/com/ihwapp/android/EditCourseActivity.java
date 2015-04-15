@@ -3,6 +3,7 @@ package com.ihwapp.android;
 import android.content.Context;
 import android.content.res.Resources;
 import android.os.Bundle;
+import android.support.v7.widget.Toolbar;
 import android.text.Editable;
 import android.text.InputFilter;
 import android.text.Spanned;
@@ -42,8 +43,12 @@ public class EditCourseActivity extends IHWActivity {
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		this.setContentView(R.layout.activity_edit_course);
-		this.setTitle("Add a Course");
-		getActionBar().setDisplayHomeAsUpEnabled(true); // TODO eliminate possibility of NPE
+        
+        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        toolbar.setTitle("Edit Course");
+        toolbar.inflateMenu(R.menu.edit_course);
+        setSupportActionBar(toolbar);
+		getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 		
 		numDays = Curriculum.getCurrentCampus();
 		numPeriods = numDays+3;
@@ -53,13 +58,15 @@ public class EditCourseActivity extends IHWActivity {
 		int etid = Resources.getSystem().getIdentifier("edit_text_holo_light", "drawable", "android");
 		nameBox.setBackgroundResource(etid);
 		periodBox.setBackgroundResource(etid);
-		ArrayAdapter<CharSequence> a = ArrayAdapter.createFromResource(this, R.array.term_options, R.layout.spinner_layout);
+		ArrayAdapter<CharSequence> a = ArrayAdapter.createFromResource(this, R.array.term_options,
+                R.layout.spinner_layout);
 		a.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
 		termSpinner.setAdapter(a);
 		
 		TableRow.LayoutParams labelParams = new TableRow.LayoutParams(); 
 		labelParams.gravity = Gravity.CENTER_VERTICAL;
-		TableRow.LayoutParams cbParams = new TableRow.LayoutParams(TableRow.LayoutParams.WRAP_CONTENT, TableRow.LayoutParams.WRAP_CONTENT); 
+		TableRow.LayoutParams cbParams = new TableRow.LayoutParams(TableRow.LayoutParams.WRAP_CONTENT,
+                TableRow.LayoutParams.WRAP_CONTENT);
 		cbParams.gravity = Gravity.CENTER_HORIZONTAL;
 		cbParams.leftMargin = 4;
 		cbParams.rightMargin = -4;
@@ -107,7 +114,8 @@ public class EditCourseActivity extends IHWActivity {
 			for (int c=0; c<numDays; c++) {
 				if (r==0) meetingsLayout.setColumnStretchable(c + 1, true);
 				CheckBox cb = new CheckBox(this);
-				int cbid = Resources.getSystem().getIdentifier("btn_check_holo_light", "drawable", "android");
+				int cbid = Resources.getSystem().getIdentifier("btn_check_holo_light", "drawable",
+                        "android"); // TODO use a material checkbox instead
 				cb.setButtonDrawable(cbid);
 				cb.setVisibility(View.INVISIBLE);
 				cb.setEnabled(false);
@@ -207,7 +215,8 @@ public class EditCourseActivity extends IHWActivity {
 	public boolean onOptionsItemSelected(MenuItem item) {
 		if (item.getItemId() == R.id.action_delete) {
 			if (existingCourseName != null) {
-				Curriculum.getCurrentCurriculum().removeCourse(Curriculum.getCurrentCurriculum().getCourse(existingCourseName));
+				Curriculum.getCurrentCurriculum().removeCourse(Curriculum.getCurrentCurriculum().
+                        getCourse(existingCourseName));
 				Curriculum.getCurrentCurriculum().saveCourses();
 			}
 			finish();
@@ -225,13 +234,16 @@ public class EditCourseActivity extends IHWActivity {
 				}
 				boolean success;
 				//create the course object and add it
-				Course toAdd = new Course(nameBox.getText().toString(), period, termSpinner.getSelectedItemPosition(), meetings);
-				if (existingCourseName != null) success = Curriculum.getCurrentCurriculum().replaceCourse(existingCourseName, toAdd);
+				Course toAdd = new Course(nameBox.getText().toString(), period, termSpinner.
+                        getSelectedItemPosition(), meetings);
+				if (existingCourseName != null) success = Curriculum.getCurrentCurriculum().
+                        replaceCourse(existingCourseName, toAdd);
 				else success = Curriculum.getCurrentCurriculum().addCourse(toAdd);
 				if (!success) {
 					//Curriculum rejected the course
 					Toast.makeText(this, "The course meetings you selected conflict with one or " +
-                            "more of your other courses. Please change them and try again.", Toast.LENGTH_LONG).show();
+                            "more of your other courses. Please change them and try again.",
+                            Toast.LENGTH_LONG).show();
 				} else {
 					//Curriculum accepted the course
 					Curriculum.getCurrentCurriculum().saveCourses();
