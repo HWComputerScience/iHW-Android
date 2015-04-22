@@ -10,7 +10,7 @@ public class NormalCoursesActivity extends CoursesActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        setContentView(R.layout.activity_edit_course);
+        setContentView(R.layout.activity_courses);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         toolbar.setTitle("Edit Courses");
         toolbar.inflateMenu(R.menu.courses);
