@@ -34,6 +34,7 @@
     <string name="prompt_select_periods">Check the periods when this course meets below.</string>
     <string name="label_period">Period</string>
     <string name="action_edit_courses">Edit Courses</string>
+    <string name="add_course">Add a Course</string>
     <string name="prompt_no_courses">Tap \&quot;+\&quot; above to add a course.</string>
     <string name="action_add">Add</string>
     <string name="action_edit_course">Edit Course</string>
@@ -73,4 +74,9 @@
     <string name="pref_disclaimer">Disclaimer</string>
     <string name="pref_disclaimer_desc">Don\'t blame us if you\'re late to class!</string>
     <string name="pref_about">About iHW</string>
+
+    <string name="toast_changes_discarded">Changes discarded</string>
+    <string name="toast_changes_saved">Changes saved</string>
+    <string name="toast_course_incomplete">The course must have a name and at least one class meeting</string>
+    <string name="toast_course_conflict">The course meetings you selected conflict with one or more of your other courses. Please change them and try again</string>
 </resources>
