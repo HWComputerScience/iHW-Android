@@ -1,14 +1,14 @@
-<RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <include layout="@layout/includes_toolbar"
+    <include
+        layout="@layout/includes_toolbar"
         android:id="@+id/toolbar" />
 
-    <ListView android:id="@+id/preference_list"
+    <ListView
+        android:id="@+id/preference_list"
         android:layout_height="fill_parent"
         android:layout_width="fill_parent"
         android:layout_alignParentStart="false"

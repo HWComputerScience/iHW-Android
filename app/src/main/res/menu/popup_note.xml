@@ -1,8 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
-    <item android:id="@+id/option_is_todo" android:checkable="false" app:showAsAction="ifRoom"
-        android:title="@string/option_show_checkbox"/>
-    <item android:id="@+id/option_is_important" app:showAsAction="always"
-        android:title="@string/option_mark_important"/>
+    <item
+        android:id="@+id/option_is_todo"
+        android:checkable="false"
+        app:showAsAction="ifRoom"
+        android:title="@string/option_show_checkbox" />
+    <item
+        android:id="@+id/option_is_important"
+        app:showAsAction="always"
+        android:title="@string/option_mark_important" />
 </menu>
