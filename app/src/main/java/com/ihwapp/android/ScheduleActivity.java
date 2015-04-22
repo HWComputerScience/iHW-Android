@@ -16,6 +16,7 @@ import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentStatePagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.ActionBarActivity;
+import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.Gravity;
@@ -30,7 +31,7 @@ import com.ihwapp.android.model.Date;
 
 import java.util.Locale;
 
-public class ScheduleActivity extends ActionBarActivity implements Curriculum.ModelLoadingListener {
+public class ScheduleActivity extends AppCompatActivity implements Curriculum.ModelLoadingListener {
     private ViewPager pager;
     private DayPagerAdapter adapter;
     private Date currentDate;
@@ -57,7 +58,11 @@ public class ScheduleActivity extends ActionBarActivity implements Curriculum.Mo
             CustomFontPagerTitleStrip pts = new CustomFontPagerTitleStrip(this);
             pts.setId("pager_title_strip".hashCode());
             pts.setTypeface(Typeface.DEFAULT);
-            pts.setBackgroundDrawable(getResources().getDrawable(R.drawable.dark_tan));
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP_MR1)
+                pts.setBackground(getDrawable(R.drawable.dark_tan));
+            else if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.ICE_CREAM_SANDWICH_MR1)
+                pts.setBackground(getResources().getDrawable(R.drawable.dark_tan)); // TODO make sure this doesn't crash on ancient devices
+            else pts.setBackgroundDrawable(getResources().getDrawable(R.drawable.dark_tan));
             pts.setTextColor(Color.BLACK);
             ViewPager.LayoutParams params = new ViewPager.LayoutParams();
             params.height = LayoutParams.WRAP_CONTENT;

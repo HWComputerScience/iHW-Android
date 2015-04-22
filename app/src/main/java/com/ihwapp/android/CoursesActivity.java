@@ -7,6 +7,7 @@ import android.graphics.Color;
 import android.os.Bundle;
 import android.support.v4.app.ListFragment;
 import android.support.v7.app.ActionBarActivity;
+import android.support.v7.app.AppCompatActivity;
 import android.view.ActionMode;
 import android.view.LayoutInflater;
 import android.view.Menu;
@@ -22,7 +23,7 @@ import com.ihwapp.android.model.Curriculum;
 
 import java.util.Arrays;
 
-public abstract class CoursesActivity extends ActionBarActivity {
+public abstract class CoursesActivity extends AppCompatActivity {
     protected CoursesFragment coursesFragment;
 
     @Override
