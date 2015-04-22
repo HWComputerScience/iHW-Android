@@ -255,7 +255,7 @@ public class EditCourseActivity extends IHWActivity {
                 }
             } else {
                 if (item.getItemId() == android.R.id.home) {
-                    Toast.makeText(this, R.string.toast_discarded, Toast.LENGTH_SHORT).show();
+                    Toast.makeText(this, R.string.toast_changes_discarded, Toast.LENGTH_SHORT).show();
                     finish();
                 } else {
                     Toast.makeText(this, R.string.toast_course_incomplete, Toast.LENGTH_SHORT).show();
@@ -267,7 +267,7 @@ public class EditCourseActivity extends IHWActivity {
     }
 
     public void onBackPressed() {
-        Toast.makeText(this, R.string.toast_discarded, Toast.LENGTH_SHORT).show();
+        Toast.makeText(this, R.string.toast_changes_discarded, Toast.LENGTH_SHORT).show();
         super.onBackPressed();
     }
 
