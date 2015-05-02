@@ -196,7 +196,7 @@ public class DayFragment extends Fragment {
     public void onDestroyView() {
         //Log.d("iHW-lc", "DayFragment onDestroyView: " + date);
         super.onDestroyView();
-        periodViews.clear();
+        if (periodViews != null) periodViews.clear();
         periodViews = null;
         //countdownTimer = null;
         //countdownView = null;
@@ -211,9 +211,8 @@ public class DayFragment extends Fragment {
     public void onDetach() {
         //Log.d("iHW-lc", "DayFragment " + this + " onDetach from " + this.getActivity() + ": " + date);
         super.onDetach();
-        if (date == null) return;
-        this.ofvcls.clear();
-        this.ofvcls = null;
+        if (ofvcls != null) ofvcls.clear();
+        ofvcls = null;
         day = null;
         date = null;
     }

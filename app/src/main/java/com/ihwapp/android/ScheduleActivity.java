@@ -15,7 +15,6 @@ import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentStatePagerAdapter;
 import android.support.v4.view.ViewPager;
-import android.support.v7.app.ActionBarActivity;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
@@ -80,7 +79,7 @@ public class ScheduleActivity extends AppCompatActivity implements Curriculum.Mo
                             Date()));
                     optionsMenu.findItem(R.id.action_goto_today).setEnabled(!currentDate.equals(new Date()));
                 }
-                Curriculum.getCurrentCurriculum().clearUnnededItems(currentDate);
+                Curriculum.getCurrentCurriculum().clearUnneededItems(currentDate);
             }
 
             public void onPageScrolled(int arg0, float arg1, int arg2) {

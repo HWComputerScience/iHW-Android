@@ -6,8 +6,8 @@ import android.database.DataSetObserver;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.support.v4.app.ListFragment;
-import android.support.v7.app.ActionBarActivity;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.view.ActionMode;
 import android.view.LayoutInflater;
 import android.view.Menu;
@@ -22,8 +22,9 @@ import android.widget.TextView;
 import com.ihwapp.android.model.Curriculum;
 
 import java.util.Arrays;
+import java.util.List;
 
-public abstract class CoursesActivity extends AppCompatActivity {
+public abstract class CoursesActivity extends AppCompatActivity implements Curriculum.ModelLoadingListener {
     protected CoursesFragment coursesFragment;
 
     @Override
@@ -33,7 +34,7 @@ public abstract class CoursesActivity extends AppCompatActivity {
         setContentView(R.layout.activity_courses);
 
         coursesFragment = new CoursesFragment();
-        getSupportFragmentManager().beginTransaction().replace(android.R.id.content,
+        getSupportFragmentManager().beginTransaction().add(R.id.courses_container,
                 coursesFragment).commit();
     }
 
@@ -67,8 +68,27 @@ public abstract class CoursesActivity extends AppCompatActivity {
 
     protected void onStart() {
         super.onStart();
-        //TODO if (!Curriculum.loadCurrentCurriculum(this)) finish();
         coursesFragment.setListViewStuff();
+        if (!Curriculum.getCurrentCurriculum().isLoaded()) {
+            Curriculum.getCurrentCurriculum().addModelLoadingListener(this);
+        } else {
+            coursesFragment.reloadData();
+        }
+    }
+
+    @Override
+    public void onProgressUpdate(int progress) {}
+
+    @Override
+    public void onFinishedLoading(Curriculum c) {
+        c.removeModelLoadingListener(this);
+        coursesFragment.reloadData();
+    }
+
+    @Override
+    public void onLoadFailed(Curriculum c) {
+        c.removeModelLoadingListener(this);
+        finish();
     }
 
     @Override
@@ -80,13 +100,16 @@ public abstract class CoursesActivity extends AppCompatActivity {
 
     public static class CoursesFragment extends ListFragment implements ListAdapter {
         private String[] courseNames;
-        private Context context;
 
         private void reloadData() {
             //Get course names and copy them into a local array
-            Object[] courseObjs = Curriculum.getCurrentCurriculum().getAllCourseNames().toArray();
+            List<String> courseList = Curriculum.getCurrentCurriculum().getAllCourseNames();
+            if (courseList == null) return;
+            Object[] courseObjs = courseList.toArray();
             courseNames = Arrays.copyOf(courseObjs, courseObjs.length, String[].class);
+            Arrays.sort(courseNames);
             this.setListAdapter(this);
+            Log.d("iHW", "loaded data");
         }
 
 
@@ -94,7 +117,7 @@ public abstract class CoursesActivity extends AppCompatActivity {
             //Open this course in a new edit course activity
             //NOTE: Course names must be unique for this to work, and I'm not
             ///sure they're enforced that way...could be a problem later on...
-            Intent i = new Intent(context, EditCourseActivity.class);
+            Intent i = new Intent(this.getActivity(), EditCourseActivity.class);
             i.putExtra("courseName", courseNames[position]);
             startActivity(i);
         }
@@ -123,7 +146,7 @@ public abstract class CoursesActivity extends AppCompatActivity {
         @Override
         public View getView(final int position, View convertView, ViewGroup parent) {
             if (convertView == null) {
-                LayoutInflater inflater = (LayoutInflater) convertView.getContext()
+                LayoutInflater inflater = (LayoutInflater) this.getActivity()
                         .getSystemService(Context.LAYOUT_INFLATER_SERVICE);
                 convertView = inflater.inflate(R.layout.list_item_course, null);
             }
@@ -139,7 +162,7 @@ public abstract class CoursesActivity extends AppCompatActivity {
 
         @Override
         public boolean hasStableIds() {
-            return true;
+            return false;
         }
 
         @Override
@@ -199,7 +222,7 @@ public abstract class CoursesActivity extends AppCompatActivity {
             @Override
             public boolean onActionItemClicked(ActionMode mode, MenuItem item) {
                 if (item.getItemId() == R.id.action_edit) {
-                    Intent i = new Intent(context, EditCourseActivity.class);
+                    Intent i = new Intent(CoursesFragment.this.getActivity(), EditCourseActivity.class);
                     i.putExtra("courseName", courseNames[(int) getListView().getCheckedItemIds()[0]]);
                     startActivity(i);
                 } else if (item.getItemId() == R.id.action_delete) {

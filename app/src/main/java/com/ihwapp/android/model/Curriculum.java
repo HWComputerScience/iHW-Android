@@ -1,5 +1,6 @@
 package com.ihwapp.android.model;
 
+import android.annotation.SuppressLint;
 import android.app.AlarmManager;
 import android.app.PendingIntent;
 import android.content.Context;
@@ -9,6 +10,8 @@ import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.net.Uri;
 import android.os.AsyncTask;
+import android.support.annotation.NonNull;
+import android.support.annotation.Nullable;
 import android.util.Log;
 
 import com.ihwapp.android.Constants;
@@ -37,11 +40,11 @@ public class Curriculum {
     private static Curriculum currentCurriculum;
     public static Context ctx;
 
-    public static Curriculum getCurrentCurriculum() {
+    public static @NonNull Curriculum getCurrentCurriculum() {
         return getCurriculum(getCurrentCampus(), getCurrentYear());
     }
 
-    public static Curriculum reloadCurrentCurriculum() {
+    public static @NonNull Curriculum reloadCurrentCurriculum() {
         currentCurriculum = null;
         return getCurrentCurriculum();
     }
@@ -50,7 +53,7 @@ public class Curriculum {
      * Returns the curriculum specified by campus and year. If that curriculum is not ready yet,
      * attempts to load it immediately. If it cannot be loaded immediately, returns null.
      */
-    private static Curriculum getCurriculum(int campus, int year) {
+    private static @NonNull Curriculum getCurriculum(int campus, int year) {
         if (currentCurriculum == null || currentCurriculum.getCampus() != campus || currentCurriculum.getYear() != year) {
             //Log.d("iHW", "Recreating curriculum object");
             currentCurriculum = new Curriculum(campus, year, new Date());
@@ -77,6 +80,7 @@ public class Curriculum {
                 .putInt("manualYear", d.get(Date.YEAR)).commit();
     }
 
+    @SuppressLint("CommitPrefEdits")
     public static void updateCurrentYear() {
         Date d = new Date();
         d.add(Date.MONTH, -6);
@@ -119,14 +123,15 @@ public class Curriculum {
             String campusChar = getCampusChar(getCurrentCampus());
             SharedPreferences prefs = ctx.getSharedPreferences(getCurrentYear() + campusChar, Context.MODE_PRIVATE);
             String yearJSON = prefs.getString("yearJSON", "");
+            assert yearJSON != null;
             return yearJSON.equals("") || new JSONObject(yearJSON).getJSONArray("courses").length() == 0;
         } catch (JSONException ignored) {
         }
         return false;
     }
 
-    private static String getCampusChar(int campus) {
-        String campusChar = null;
+    private static @NonNull String getCampusChar(int campus) {
+        String campusChar = "";
         if (campus == Constants.CAMPUS_MIDDLE) campusChar = "m";
         else if (campus == Constants.CAMPUS_UPPER) campusChar = "u";
         return campusChar;
@@ -140,14 +145,14 @@ public class Curriculum {
         else return -1;
     }
 
-    private static Date getWeekStart(int year, Date d) {
+    private static @NonNull Date getWeekStart(int year, Date d) {
         Date weekStart = d.dateOfPreviousSunday();
         Date july1 = new Date(7, 1, year);
         if (weekStart.compareTo(july1) < 0) weekStart = july1;
         return weekStart;
     }
 
-    private static String generateBlankYearJSON(int campus, int year) {
+    private static @NonNull String generateBlankYearJSON(int campus, int year) {
         try {
             JSONObject obj = new JSONObject();
             obj.put("year", year);
@@ -155,18 +160,18 @@ public class Curriculum {
             obj.put("courses", new JSONArray());
             return obj.toString(4);
         } catch (JSONException e) {
-            return null;
+            return "";
         }
     }
 
-    private static String generateBlankWeekJSON(Date startingDate) {
+    private static @NonNull String generateBlankWeekJSON(Date startingDate) {
         try {
             JSONObject obj = new JSONObject();
             obj.put("startingDate", startingDate.toString());
             obj.put("notes", new JSONObject());
             return obj.toString(4);
         } catch (JSONException e) {
-            return null;
+            return "";
         }
     }
 
@@ -201,28 +206,31 @@ public class Curriculum {
      */
 
     private final int campus;
-    private HashSet<Course> courses;
-    private JSONObject normalDayTemplate;
-    private JSONObject normalMondayTemplate;
-    private SortedMap<Date, JSONObject> specialDayTemplates;
-    private SortedMap<Date, JSONObject> dayCaptions;
+    private @Nullable HashSet<Course> courses;
+    private @Nullable JSONObject normalDayTemplate;
+    private @Nullable JSONObject normalMondayTemplate;
+    private @Nullable SortedMap<Date, JSONObject> specialDayTemplates;
+    private @Nullable SortedMap<Date, JSONObject> dayCaptions;
     private int passingPeriodLength;
-    private SortedMap<Date, JSONObject> loadedWeeks; //contains week JSON by first day
-    private SortedMap<Date, Day> loadedDays; //will contain days from loadedEndDates[0] to loadedEndDates[1], inclusive
-    private SortedMap<Date, Integer> dayNumbers;
+    private @NonNull SortedMap<Date, JSONObject> loadedWeeks =
+            Collections.synchronizedSortedMap(new TreeMap<Date, JSONObject>());
+            //contains week JSON by first day
+    private @NonNull SortedMap<Date, Day> loadedDays =
+            Collections.synchronizedSortedMap(new TreeMap<Date, Day>());
+    private @Nullable SortedMap<Date, Integer> dayNumbers;
     private final int year; //2012 for the 2012-2013 school year, for example
-    private Date[] semesterEndDates; //3 values: the first day of the first semester and the last days of both semesters
-    private Date[] trimesterEndDates; //4 values: the first day of the first trimester and the last days of all trimesters
+    private @Nullable Date[] semesterEndDates; //3 values: the first day of the first semester and the last days of both semesters
+    private @Nullable Date[] trimesterEndDates; //4 values: the first day of the first trimester and the last days of all trimesters
     private int loadingProgress;
-    private Time dayStartTime;
+    private @Nullable Time dayStartTime;
     private boolean currentlyCaching = false;
-    private HashSet<ModelLoadingListener> mlls;
+    private @NonNull HashSet<ModelLoadingListener> mlls;
 
     private Curriculum(int campus, int year, Date startingDate) {
         this.campus = campus;
         this.year = year;
         loadingProgress = -1;
-        mlls = new HashSet<ModelLoadingListener>(5);
+        mlls = new HashSet<>(5);
         if (startingDate.compareTo(new Date(7, 1, year)) < 0) startingDate = new Date(7, 1, year);
         else if (startingDate.compareTo(new Date(7, 1, year + 1)) >= 0)
             startingDate = new Date(7, 1, year + 1).dateByAdding(-1);
@@ -241,7 +249,7 @@ public class Curriculum {
         return passingPeriodLength;
     }
 
-    public Time getDayStartTime() {
+    public @Nullable Time getDayStartTime() {
         return dayStartTime;
     }
 
@@ -265,6 +273,7 @@ public class Curriculum {
         String campusChar = getCampusChar(this.campus);
         SharedPreferences prefs = ctx.getSharedPreferences(year + campusChar, Context.MODE_PRIVATE);
         final String scheduleJSON = prefs.getString("scheduleJSON", "");
+        assert scheduleJSON != null;
 
         final AsyncTask<Void, Integer, Void> phase2 = new AsyncTask<Void, Integer, Void>() {
             protected Void doInBackground(Void... params) {
@@ -367,6 +376,7 @@ public class Curriculum {
         phase1b.execute();
     }
 
+    /* NOT USED
     public Date getFirstLoadedDate() {
         if (loadedDays == null || loadedDays.size() == 0) return null;
         return loadedDays.firstKey();
@@ -376,9 +386,10 @@ public class Curriculum {
         if (loadedDays == null || loadedDays.size() == 0) return null;
         return loadedDays.lastKey();
     }
+    */
 
     public boolean isLoaded(Date d) {
-        return loadedDays != null && loadedDays.containsKey(d);
+        return loadedDays.containsKey(d);
     }
 
     public boolean isLoaded() {
@@ -437,6 +448,7 @@ public class Curriculum {
             return result;
         }
 
+        @SuppressLint("CommitPrefEdits")
         public void onPostExecute(String result) {
             if (result != null && !result.equals("")) {
                 String campusChar = getCampusChar(campus);
@@ -456,6 +468,7 @@ public class Curriculum {
             String campusChar = getCampusChar(this.campus);
             SharedPreferences prefs = ctx.getSharedPreferences(year + campusChar, Context.MODE_PRIVATE);
             String scheduleJSON = prefs.getString("scheduleJSON", "");
+            assert scheduleJSON != null;
             if (scheduleJSON.equals("")) return false;
             JSONObject scheduleObj = new JSONObject(scheduleJSON);
 
@@ -512,11 +525,12 @@ public class Curriculum {
             String campusChar = getCampusChar(campus);
             SharedPreferences prefs = ctx.getSharedPreferences(year + campusChar, Context.MODE_PRIVATE);
             String yearJSON = prefs.getString("yearJSON", "");
+            assert yearJSON != null;
             if (yearJSON.equals("")) yearJSON = generateBlankYearJSON(campus, year);
 
             JSONObject yearObj = new JSONObject(yearJSON);
             JSONArray coursesArr = yearObj.getJSONArray("courses");
-            coursesSet = new HashSet<Course>(coursesArr.length());
+            coursesSet = new HashSet<>(coursesArr.length());
             for (int i = 0; i < coursesArr.length(); i++) {
                 coursesSet.add(new Course(coursesArr.getJSONObject(i)));
             }
@@ -572,11 +586,7 @@ public class Curriculum {
             return false;
         }
         success = loadDay(date);
-        if (!success) {
-            //Log.e("iHW", "ERROR loading day");
-            return false;
-        }
-        return true;
+        return success;
     }
 
     private void cacheNeededWeeksDays(final Date currentDate) {
@@ -586,14 +596,14 @@ public class Curriculum {
             protected Void doInBackground(Void... params) {
                 //Log.d("iHW", "starting to cache needed weeks and days");
                 Date currentWeekStart = getWeekStart(year, currentDate);
-                ArrayList<Date> weeksNeeded = new ArrayList<Date>(3);
+                ArrayList<Date> weeksNeeded = new ArrayList<>(3);
                 for (int i = -7; i <= 7; i += 7) weeksNeeded.add(currentWeekStart.dateByAdding(i));
                 loadedWeeks.keySet().retainAll(weeksNeeded);
                 for (Date d : weeksNeeded)
                     if (isInBounds(d) && !loadedWeeks.containsKey(d)) {
                         loadWeek(d);
                     }
-                ArrayList<Date> daysNeeded = new ArrayList<Date>(7);
+                ArrayList<Date> daysNeeded = new ArrayList<>(7);
                 for (int i = -3; i <= 3; i++) daysNeeded.add(currentDate.dateByAdding(i));
                 loadedDays.keySet().retainAll(daysNeeded);
                 for (Date d : daysNeeded)
@@ -612,18 +622,17 @@ public class Curriculum {
             //Log.d("iHW", "starting to load week containing " + date);
             int weekNumber = getWeekNumber(year, date);
             Date weekStart = getWeekStart(year, date);
-            if (loadedWeeks != null && loadedWeeks.containsKey(new Date(weekStart.toString())))
+            if (loadedWeeks.containsKey(new Date(weekStart.toString())))
                 return true;
             if (weekNumber == -1) return false;
             SharedPreferences prefs = ctx.getSharedPreferences(year + getCampusChar(campus), Context.MODE_PRIVATE);
             String weekJSON = prefs.getString("week" + weekNumber, "");
+            assert weekJSON != null;
             if (weekJSON.equals("")) {
                 weekJSON = generateBlankWeekJSON(weekStart);
             }
             JSONObject weekJSONObj;
             weekJSONObj = new JSONObject(weekJSON);
-            if (loadedWeeks == null)
-                loadedWeeks = Collections.synchronizedSortedMap(new TreeMap<Date, JSONObject>());
             loadedWeeks.put(new Date(weekStart.toString()), weekJSONObj);
             //Log.d("iHW", "finished loading week");
             return true;
@@ -634,11 +643,12 @@ public class Curriculum {
 
     private boolean loadDay(Date d) {
         if (!isInBounds(d)) return false;
+        if (specialDayTemplates == null || semesterEndDates == null
+                || dayCaptions == null || normalDayTemplate == null
+                || normalMondayTemplate == null || dayNumbers == null) return false;
         try {
             //Log.d("iHW", "starting to load day: " + d);
             //Date weekStart = getWeekStart(year, d);
-            if (loadedDays == null)
-                loadedDays = Collections.synchronizedSortedMap(new TreeMap<Date, Day>());
             //if (!loadedWeeks.containsKey(weekStart)) return false;
             JSONObject template;
             if (specialDayTemplates.containsKey(d)) {
@@ -677,7 +687,7 @@ public class Curriculum {
                 template.put("dayNumber", dayNumbers.get(d));
             }
             String type = template.getString("type");
-            Day day = null;
+            Day day;
             if (type.equals("normal")) {
                 day = new NormalDay(template);
                 ((NormalDay) day).fillPeriods(this);
@@ -699,7 +709,7 @@ public class Curriculum {
         return false;
     }
 
-    public Day getDay(Date d) {
+    public @Nullable Day getDay(Date d) {
         if (!isInBounds(d)) {
             Log.d("iHW", "Date out of bounds: " + d);
             return null;
@@ -708,10 +718,10 @@ public class Curriculum {
         //Log.d("iHW", "weeks loaded: " + loadedWeeks.keySet().toString());
         if (!isLoaded(d)) {
             boolean success = true;
-            if (loadedWeeks == null || !loadedWeeks.containsKey(getWeekStart(year, d)))
+            if (!loadedWeeks.containsKey(getWeekStart(year, d)))
                 success = loadWeek(d);
             if (!success) Log.e("iHW", "ERROR loading week");
-            if (loadedDays == null || !loadedDays.containsKey(d)) success = loadDay(d);
+            if (!loadedDays.containsKey(d)) success = loadDay(d);
             if (!success) Log.e("iHW", "ERROR loading day");
         }
         if (!isLoaded(d)) return null;
@@ -721,14 +731,14 @@ public class Curriculum {
         }
     }
 
-    public void clearUnnededItems(Date d) {
+    public void clearUnneededItems(Date d) {
         Date currentWeekStart = getWeekStart(year, d);
-        ArrayList<Date> weeksNeeded = new ArrayList<Date>(3);
+        ArrayList<Date> weeksNeeded = new ArrayList<>(3);
         for (int i = -7; i <= 7; i += 7) weeksNeeded.add(currentWeekStart.dateByAdding(i));
-        if (loadedWeeks != null) loadedWeeks.keySet().retainAll(weeksNeeded);
-        ArrayList<Date> daysNeeded = new ArrayList<Date>(7);
+        loadedWeeks.keySet().retainAll(weeksNeeded);
+        ArrayList<Date> daysNeeded = new ArrayList<>(7);
         for (int i = -3; i <= 3; i++) daysNeeded.add(d.dateByAdding(i));
-        if (loadedDays != null) loadedDays.keySet().retainAll(daysNeeded);
+        loadedDays.keySet().retainAll(daysNeeded);
     }
 
     private boolean isInBounds(Date d) {
@@ -736,11 +746,11 @@ public class Curriculum {
     }
 
     public interface ModelLoadingListener {
-        public void onProgressUpdate(int progress);
+        void onProgressUpdate(int progress);
 
-        public void onFinishedLoading(Curriculum c);
+        void onFinishedLoading(Curriculum c);
 
-        public void onLoadFailed(Curriculum c);
+        void onLoadFailed(Curriculum c);
     }
 
     /***************************END LOADING STUFF****************************/
@@ -749,8 +759,9 @@ public class Curriculum {
      * ***********************BEGIN COURSES STUFF**************************
      */
 
-    public List<String> getAllCourseNames() {
-        List<String> list = new ArrayList<String>();
+    public @Nullable List<String> getAllCourseNames() {
+        if (courses == null) return null;
+        List<String> list = new ArrayList<>();
         for (Course c : courses) list.add(c.getName());
         return list;
     }
@@ -760,6 +771,7 @@ public class Curriculum {
      * Returns true if it was added, and false if scheduling conflicts prevented it from being added.
      */
     public boolean addCourse(Course c) {
+        if (courses == null) return false;
         for (Course check : courses) {
             if (!termsCompatible(c.getTerm(), check.getTerm())) {
                 if (c.getPeriod() == check.getPeriod()) {
@@ -800,20 +812,19 @@ public class Curriculum {
             }
         }
         courses.add(c);
-        //this.rebuildSpecialDays();
         loadedDays.clear();
         return true;
     }
 
     public void removeCourse(Course c) {
+        if (courses == null) return;
         courses.remove(c);
-        //rebuildSpecialDays();
         loadedDays.clear();
     }
 
     public void removeAllCourses() {
+        if (courses == null) return;
         courses.clear();
-        //rebuildSpecialDays();
         loadedDays.clear();
     }
 
@@ -829,8 +840,9 @@ public class Curriculum {
 
     }
 
-    public List<Integer> termsFromDate(Date d) {
-        List<Integer> list = new ArrayList<Integer>(3);
+    public @Nullable List<Integer> termsFromDate(Date d) {
+        if (semesterEndDates == null || trimesterEndDates == null) return null;
+        List<Integer> list = new ArrayList<>(3);
         if (d.compareTo(semesterEndDates[0]) >= 0) {
             if (d.compareTo(semesterEndDates[1]) <= 0) {
                 list.add(Constants.TERM_FULL_YEAR);
@@ -849,8 +861,9 @@ public class Curriculum {
         }
         return list;
     }
-
+    /* NOT USED
     public Course getCourse(Date d, int period) {
+        if (semesterEndDates == null || courses == null || dayNumbers == null) return null;
         if (d.compareTo(semesterEndDates[0]) < 0 || d.compareTo(semesterEndDates[2]) > 0)
             return null;
         int dayNum = dayNumbers.get(d);
@@ -894,13 +907,14 @@ public class Curriculum {
         }
         return null;
     }
-
-    public Course[] getCourseList(Date d) {
-        if (semesterEndDates == null ||
+    */
+    public @Nullable Course[] getCourseList(Date d) {
+        if (semesterEndDates == null || dayNumbers == null || courses == null ||
                 semesterEndDates[0] == null || d.compareTo(semesterEndDates[0]) < 0 ||
                 semesterEndDates[2] == null || d.compareTo(semesterEndDates[2]) > 0) return null;
         int dayNum = dayNumbers.get(d);
         List<Integer> terms = termsFromDate(d);
+        assert terms != null;
         Course[] courseList = new Course[campus + 4]; //campus+3 is numPeriods, add 1 to keep 0 index empty
         int[] maxMeetings = new int[campus + 4];
         for (int i = 0; i < maxMeetings.length; i++) maxMeetings[i] = 1;
@@ -923,7 +937,8 @@ public class Curriculum {
         return courseList;
     }
 
-    public Course getCourse(String name) {
+    public @Nullable Course getCourse(String name) {
+        if (courses == null) return null;
         for (Course c : courses) if (c.getName().equals(name)) return c;
         return null;
     }
@@ -982,10 +997,10 @@ public class Curriculum {
      * *******************************BEGIN NOTES STUFF*************************************
      */
 
-    public ArrayList<Note> getNotes(Date d, int period) {
+    public @Nullable ArrayList<Note> getNotes(Date d, int period) {
         Date weekStart = getWeekStart(year, d);
         boolean success = true;
-        if (loadedWeeks == null || !loadedWeeks.containsKey(weekStart)) success = loadWeek(d);
+        if (!loadedWeeks.containsKey(weekStart)) success = loadWeek(d);
         if (!success) {
             //Log.e("iHW", "ERROR loading week");
             return null;
@@ -995,14 +1010,14 @@ public class Curriculum {
                 JSONObject weekJSON = loadedWeeks.get(weekStart);
                 if (weekJSON.getJSONObject("notes").has(key)) {
                     JSONArray notesArr = weekJSON.getJSONObject("notes").getJSONArray(key);
-                    ArrayList<Note> notes = new ArrayList<Note>(notesArr.length());
+                    ArrayList<Note> notes = new ArrayList<>(notesArr.length());
                     for (int i = 0; i < notesArr.length(); i++) {
                         JSONObject noteObj = notesArr.getJSONObject(i);
                         notes.add(new Note(noteObj));
                     }
                     return notes;
                 } else {
-                    return new ArrayList<Note>(6);
+                    return new ArrayList<>(6);
                 }
             } catch (JSONException e) {
                 //Log.e("iHW", "JSONException!", e);
@@ -1048,6 +1063,7 @@ public class Curriculum {
     }
 
     public void saveCourses() {
+        if (courses == null) return;
         String campusChar = getCampusChar(campus);
         SharedPreferences prefs = ctx.getSharedPreferences(year + campusChar, Context.MODE_PRIVATE);
         try {
