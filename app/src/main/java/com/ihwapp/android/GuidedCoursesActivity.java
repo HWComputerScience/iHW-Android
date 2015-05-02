@@ -12,7 +12,6 @@ public class GuidedCoursesActivity extends CoursesActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        setContentView(R.layout.activity_edit_course);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         toolbar.setTitle("Add Your Courses");
         toolbar.inflateMenu(R.menu.courses);
