@@ -4,6 +4,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.database.DataSetObserver;
 import android.graphics.Color;
+import android.os.Build;
 import android.os.Bundle;
 import android.support.v4.app.ListFragment;
 import android.support.v7.app.AppCompatActivity;
@@ -151,7 +152,8 @@ public abstract class CoursesActivity extends AppCompatActivity implements Curri
                 convertView = inflater.inflate(R.layout.list_item_course, null);
             }
             ((TextView) convertView.findViewById(R.id.text_course_name)).setText(courseNames[position]);
-            convertView.setBackgroundResource(R.drawable.list_item_selector);
+            if (Build.VERSION.SDK_INT < Build.VERSION_CODES.LOLLIPOP)
+                convertView.setBackgroundResource(R.drawable.list_item_selector);
             return convertView;
         }
 

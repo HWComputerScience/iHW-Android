@@ -4,6 +4,7 @@ import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.database.DataSetObserver;
+import android.os.Build;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
@@ -12,6 +13,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.CheckBox;
 import android.widget.CompoundButton;
 import android.widget.LinearLayout;
@@ -52,6 +54,22 @@ public class PreferencesActivity extends IHWActivity implements ListAdapter {
         subtitles.add("");
         mainList = (ListView) findViewById(R.id.preference_list);
         mainList.setDivider(this.getResources().getDrawable(android.R.drawable.divider_horizontal_bright));
+        mainList.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+                if (i == 0) {
+                    toggleNotifications(!notificationBox.isChecked());
+                } else if (i == 1) {
+                    showYearOptions();
+                } else if (i == 2) {
+                    showRedownloadOptions();
+                } else if (i == 3) {
+                    showDisclaimer();
+                } else if (i == 4) {
+                    showAbout();
+                }
+            }
+        });
         mainList.setAdapter(this);
         newCampus = Curriculum.getCurrentCampus();
         newYear = Curriculum.getCurrentYear();
@@ -119,23 +137,9 @@ public class PreferencesActivity extends IHWActivity implements ListAdapter {
                 ((ViewGroup) convertView).addView(notificationBox);
             }
         }
-        convertView.setBackgroundResource(R.drawable.list_item_selector);
-        convertView.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View v) {
-                int i = mainList.indexOfChild(v);
-                if (i == 0) {
-                    toggleNotifications(!notificationBox.isChecked());
-                } else if (i == 1) {
-                    showYearOptions();
-                } else if (i == 2) {
-                    showRedownloadOptions();
-                } else if (i == 3) {
-                    showDisclaimer();
-                } else if (i == 4) {
-                    showAbout();
-                }
-            }
-        });
+
+        if (Build.VERSION.SDK_INT < Build.VERSION_CODES.LOLLIPOP)
+            convertView.setBackgroundResource(R.drawable.list_item_selector);
         return convertView;
     }
 
