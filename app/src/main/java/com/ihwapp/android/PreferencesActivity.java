@@ -128,7 +128,8 @@ public class PreferencesActivity extends IHWActivity implements ListAdapter {
             if (position == 0) {
                 notificationBox = new CheckBox(this);
                 notificationBox.setChecked(Curriculum.getNotificationsEnabled());
-                notificationBox.setGravity(Gravity.RIGHT | Gravity.CENTER_VERTICAL);
+                notificationBox.setFocusable(false);
+                notificationBox.setGravity(Gravity.END | Gravity.CENTER_VERTICAL);
                 notificationBox.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
                     public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
                         toggleNotifications(isChecked);
