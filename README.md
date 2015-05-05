@@ -8,6 +8,6 @@ The application scapes automatically downloads students' schedules from the HW w
 
 ##Todo
  - [ ] Use faster layout for schedule
- - [ ] Get ripple effect in Settings working
+ - [x] Get ripple effect in Settings working
  - [ ] Write documentation
  - [ ] Android Wear support (show next class, time until that period)
