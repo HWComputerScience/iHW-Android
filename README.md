@@ -7,6 +7,8 @@ The application scapes automatically downloads students' schedules from the HW w
  - Ethan Madison '15 (2014-2015 maintainer)
 
 ##Todo
+ - [ ] Correct long-press behavior in edit courses
+ - [ ] Eliminate possibilities of null pointer exceptions all over the app
  - [ ] Use faster layout for schedule
  - [x] Get ripple effect in Settings working
  - [ ] Write documentation
