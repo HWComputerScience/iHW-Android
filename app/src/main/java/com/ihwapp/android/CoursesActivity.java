@@ -206,6 +206,10 @@ public abstract class CoursesActivity extends AppCompatActivity implements Curri
 
             @Override
             public void onDestroyActionMode(ActionMode mode) {
+                if(getActivity() instanceof NormalCoursesActivity)
+                {
+                    ((NormalCoursesActivity)getActivity()).getSupportActionBar().show();
+                }
                 int i = 0;
                 View child = getListView().getChildAt(0);
                 while (child != null) {
@@ -217,6 +221,10 @@ public abstract class CoursesActivity extends AppCompatActivity implements Curri
 
             @Override
             public boolean onCreateActionMode(ActionMode mode, Menu menu) {
+                if(getActivity() instanceof NormalCoursesActivity)
+                {
+                    ((NormalCoursesActivity)getActivity()).getSupportActionBar().hide();
+                }
                 getActivity().getMenuInflater().inflate(R.menu.cab_courses, menu);
                 return true;
             }
