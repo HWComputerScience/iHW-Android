@@ -233,7 +233,7 @@ public abstract class CoursesActivity extends AppCompatActivity implements Curri
             public boolean onActionItemClicked(ActionMode mode, MenuItem item) {
                 if (item.getItemId() == R.id.action_edit) {
                     Intent i = new Intent(CoursesFragment.this.getActivity(), EditCourseActivity.class);
-                    i.putExtra("courseName", courseNames[(int) getListView().getCheckedItemIds()[0]]);// HERE!!!
+                    i.putExtra("courseName", courseNames[(int) getListView().getCheckedItemIds()[0]]);
                     startActivity(i);
                 } else if (item.getItemId() == R.id.action_delete) {
                     //Delete all selected courses
