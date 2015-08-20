@@ -176,7 +176,7 @@ public class EditCourseActivity extends IHWActivity {
         for (int r = 0; r < 3; r++) {
             int thisPeriod = period + r - 1;
             if (thisPeriod > 0 && thisPeriod <= numPeriods)
-                periodHeaders[r].setText(getOrdinal(thisPeriod));
+                periodHeaders[r].setText(Integer.toString(thisPeriod));
             else periodHeaders[r].setText("");
             for (int c = 0; c < numDays; c++) {
                 if (thisPeriod > 0 && thisPeriod <= numPeriods) {
@@ -189,15 +189,6 @@ public class EditCourseActivity extends IHWActivity {
                 }
             }
         }
-    }
-
-    private static String getOrdinal(int num) {
-        String suffix;
-        if (num % 10 == 1) suffix = "st";
-        else if (num % 10 == 2) suffix = "nd";
-        else if (num % 10 == 3) suffix = "rd";
-        else suffix = "th";
-        return num + suffix;
     }
 
     public boolean onCreateOptionsMenu(Menu menu) {
