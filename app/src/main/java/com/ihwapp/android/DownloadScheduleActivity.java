@@ -35,6 +35,7 @@ public class DownloadScheduleActivity extends IHWActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_download);
+
         WebView webview = (WebView) this.findViewById(R.id.webView_download);
         webview.getSettings().setJavaScriptEnabled(true);
         webview.getSettings().setSupportZoom(true);
@@ -103,7 +104,7 @@ public class DownloadScheduleActivity extends IHWActivity {
         });
         android.webkit.CookieManager.getInstance().removeAllCookie();
         webview.loadUrl("https://www.hw.com/students/Login?returnurl=/students/School-Resources/My-Schedule-Events");
-        setupActionBar();
+        //setupActionBar();
     }
 
     /**
