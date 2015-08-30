@@ -29,6 +29,7 @@ import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
 import java.net.URL;
 import java.util.ArrayList;
+import java.util.Collection;
 import java.util.Collections;
 import java.util.HashSet;
 import java.util.Iterator;
@@ -766,6 +767,11 @@ public class Curriculum {
         return list;
     }
 
+    public @Nullable Collection< Course > getAllCourses()
+    {
+        return courses;
+    }
+
     /**
      * Attempts to add the specified course to the curriculum.
      * Returns true if it was added, and false if scheduling conflicts prevented it from being added.
@@ -839,6 +845,19 @@ public class Curriculum {
         }
 
     }
+
+    public boolean replaceCourse(String oldName, int oldTerm, Course c) {
+        Course oldCourse = this.getCourse(oldName, oldTerm);
+        this.removeCourse(oldCourse);
+        if (this.addCourse(c)) {
+            return true;
+        } else {
+            this.addCourse(oldCourse);
+            return false;
+        }
+
+    }
+
 
     public @Nullable List<Integer> termsFromDate(Date d) {
         if (semesterEndDates == null || trimesterEndDates == null) return null;
@@ -940,6 +959,21 @@ public class Curriculum {
     public @Nullable Course getCourse(String name) {
         if (courses == null) return null;
         for (Course c : courses) if (c.getName().equals(name)) return c;
+        return null;
+    }
+
+    public @Nullable Course getCourse( String name, int term ) {
+        if ( courses == null )
+        {
+            return null;
+        }
+        for( Course c : courses )
+        {
+            if( c.getName().equals( name ) && c.getTerm() == term )
+            {
+                return c;
+            }
+        }
         return null;
     }
 

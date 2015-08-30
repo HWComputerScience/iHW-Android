@@ -3,27 +3,26 @@ package com.ihwapp.android;
 import android.content.Context;
 import android.content.Intent;
 import android.database.DataSetObserver;
-import android.graphics.Color;
 import android.os.Build;
 import android.os.Bundle;
 import android.support.v4.app.ListFragment;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
-import android.view.ActionMode;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.AbsListView;
 import android.widget.ListAdapter;
 import android.widget.ListView;
 import android.widget.TextView;
 
+import com.ihwapp.android.model.Course;
 import com.ihwapp.android.model.Curriculum;
 
 import java.util.Arrays;
-import java.util.List;
+import java.util.Collection;
+import java.util.Comparator;
 
 public abstract class CoursesActivity extends AppCompatActivity implements Curriculum.ModelLoadingListener {
     protected CoursesFragment coursesFragment;
@@ -100,15 +99,25 @@ public abstract class CoursesActivity extends AppCompatActivity implements Curri
 
 
     public static class CoursesFragment extends ListFragment implements ListAdapter {
-        private String[] courseNames;
+        private Course[] courses;
 
         private void reloadData() {
             //Get course names and copy them into a local array
-            List<String> courseList = Curriculum.getCurrentCurriculum().getAllCourseNames();
+            Collection< Course > courseList = Curriculum.getCurrentCurriculum().getAllCourses();
             if (courseList == null) return;
             Object[] courseObjs = courseList.toArray();
-            courseNames = Arrays.copyOf(courseObjs, courseObjs.length, String[].class);
-            Arrays.sort(courseNames);
+            courses = Arrays.copyOf(courseObjs, courseObjs.length, Course[].class);
+            Arrays.sort(courses, new Comparator< Course >() {
+                @Override
+                public int compare( Course a, Course b ) {
+                    int nameCompare = a.getName().compareTo( b.getName() );
+                    if( nameCompare != 0 )
+                    {
+                        return nameCompare;
+                    }
+                    return a.getTerm() - b.getTerm();
+                }
+            });
             this.setListAdapter(this);
             Log.d("iHW", "loaded data");
         }
@@ -116,26 +125,25 @@ public abstract class CoursesActivity extends AppCompatActivity implements Curri
 
         public void onListItemClick(ListView l, View v, int position, long id) {
             //Open this course in a new edit course activity
-            //NOTE: Course names must be unique for this to work, and I'm not
-            ///sure they're enforced that way...could be a problem later on...
             Intent i = new Intent(this.getActivity(), EditCourseActivity.class);
-            i.putExtra("courseName", courseNames[position]);
+            i.putExtra( "courseName", courses[ position ].getName() );
+            i.putExtra( "courseTerm", courses[ position ].getTerm() );
             startActivity(i);
         }
 
         @Override
         public int getCount() {
-            return courseNames.length;
+            return courses.length;
         }
 
         @Override
         public Object getItem(int position) {
-            return courseNames[position];
+            return courses[position];
         }
 
         @Override
         public long getItemId(int position) {
-            //return courseNames[position].hashCode();
+            //return courses[position].hashCode();
             return position;
         }
 
@@ -151,7 +159,7 @@ public abstract class CoursesActivity extends AppCompatActivity implements Curri
                         .getSystemService(Context.LAYOUT_INFLATER_SERVICE);
                 convertView = inflater.inflate(R.layout.list_item_course, null);
             }
-            ((TextView) convertView.findViewById(R.id.text_course_name)).setText(courseNames[position]);
+            ((TextView) convertView.findViewById(R.id.text_course_name)).setText(courses[position].getName());
             if (Build.VERSION.SDK_INT < Build.VERSION_CODES.LOLLIPOP)
                 convertView.setBackgroundResource(R.drawable.list_item_selector);
             return convertView;
