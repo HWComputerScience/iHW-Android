@@ -38,6 +38,7 @@ public class EditCourseActivity extends IHWActivity {
     private CheckBox[][] meetingBoxes;
     private TextView[] periodHeaders;
     private String existingCourseName = null;
+    private int existingCourseTerm = 0;
 
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -145,9 +146,10 @@ public class EditCourseActivity extends IHWActivity {
     protected void onStart() {
         super.onStart();
         existingCourseName = getIntent().getStringExtra("courseName");
+        existingCourseTerm = getIntent().getIntExtra( "courseTerm", 0 );
         if (existingCourseName != null) {
             this.getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_HIDDEN);
-            Course c = Curriculum.getCurrentCurriculum().getCourse(existingCourseName);
+            Course c = Curriculum.getCurrentCurriculum().getCourse(existingCourseName, existingCourseTerm);
             getSupportActionBar().setTitle(c.getName());
             nameBox.setText(c.getName());
             periodBox.setText("" + c.getPeriod());
@@ -208,7 +210,7 @@ public class EditCourseActivity extends IHWActivity {
         if (item.getItemId() == R.id.action_delete) {
             if (existingCourseName != null) {
                 Curriculum.getCurrentCurriculum().removeCourse(Curriculum.getCurrentCurriculum().
-                        getCourse(existingCourseName));
+                        getCourse(existingCourseName, existingCourseTerm));
                 Curriculum.getCurrentCurriculum().saveCourses();
             }
             finish();
@@ -231,7 +233,7 @@ public class EditCourseActivity extends IHWActivity {
                 Course toAdd = new Course(nameBox.getText().toString(), period, termSpinner.
                         getSelectedItemPosition(), meetings);
                 if (existingCourseName != null) success = Curriculum.getCurrentCurriculum().
-                        replaceCourse(existingCourseName, toAdd);
+                        replaceCourse(existingCourseName, existingCourseTerm, toAdd);
                 else success = Curriculum.getCurrentCurriculum().addCourse(toAdd);
                 if (!success) {
                     //Curriculum rejected the course
