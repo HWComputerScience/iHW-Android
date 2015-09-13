@@ -34,6 +34,7 @@
     <string name="prompt_select_periods">Check the periods when this course meets below.</string>
     <string name="label_period">Period</string>
     <string name="action_edit_courses">Edit Courses</string>
+    <string name="add_course">Add a Course</string>
     <string name="prompt_no_courses">Tap \&quot;+\&quot; above to add a course.</string>
     <string name="action_add">Add</string>
     <string name="action_edit_course">Edit Course</string>
@@ -47,8 +48,7 @@
     <string name="option_hide_checkbox">Hide Checkbox</string>
     <string name="option_mark_unimportant">Mark Unimportant</string>
     <string name="text_bullet">–</string>
-    <string name="action_options">iHW Options</string>
-    <string name="title_activity_preferences">iHW Options</string>
+    <string name="title_activity_preferences">Settings</string>
     <string name="action_settings">Settings</string>
     <string name="action_go">Go</string>
     <string name="prompt_change_year">Change year:</string>
@@ -63,5 +63,20 @@
     <string name="title_activity_web_view">WebViewActivity</string>
     <string name="action_decrement">–</string>
     <string name="action_increment">+</string>
+    <string name="action_cancel">Cancel</string>
 
+    <string name="pref_notifications">Notifications</string>
+    <string name="pref_notifications_desc">Get notified during frees before class starts</string>
+    <string name="pref_change">Change year or campus</string>
+    <string name="pref_change_desc">"Choose school year or select MS/US"</string>
+    <string name="pref_redownload">Redownload schedule</string>
+    <string name="pref_redownload_desc">Download your schedule from HW.com</string>
+    <string name="pref_disclaimer">Disclaimer</string>
+    <string name="pref_disclaimer_desc">Don\'t blame us if you\'re late to class!</string>
+    <string name="pref_about">About iHW</string>
+
+    <string name="toast_changes_discarded">Changes discarded</string>
+    <string name="toast_changes_saved">Changes saved</string>
+    <string name="toast_course_incomplete">The course must have a name and at least one class meeting</string>
+    <string name="toast_course_conflict">The course meetings you selected conflict with one or more of your other courses. Please change them and try again</string>
 </resources>

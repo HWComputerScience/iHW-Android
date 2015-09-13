@@ -1,6 +1,12 @@
-<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
-    <item android:id="@+id/action_add" android:showAsAction="always|withText" android:title="@string/action_add_course" android:checkable="false" android:icon="@drawable/ic_content_new" android:titleCondensed="@string/action_add"/>
-
+    <item
+        android:id="@+id/action_add"
+        app:showAsAction="always|withText"
+        android:title="@string/action_add_course"
+        android:checkable="false"
+        android:icon="@drawable/ic_content_new"
+        android:titleCondensed="@string/action_add" />
 
 </menu>
